@@ -19,10 +19,10 @@ def outcomes(forms,slots,base,bonus,x):
         values.append(base+bonus*count)
     return values
 
-def panel(split):
+def panel(split, namespace="indent-v1"):
     out=[]
     for layout in range(SIZE[split]//4):
-        rng=random.Random(f"indent-v1-{split}-{layout}")
+        rng=random.Random(f"{namespace}-{split}-{layout}")
         forms=SPLITS[split][layout%len(SPLITS[split])]
         slots=rng.sample(range(3),3)
         base=rng.randint(-12,12);bonus=rng.choice([2,3,5,7,9])
