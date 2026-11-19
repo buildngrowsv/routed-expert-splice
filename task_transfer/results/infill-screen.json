@@ -1,0 +1,21 @@
+{
+  "discovery": {
+    "n": 128,
+    "host": 22,
+    "donor": 35,
+    "donor_only": 19,
+    "host_only": 6,
+    "difference": 0.1015625,
+    "p": 0.01463329792022705
+  },
+  "confirmation": {
+    "n": 256,
+    "host": 67,
+    "donor": 74,
+    "donor_only": 20,
+    "host_only": 13,
+    "difference": 0.02734375,
+    "p": 0.296206368599087
+  },
+  "qualified": false
+}

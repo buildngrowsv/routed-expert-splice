@@ -1,0 +1,2306 @@
+[
+  {
+    "id": "bits-fim-discovery-0000",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0001",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0002",
+    "gold": 0,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0003",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0004",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0005",
+    "gold": 2,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0006",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0007",
+    "gold": 0,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0008",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0009",
+    "gold": 3,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0010",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0011",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0012",
+    "gold": 2,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0013",
+    "gold": 0,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0014",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0015",
+    "gold": 3,
+    "host": 0,
+    "donor": 2
+  },
+  {
+    "id": "bits-fim-discovery-0016",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0017",
+    "gold": 0,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0018",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0019",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0020",
+    "gold": 3,
+    "host": 0,
+    "donor": 2
+  },
+  {
+    "id": "bits-fim-discovery-0021",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0022",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0023",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0024",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0025",
+    "gold": 0,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0026",
+    "gold": 3,
+    "host": 0,
+    "donor": 1
+  },
+  {
+    "id": "bits-fim-discovery-0027",
+    "gold": 1,
+    "host": 0,
+    "donor": 1
+  },
+  {
+    "id": "bits-fim-discovery-0028",
+    "gold": 3,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0029",
+    "gold": 2,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0030",
+    "gold": 0,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0031",
+    "gold": 1,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0032",
+    "gold": 0,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0033",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0034",
+    "gold": 3,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0035",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0036",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0037",
+    "gold": 1,
+    "host": 1,
+    "donor": 1
+  },
+  {
+    "id": "bits-fim-discovery-0038",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0039",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0040",
+    "gold": 3,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0041",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0042",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0043",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0044",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0045",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0046",
+    "gold": 0,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0047",
+    "gold": 1,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0048",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0049",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0050",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0051",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0052",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0053",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0054",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0055",
+    "gold": 1,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0056",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0057",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0058",
+    "gold": 1,
+    "host": 1,
+    "donor": 1
+  },
+  {
+    "id": "bits-fim-discovery-0059",
+    "gold": 0,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0060",
+    "gold": 2,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0061",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0062",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0063",
+    "gold": 3,
+    "host": 3,
+    "donor": 2
+  },
+  {
+    "id": "bits-fim-discovery-0064",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0065",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0066",
+    "gold": 0,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0067",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0068",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0069",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0070",
+    "gold": 3,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0071",
+    "gold": 1,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0072",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0073",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0074",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0075",
+    "gold": 0,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0076",
+    "gold": 3,
+    "host": 0,
+    "donor": 1
+  },
+  {
+    "id": "bits-fim-discovery-0077",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0078",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0079",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0080",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0081",
+    "gold": 3,
+    "host": 1,
+    "donor": 1
+  },
+  {
+    "id": "bits-fim-discovery-0082",
+    "gold": 2,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0083",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0084",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0085",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0086",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0087",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0088",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0089",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0090",
+    "gold": 0,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0091",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0092",
+    "gold": 0,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0093",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0094",
+    "gold": 3,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0095",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0096",
+    "gold": 0,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0097",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0098",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0099",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0100",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0101",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0102",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0103",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0104",
+    "gold": 1,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0105",
+    "gold": 0,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0106",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0107",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0108",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0109",
+    "gold": 3,
+    "host": 3,
+    "donor": 2
+  },
+  {
+    "id": "bits-fim-discovery-0110",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0111",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0112",
+    "gold": 0,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0113",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0114",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0115",
+    "gold": 3,
+    "host": 0,
+    "donor": 2
+  },
+  {
+    "id": "bits-fim-discovery-0116",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0117",
+    "gold": 2,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0118",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0119",
+    "gold": 0,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0120",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0121",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0122",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0123",
+    "gold": 3,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0124",
+    "gold": 0,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0125",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0126",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-discovery-0127",
+    "gold": 2,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0000",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0001",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0002",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0003",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0004",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0005",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0006",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0007",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0008",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0009",
+    "gold": 1,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0010",
+    "gold": 2,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0011",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0012",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0013",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0014",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0015",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0016",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0017",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0018",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0019",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0020",
+    "gold": 2,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0021",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0022",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0023",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0024",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0025",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0026",
+    "gold": 1,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0027",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0028",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0029",
+    "gold": 0,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0030",
+    "gold": 1,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0031",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0032",
+    "gold": 3,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0033",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0034",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0035",
+    "gold": 2,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0036",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0037",
+    "gold": 1,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0038",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0039",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0040",
+    "gold": 0,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0041",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0042",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0043",
+    "gold": 1,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0044",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0045",
+    "gold": 2,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0046",
+    "gold": 1,
+    "host": 1,
+    "donor": 1
+  },
+  {
+    "id": "bits-fim-confirmation-0047",
+    "gold": 3,
+    "host": 0,
+    "donor": 2
+  },
+  {
+    "id": "bits-fim-confirmation-0048",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0049",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0050",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0051",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0052",
+    "gold": 2,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0053",
+    "gold": 1,
+    "host": 1,
+    "donor": 1
+  },
+  {
+    "id": "bits-fim-confirmation-0054",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0055",
+    "gold": 0,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0056",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0057",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0058",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0059",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0060",
+    "gold": 0,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0061",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0062",
+    "gold": 3,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0063",
+    "gold": 2,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0064",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0065",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0066",
+    "gold": 3,
+    "host": 0,
+    "donor": 2
+  },
+  {
+    "id": "bits-fim-confirmation-0067",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0068",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0069",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0070",
+    "gold": 1,
+    "host": 1,
+    "donor": 1
+  },
+  {
+    "id": "bits-fim-confirmation-0071",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0072",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0073",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0074",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0075",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0076",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0077",
+    "gold": 1,
+    "host": 1,
+    "donor": 1
+  },
+  {
+    "id": "bits-fim-confirmation-0078",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0079",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0080",
+    "gold": 3,
+    "host": 0,
+    "donor": 2
+  },
+  {
+    "id": "bits-fim-confirmation-0081",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0082",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0083",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0084",
+    "gold": 1,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0085",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0086",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0087",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0088",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0089",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0090",
+    "gold": 0,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0091",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0092",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0093",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0094",
+    "gold": 1,
+    "host": 1,
+    "donor": 1
+  },
+  {
+    "id": "bits-fim-confirmation-0095",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0096",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0097",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0098",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0099",
+    "gold": 0,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0100",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0101",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0102",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0103",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0104",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0105",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0106",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0107",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0108",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0109",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0110",
+    "gold": 2,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0111",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0112",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0113",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0114",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0115",
+    "gold": 0,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0116",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0117",
+    "gold": 0,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0118",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0119",
+    "gold": 2,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0120",
+    "gold": 2,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0121",
+    "gold": 1,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0122",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0123",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0124",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0125",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0126",
+    "gold": 2,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0127",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0128",
+    "gold": 2,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0129",
+    "gold": 1,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0130",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0131",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0132",
+    "gold": 1,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0133",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0134",
+    "gold": 3,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0135",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0136",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0137",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0138",
+    "gold": 3,
+    "host": 1,
+    "donor": 1
+  },
+  {
+    "id": "bits-fim-confirmation-0139",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0140",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0141",
+    "gold": 2,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0142",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0143",
+    "gold": 1,
+    "host": 1,
+    "donor": 1
+  },
+  {
+    "id": "bits-fim-confirmation-0144",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0145",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0146",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0147",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0148",
+    "gold": 3,
+    "host": 0,
+    "donor": 2
+  },
+  {
+    "id": "bits-fim-confirmation-0149",
+    "gold": 0,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0150",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0151",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0152",
+    "gold": 1,
+    "host": 3,
+    "donor": 1
+  },
+  {
+    "id": "bits-fim-confirmation-0153",
+    "gold": 0,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0154",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0155",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0156",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0157",
+    "gold": 1,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0158",
+    "gold": 3,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0159",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0160",
+    "gold": 3,
+    "host": 1,
+    "donor": 2
+  },
+  {
+    "id": "bits-fim-confirmation-0161",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0162",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0163",
+    "gold": 1,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0164",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0165",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0166",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0167",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0168",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0169",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0170",
+    "gold": 1,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0171",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0172",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0173",
+    "gold": 3,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0174",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0175",
+    "gold": 1,
+    "host": 1,
+    "donor": 1
+  },
+  {
+    "id": "bits-fim-confirmation-0176",
+    "gold": 0,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0177",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0178",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0179",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0180",
+    "gold": 1,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0181",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0182",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0183",
+    "gold": 3,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0184",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0185",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0186",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0187",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0188",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0189",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0190",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0191",
+    "gold": 2,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0192",
+    "gold": 0,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0193",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0194",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0195",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0196",
+    "gold": 0,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0197",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0198",
+    "gold": 2,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0199",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0200",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0201",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0202",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0203",
+    "gold": 0,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0204",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0205",
+    "gold": 0,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0206",
+    "gold": 2,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0207",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0208",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0209",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0210",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0211",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0212",
+    "gold": 1,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0213",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0214",
+    "gold": 0,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0215",
+    "gold": 3,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0216",
+    "gold": 3,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0217",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0218",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0219",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0220",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0221",
+    "gold": 3,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0222",
+    "gold": 1,
+    "host": 1,
+    "donor": 1
+  },
+  {
+    "id": "bits-fim-confirmation-0223",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0224",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0225",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0226",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0227",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0228",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0229",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0230",
+    "gold": 0,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0231",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0232",
+    "gold": 3,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0233",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0234",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0235",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0236",
+    "gold": 1,
+    "host": 1,
+    "donor": 1
+  },
+  {
+    "id": "bits-fim-confirmation-0237",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0238",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0239",
+    "gold": 0,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0240",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0241",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0242",
+    "gold": 2,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0243",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0244",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0245",
+    "gold": 0,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0246",
+    "gold": 2,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0247",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0248",
+    "gold": 1,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0249",
+    "gold": 2,
+    "host": 3,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0250",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0251",
+    "gold": 3,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0252",
+    "gold": 0,
+    "host": 0,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0253",
+    "gold": 1,
+    "host": 1,
+    "donor": 0
+  },
+  {
+    "id": "bits-fim-confirmation-0254",
+    "gold": 3,
+    "host": 0,
+    "donor": 1
+  },
+  {
+    "id": "bits-fim-confirmation-0255",
+    "gold": 2,
+    "host": 1,
+    "donor": 0
+  }
+]
