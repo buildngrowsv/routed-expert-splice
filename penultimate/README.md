@@ -4,6 +4,8 @@ A frozen coding expert carried useful information immediately after surgery. On 
 
 ![Training gains and the cost of switching off the donor before and after training](results/donor-use.png)
 
+[Pubroot submission and review record](https://github.com/buildngrowsv/pubroot-website/issues/337)
+
 ## Operation and benchmark
 
 We moved the same 13,074,432-weight feed-forward network from Qwen2.5-Coder-0.5B into block 27 of the 28-block Qwen2.5-1.5B base model. Host attention and its residual connection survived the operation. Affine input and output maps fitted on training activations translated between the host's 1,536 values per token and the donor's 896. The coding network and both maps stayed fixed. Block 28, including its attention, feed-forward network and normalizations, supplied all 46,797,824 gradient-trainable parameters. Each token passed through the same branch. The prior study used the final host block for the graft. The present study estimates effects within the upstream placement. [Prior study](https://pubroot.com/ai/fine-tuning/replacing-a-qwen-feed-forward-block-with-a-smaller-pretrained-expert/)
