@@ -10,6 +10,10 @@ A 13.1M-weight feed-forward block from Qwen2.5-Coder-0.5B recovered **40.3% of t
 
 The intact coding expert helped immediately in block 27. After we trained the entire following block, the cost of removing the expert on Python moved from 0.0553 to 0.0539 nats per token. The largest adaptation gain came when block 27 had no feed-forward output. [Study, figure and controls](penultimate/README.md) · [Methods](penultimate/METHODS.md)
 
+## Task-trained Python repair
+
+On a qualified infill task, the smaller coding donor solved 344/384 and the untouched larger host solved 111/384. All 273 new solves survived turning off the donor after task training. Every trained control also solved all 384. [Study and per-problem ledger](task_transfer/README.md)
+
 ## Reproduce
 
 Use Apple Silicon with a supported Metal GPU for the model runs. Install uv and start in this directory. The scripts fetch public, revision-pinned checkpoints and a CPython source archive. Model weights, corpus extracts and cached hidden states stay in the ignored cache directory. The public evidence includes the file/window manifests, selected epochs and per-token scores.
