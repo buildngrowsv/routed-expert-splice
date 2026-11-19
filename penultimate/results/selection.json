@@ -1,0 +1,542 @@
+{
+  "native-101": {
+    "selected": 0,
+    "validation": [
+      {
+        "step": 0,
+        "nll": 1.8824554811430347,
+        "accuracy": 0.607421875,
+        "last_batch_objective": null
+      },
+      {
+        "step": 8,
+        "nll": 1.8824554811430347,
+        "accuracy": 0.607421875,
+        "last_batch_objective": 0.0
+      },
+      {
+        "step": 32,
+        "nll": 1.8824554811430347,
+        "accuracy": 0.607421875,
+        "last_batch_objective": 0.0
+      },
+      {
+        "step": 96,
+        "nll": 1.8824554811430347,
+        "accuracy": 0.607421875,
+        "last_batch_objective": 0.0
+      }
+    ],
+    "seconds": 3.01
+  },
+  "knockout-101": {
+    "selected": 96,
+    "validation": [
+      {
+        "step": 0,
+        "nll": 2.0774767593593464,
+        "accuracy": 0.5859375,
+        "last_batch_objective": null
+      },
+      {
+        "step": 8,
+        "nll": 2.0631643300996627,
+        "accuracy": 0.5830078125,
+        "last_batch_objective": 0.16663667559623718
+      },
+      {
+        "step": 32,
+        "nll": 2.0589905607472057,
+        "accuracy": 0.5791015625,
+        "last_batch_objective": 0.1636771857738495
+      },
+      {
+        "step": 96,
+        "nll": 2.0495853988516384,
+        "accuracy": 0.580078125,
+        "last_batch_objective": 0.08156715333461761
+      }
+    ],
+    "seconds": 2.93
+  },
+  "direct-101": {
+    "selected": 0,
+    "validation": [
+      {
+        "step": 0,
+        "nll": 1.9643794845576785,
+        "accuracy": 0.5908203125,
+        "last_batch_objective": null
+      },
+      {
+        "step": 8,
+        "nll": 1.964479324610359,
+        "accuracy": 0.58984375,
+        "last_batch_objective": 0.019155457615852356
+      },
+      {
+        "step": 32,
+        "nll": 1.9656817654103484,
+        "accuracy": 0.5849609375,
+        "last_batch_objective": 0.026333127170801163
+      },
+      {
+        "step": 96,
+        "nll": 1.9677513642112032,
+        "accuracy": 0.5859375,
+        "last_batch_objective": 0.022483427077531815
+      }
+    ],
+    "seconds": 2.92
+  },
+  "shuffled-101": {
+    "selected": 0,
+    "validation": [
+      {
+        "step": 0,
+        "nll": 1.9923127722011094,
+        "accuracy": 0.58203125,
+        "last_batch_objective": null
+      },
+      {
+        "step": 8,
+        "nll": 1.9923541915780705,
+        "accuracy": 0.58203125,
+        "last_batch_objective": 0.03273974731564522
+      },
+      {
+        "step": 32,
+        "nll": 1.9950742124923346,
+        "accuracy": 0.5849609375,
+        "last_batch_objective": 0.04335707798600197
+      },
+      {
+        "step": 96,
+        "nll": 1.9982300574625214,
+        "accuracy": 0.580078125,
+        "last_batch_objective": 0.03622050583362579
+      }
+    ],
+    "seconds": 2.95
+  },
+  "general-101": {
+    "selected": 8,
+    "validation": [
+      {
+        "step": 0,
+        "nll": 1.986160034616507,
+        "accuracy": 0.5869140625,
+        "last_batch_objective": null
+      },
+      {
+        "step": 8,
+        "nll": 1.9838780379286298,
+        "accuracy": 0.5859375,
+        "last_batch_objective": 0.03614911064505577
+      },
+      {
+        "step": 32,
+        "nll": 1.988553438498922,
+        "accuracy": 0.587890625,
+        "last_batch_objective": 0.05923037976026535
+      },
+      {
+        "step": 96,
+        "nll": 1.9872582534988457,
+        "accuracy": 0.5849609375,
+        "last_batch_objective": 0.04032192751765251
+      }
+    ],
+    "seconds": 2.96
+  },
+  "coder-101": {
+    "selected": 0,
+    "validation": [
+      {
+        "step": 0,
+        "nll": 1.991358249824918,
+        "accuracy": 0.5859375,
+        "last_batch_objective": null
+      },
+      {
+        "step": 8,
+        "nll": 1.991578986165468,
+        "accuracy": 0.5791015625,
+        "last_batch_objective": 0.031749874353408813
+      },
+      {
+        "step": 32,
+        "nll": 1.9943045126668704,
+        "accuracy": 0.5859375,
+        "last_batch_objective": 0.044669002294540405
+      },
+      {
+        "step": 96,
+        "nll": 1.9951582278967912,
+        "accuracy": 0.5830078125,
+        "last_batch_objective": 0.03611685335636139
+      }
+    ],
+    "seconds": 2.95
+  },
+  "native-211": {
+    "selected": 0,
+    "validation": [
+      {
+        "step": 0,
+        "nll": 1.8824554811430347,
+        "accuracy": 0.607421875,
+        "last_batch_objective": null
+      },
+      {
+        "step": 8,
+        "nll": 1.8824554811430347,
+        "accuracy": 0.607421875,
+        "last_batch_objective": 0.0
+      },
+      {
+        "step": 32,
+        "nll": 1.8824554811430347,
+        "accuracy": 0.607421875,
+        "last_batch_objective": 0.0
+      },
+      {
+        "step": 96,
+        "nll": 1.8824554811430347,
+        "accuracy": 0.607421875,
+        "last_batch_objective": 0.0
+      }
+    ],
+    "seconds": 2.94
+  },
+  "knockout-211": {
+    "selected": 96,
+    "validation": [
+      {
+        "step": 0,
+        "nll": 2.0774767593593464,
+        "accuracy": 0.5859375,
+        "last_batch_objective": null
+      },
+      {
+        "step": 8,
+        "nll": 2.0615554223164887,
+        "accuracy": 0.5849609375,
+        "last_batch_objective": 0.10614202916622162
+      },
+      {
+        "step": 32,
+        "nll": 2.0604650638555917,
+        "accuracy": 0.5771484375,
+        "last_batch_objective": 0.0659550130367279
+      },
+      {
+        "step": 96,
+        "nll": 2.0507052433033905,
+        "accuracy": 0.58203125,
+        "last_batch_objective": 0.05773857235908508
+      }
+    ],
+    "seconds": 2.91
+  },
+  "direct-211": {
+    "selected": 8,
+    "validation": [
+      {
+        "step": 0,
+        "nll": 1.9643794845576785,
+        "accuracy": 0.5908203125,
+        "last_batch_objective": null
+      },
+      {
+        "step": 8,
+        "nll": 1.9633713869454592,
+        "accuracy": 0.58984375,
+        "last_batch_objective": 0.018676502630114555
+      },
+      {
+        "step": 32,
+        "nll": 1.9664818776982553,
+        "accuracy": 0.5869140625,
+        "last_batch_objective": 0.01824648305773735
+      },
+      {
+        "step": 96,
+        "nll": 1.9679180252212394,
+        "accuracy": 0.587890625,
+        "last_batch_objective": 0.017259396612644196
+      }
+    ],
+    "seconds": 2.9
+  },
+  "shuffled-211": {
+    "selected": 8,
+    "validation": [
+      {
+        "step": 0,
+        "nll": 1.9923127722011094,
+        "accuracy": 0.58203125,
+        "last_batch_objective": null
+      },
+      {
+        "step": 8,
+        "nll": 1.9919238567924573,
+        "accuracy": 0.580078125,
+        "last_batch_objective": 0.02708941511809826
+      },
+      {
+        "step": 32,
+        "nll": 1.9952137604195856,
+        "accuracy": 0.5771484375,
+        "last_batch_objective": 0.028871532529592514
+      },
+      {
+        "step": 96,
+        "nll": 1.995856164954791,
+        "accuracy": 0.5791015625,
+        "last_batch_objective": 0.02752722054719925
+      }
+    ],
+    "seconds": 2.94
+  },
+  "general-211": {
+    "selected": 8,
+    "validation": [
+      {
+        "step": 0,
+        "nll": 1.986160034616507,
+        "accuracy": 0.5869140625,
+        "last_batch_objective": null
+      },
+      {
+        "step": 8,
+        "nll": 1.9854111373748786,
+        "accuracy": 0.5888671875,
+        "last_batch_objective": 0.028332896530628204
+      },
+      {
+        "step": 32,
+        "nll": 1.9873496317734727,
+        "accuracy": 0.583984375,
+        "last_batch_objective": 0.026943936944007874
+      },
+      {
+        "step": 96,
+        "nll": 1.9874058661853855,
+        "accuracy": 0.5849609375,
+        "last_batch_objective": 0.02729427069425583
+      }
+    ],
+    "seconds": 2.93
+  },
+  "coder-211": {
+    "selected": 8,
+    "validation": [
+      {
+        "step": 0,
+        "nll": 1.991358249824918,
+        "accuracy": 0.5859375,
+        "last_batch_objective": null
+      },
+      {
+        "step": 8,
+        "nll": 1.990170997464892,
+        "accuracy": 0.5830078125,
+        "last_batch_objective": 0.027546238154172897
+      },
+      {
+        "step": 32,
+        "nll": 1.993507757032459,
+        "accuracy": 0.580078125,
+        "last_batch_objective": 0.027005178853869438
+      },
+      {
+        "step": 96,
+        "nll": 1.9959593378795564,
+        "accuracy": 0.5830078125,
+        "last_batch_objective": 0.026805061846971512
+      }
+    ],
+    "seconds": 2.94
+  },
+  "native-307": {
+    "selected": 0,
+    "validation": [
+      {
+        "step": 0,
+        "nll": 1.8824554811430347,
+        "accuracy": 0.607421875,
+        "last_batch_objective": null
+      },
+      {
+        "step": 8,
+        "nll": 1.8824554811430347,
+        "accuracy": 0.607421875,
+        "last_batch_objective": 0.0
+      },
+      {
+        "step": 32,
+        "nll": 1.8824554811430347,
+        "accuracy": 0.607421875,
+        "last_batch_objective": 0.0
+      },
+      {
+        "step": 96,
+        "nll": 1.8824554811430347,
+        "accuracy": 0.607421875,
+        "last_batch_objective": 0.0
+      }
+    ],
+    "seconds": 2.94
+  },
+  "knockout-307": {
+    "selected": 96,
+    "validation": [
+      {
+        "step": 0,
+        "nll": 2.0774767593593464,
+        "accuracy": 0.5859375,
+        "last_batch_objective": null
+      },
+      {
+        "step": 8,
+        "nll": 2.06404524044419,
+        "accuracy": 0.580078125,
+        "last_batch_objective": 0.10378903150558472
+      },
+      {
+        "step": 32,
+        "nll": 2.0603196302262345,
+        "accuracy": 0.5810546875,
+        "last_batch_objective": 0.07526218891143799
+      },
+      {
+        "step": 96,
+        "nll": 2.051950743609984,
+        "accuracy": 0.578125,
+        "last_batch_objective": 0.06222384795546532
+      }
+    ],
+    "seconds": 2.91
+  },
+  "direct-307": {
+    "selected": 0,
+    "validation": [
+      {
+        "step": 0,
+        "nll": 1.9643794845576785,
+        "accuracy": 0.5908203125,
+        "last_batch_objective": null
+      },
+      {
+        "step": 8,
+        "nll": 1.9665156458765907,
+        "accuracy": 0.5888671875,
+        "last_batch_objective": 0.01869870349764824
+      },
+      {
+        "step": 32,
+        "nll": 1.968769044882638,
+        "accuracy": 0.5869140625,
+        "last_batch_objective": 0.01987132802605629
+      },
+      {
+        "step": 96,
+        "nll": 1.9677922976370485,
+        "accuracy": 0.58984375,
+        "last_batch_objective": 0.017451878637075424
+      }
+    ],
+    "seconds": 2.89
+  },
+  "shuffled-307": {
+    "selected": 0,
+    "validation": [
+      {
+        "step": 0,
+        "nll": 1.9923127722011094,
+        "accuracy": 0.58203125,
+        "last_batch_objective": null
+      },
+      {
+        "step": 8,
+        "nll": 1.9934503284891019,
+        "accuracy": 0.5810546875,
+        "last_batch_objective": 0.028053294867277145
+      },
+      {
+        "step": 32,
+        "nll": 1.9959097156340384,
+        "accuracy": 0.5791015625,
+        "last_batch_objective": 0.02980826050043106
+      },
+      {
+        "step": 96,
+        "nll": 1.9967437077410501,
+        "accuracy": 0.5771484375,
+        "last_batch_objective": 0.025949586182832718
+      }
+    ],
+    "seconds": 2.93
+  },
+  "general-307": {
+    "selected": 8,
+    "validation": [
+      {
+        "step": 0,
+        "nll": 1.986160034616507,
+        "accuracy": 0.5869140625,
+        "last_batch_objective": null
+      },
+      {
+        "step": 8,
+        "nll": 1.9861459347224066,
+        "accuracy": 0.587890625,
+        "last_batch_objective": 0.03002014011144638
+      },
+      {
+        "step": 32,
+        "nll": 1.9862543542134503,
+        "accuracy": 0.5869140625,
+        "last_batch_objective": 0.031161364167928696
+      },
+      {
+        "step": 96,
+        "nll": 1.987528007874058,
+        "accuracy": 0.5859375,
+        "last_batch_objective": 0.025836236774921417
+      }
+    ],
+    "seconds": 2.94
+  },
+  "coder-307": {
+    "selected": 8,
+    "validation": [
+      {
+        "step": 0,
+        "nll": 1.991358249824918,
+        "accuracy": 0.5859375,
+        "last_batch_objective": null
+      },
+      {
+        "step": 8,
+        "nll": 1.9905738864026983,
+        "accuracy": 0.5830078125,
+        "last_batch_objective": 0.029353909194469452
+      },
+      {
+        "step": 32,
+        "nll": 1.9938118172069395,
+        "accuracy": 0.5810546875,
+        "last_batch_objective": 0.02873470075428486
+      },
+      {
+        "step": 96,
+        "nll": 1.9953562935844946,
+        "accuracy": 0.583984375,
+        "last_batch_objective": 0.027420740574598312
+      }
+    ],
+    "seconds": 2.93
+  }
+}

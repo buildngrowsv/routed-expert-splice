@@ -1,0 +1,18 @@
+{
+  "parameter_count": 46797824,
+  "tensors": {
+    "self_attn.q_proj.weight": 2359296,
+    "self_attn.q_proj.bias": 1536,
+    "self_attn.k_proj.weight": 393216,
+    "self_attn.k_proj.bias": 256,
+    "self_attn.v_proj.weight": 393216,
+    "self_attn.v_proj.bias": 256,
+    "self_attn.o_proj.weight": 2359296,
+    "mlp.gate_proj.weight": 13762560,
+    "mlp.down_proj.weight": 13762560,
+    "mlp.up_proj.weight": 13762560,
+    "input_layernorm.weight": 1536,
+    "post_attention_layernorm.weight": 1536
+  },
+  "device": "Apple M5 Ultra"
+}

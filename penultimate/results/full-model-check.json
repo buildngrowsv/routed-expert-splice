@@ -1,0 +1,38 @@
+{
+  "native": {
+    "tokens": 32,
+    "top1_agreement": 0.96875,
+    "mean_abs_nll": 0.019358109682798386,
+    "max_abs_nll": 0.10349535942077637
+  },
+  "knockout": {
+    "tokens": 32,
+    "top1_agreement": 1.0,
+    "mean_abs_nll": 0.033445194363594055,
+    "max_abs_nll": 0.11599850654602051
+  },
+  "direct": {
+    "tokens": 32,
+    "top1_agreement": 1.0,
+    "mean_abs_nll": 0.027949253097176552,
+    "max_abs_nll": 0.16359567642211914
+  },
+  "shuffled": {
+    "tokens": 32,
+    "top1_agreement": 0.96875,
+    "mean_abs_nll": 0.024109873920679092,
+    "max_abs_nll": 0.1510632038116455
+  },
+  "general": {
+    "tokens": 32,
+    "top1_agreement": 1.0,
+    "mean_abs_nll": 0.030102070420980453,
+    "max_abs_nll": 0.11843466758728027
+  },
+  "coder": {
+    "tokens": 32,
+    "top1_agreement": 0.9375,
+    "mean_abs_nll": 0.027817854657769203,
+    "max_abs_nll": 0.10198211669921875
+  }
+}
