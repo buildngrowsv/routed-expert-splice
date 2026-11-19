@@ -10,7 +10,7 @@ SIZE={"train":1536,"discovery":256,"val":384,"test":384}
 DOMAIN=tuple(product(range(4),repeat=3))
 
 def multiplier(form,value):
-    return (int(value>0),value%2,value,max(0,3-value))[form]
+    return (int(value>0),value%2,value,max(0,3-value),int(value==0),value+1)[form]
 
 def outcomes(forms,slots,base,bonus,x):
     values=[base+bonus];count=1
@@ -19,17 +19,22 @@ def outcomes(forms,slots,base,bonus,x):
         values.append(base+bonus*count)
     return values
 
-def panel(split, namespace="indent-v1"):
+def panel(split, namespace="indent-v1", *, forms_pool=None, size=None):
     out=[]
-    for layout in range(SIZE[split]//4):
+    if forms_pool is None:
+        forms_pool=SPLITS[split]
+    if size is None:
+        size=SIZE[split]
+    for layout in range(size//4):
         rng=random.Random(f"{namespace}-{split}-{layout}")
-        forms=SPLITS[split][layout%len(SPLITS[split])]
+        forms=forms_pool[layout%len(forms_pool)]
         slots=rng.sample(range(3),3)
         base=rng.randint(-12,12);bonus=rng.choice([2,3,5,7,9])
         lines=["def tally(xs):",f"    total = {base}"]
         for i,(form,slot) in enumerate(zip(forms,slots)):
             x=f"xs[{slot}]"
-            statement=(f"if {x} > 0:",f"if {x} % 2:",f"for n{i} in range({x}):",f"for n{i} in range(max(0, 3 - {x})):")[form]
+            statement=(f"if {x} > 0:",f"if {x} % 2:",f"for n{i} in range({x}):",f"for n{i} in range(max(0, 3 - {x})):",
+                       f"if {x} == 0:",f"for n{i} in range({x} + 1):")[form]
             lines.append(" "*(4*(i+1))+statement)
         lines.append(" "*16+"pass")
         prefix="\n".join(lines)+"\n"
