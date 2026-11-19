@@ -4,6 +4,8 @@
 
 ![Before and after training and the identity-matched removal result](results/new-solves.png)
 
+[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/339)
+
 ## Finding a task the donor could solve better
 
 We screened frozen Qwen2.5-Coder-0.5B against frozen Qwen2.5-1.5B before fitting models on these tasks. The original three candidates failed discovery. On 128 problems each, smaller/larger solve counts were 35/53 for bit operations, 34/53 for list reduction and 65/66 for SQLite aggregates. A semantic bit-operator infill follow-up led 35/22 in discovery but only 74/67 on independent confirmation (two-sided paired exact p = 0.296). These failed screens are included in the public record.
