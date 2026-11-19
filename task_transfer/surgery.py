@@ -42,7 +42,7 @@ def train_entrances(host, arms, ids):
     return {a:mx.concatenate(xs) for a,xs in batches.items()}
 
 
-def fit(host, graft, arm, seed, x_train, train, val, initial):
+def fit(host, graft, arm, seed, x_train, train, val, initial, checkpoint_dir=WORK):
     block = host.model.layers[-1]
     master = tree_map(lambda x:x.astype(mx.float32), initial)
     opt = optim.Adam(2e-5,bias_correction=True)
@@ -60,7 +60,7 @@ def fit(host, graft, arm, seed, x_train, train, val, initial):
     vg = mx.value_and_grad(task_loss)
     best = float("inf")
     curve = []
-    path = WORK/f"task-{arm}-{seed}.safetensors"
+    path = checkpoint_dir/f"task-{arm}-{seed}.safetensors"
     for step in range(97):
         if step:
             ix = mx.array(order[step-1].astype("int32"))

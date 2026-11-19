@@ -17,11 +17,12 @@ OUT = HERE/"results"
 WORK = CACHE/"task-transfer"
 
 
-def encode(rows):
+def encode(rows, patches=None):
     tok = Tokenizer.from_file(str(CACHE/"host/tokenizer.json"))
     small = Tokenizer.from_file(str(CACHE/"donor/tokenizer.json"))
     family = rows[0]["family"]
-    patches = PATCHES if family=="delimiters" else CHOICES[family]
+    if patches is None:
+        patches = PATCHES if family=="delimiters" else CHOICES[family]
     choices = [tok.encode(s,add_special_tokens=False).ids for s in patches]
     assert all(len(x)==1 for x in choices)
     choices = np.array([x[0] for x in choices],dtype=np.int32)
