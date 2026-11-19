@@ -48,8 +48,9 @@ def full_logits(model, dataset):
     return np.concatenate(parts)
 
 
-def score_panel(models, f, split):
-    rows = panel(f,split)
+def score_panel(models, f, split, rows=None):
+    if rows is None:
+        rows = panel(f,split)
     dataset = encode(rows)
     gold = dataset[-1]
     pred = {k: full_logits(m,dataset).argmax(1) for k,m in models.items()}
