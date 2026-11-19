@@ -4,6 +4,8 @@ A smaller coding model solved **63 of 256** Python indentation repairs and a lar
 
 ![Model choices at each possible indentation](results/indentation.png)
 
+[Published Pubroot paper 2026-353](https://pubroot.com/ai/llm-benchmarks/do-coding-models-track-indentation-when-all-four-repairs-are-executable/) · [Automated review record](https://github.com/buildngrowsv/pubroot-website/issues/353)
+
 ## Why test indentation?
 
 A previous block-27 transplant in this research series used a smaller Qwen coding donor that clearly outperformed the host on delimiter repairs. The original parser could solve those tasks, and every task-trained control eventually reached 100%. All new solves survived removal of the donor. A later variable-binding task made every option executable but the frozen donor's validation lead over an adapted host was too small to justify surgery. Indentation provides another small, checkable test. A single whitespace token can leave the entire program valid while changing which inputs cause an addition to execute. Fill-in-the-middle pretraining supplies the two-sided code interface. [Earlier transplant and removal study](../task_transfer/README.md) · [Variable-binding study](../semantic/README.md) · [Fill-in-the-middle training](https://arxiv.org/abs/2207.14255) · [Qwen2.5-Coder](https://arxiv.org/abs/2409.12186)
