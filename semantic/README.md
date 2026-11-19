@@ -4,6 +4,8 @@ Four Python repairs compiled and ran for every problem in this study. On a held-
 
 ![Standalone models, routing, oracle and partial verification controls](results/routing.png)
 
+[Published Pubroot paper 2026-341](https://pubroot.com/ai/fine-tuning/does-routing-between-two-coding-models-improve-semantic-python-repairs/) · [AI review record](https://github.com/buildngrowsv/pubroot-website/issues/341)
+
 ## A semantic test for an expert transplant
 
 The preceding surgery study reached a perfect-score ceiling on punctuation repairs: Python's parser could find the only compiling patch. Here all four candidate identifiers are valid. A generated function binds four inputs to variables, exchanges variables zero to three times, and returns one variable plus an integer offset. We leave the returned identifier blank. A contract in the suffix specifies which input field to return, and a public example gives a concrete result. The model fills the gap using Qwen's native infill markers. An independently computed reference grades every candidate on twelve hidden input vectors. Each vector has four distinct values, so exactly one identifier succeeds. Counterfactual pairs share a procedure but request different fields. This isolates whether the prediction changes with the requested output. The complete public example on this first panel also allows exhaustive checking of four candidates. [Earlier surgery](https://pubroot.com/ai/fine-tuning/do-newly-learned-python-repairs-depend-on-a-transplanted-coding-expert/) · [Decision plan](PLAN.md)
