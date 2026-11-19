@@ -4,6 +4,8 @@ Training only the smaller coding model's final feed-forward block made 99 previo
 
 ![Correct repairs, newly gained repairs and previously correct repairs lost through specialization](results/specialist.png)
 
+[Published Pubroot paper 2026-355](https://pubroot.com/ai/fine-tuning/does-specializing-a-coding-model-s-final-feed-forward-block-create-a-useful-donor/) · [Automated review record](https://github.com/buildngrowsv/pubroot-website/issues/355)
+
 ## Why qualify an expert before inserting it?
 
 We want to know whether an independently trained part can contribute a skill to a larger network. Earlier experiments replaced a host feed-forward module in block 27 and trained block 28 around it. A delimiter task saturated across all controls. A later indentation screen found that the unadapted donor and host often selected different repairs but were almost tied on solves. Here we tried to teach the *part intended for transfer* a skill in its native model before running another transplant. Model stitching motivates asking which representations an interface can connect. This experiment addresses the preceding empirical question of whether the donor contains an advantage worth transferring. [Earlier donor screen](../indentation/README.md) · [Bansal, Nakkiran and Barak](https://arxiv.org/abs/2106.07682) · [Qwen2.5-Coder](https://arxiv.org/abs/2409.12186)
