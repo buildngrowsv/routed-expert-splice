@@ -14,6 +14,10 @@ The intact coding expert helped immediately in block 27. After we trained the en
 
 On a qualified infill task, the smaller coding donor solved 344/384 and the untouched larger host solved 111/384. All 273 new solves survived turning off the donor after task training. Every trained control also solved all 384. [Study and per-problem ledger](task_transfer/README.md)
 
+## Semantic repairs and model routing
+
+[Executable variable-binding study](semantic/README.md) compares model confidence, a partially informative test, and a two-model cascade on repairs for which all four candidates compile.
+
 ## Reproduce
 
 Use Apple Silicon with a supported Metal GPU for the model runs. Install uv and start in this directory. The scripts fetch public, revision-pinned checkpoints and a CPython source archive. Model weights, corpus extracts and cached hidden states stay in the ignored cache directory. The public evidence includes the file/window manifests, selected epochs and per-token scores.
