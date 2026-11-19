@@ -1,0 +1,26 @@
+{
+  "unique_visible_and_hidden": 256,
+  "legal_programs_executed": 1024,
+  "choice_analysis": {
+    "host": {
+      "prediction_counts": [
+        256,
+        0,
+        0,
+        0
+      ],
+      "quartets_unchanged": 64,
+      "quartets_both_or_more": 0
+    },
+    "donor": {
+      "prediction_counts": [
+        8,
+        24,
+        198,
+        26
+      ],
+      "quartets_unchanged": 59,
+      "quartets_both_or_more": 1
+    }
+  }
+}

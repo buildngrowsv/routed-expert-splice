@@ -35,3 +35,7 @@ uv pip install --python .venv/bin/python -r requirements.txt
 ```
 
 For CPU-only verification of the published scores, use `uv run --with numpy python verify.py`. Each panel has 2,048 target tokens per domain. Compare interventions within a panel. Only the mandatory replacement and same-size donor experiments remove the host block.
+
+## Executable indentation repairs
+
+The host chose four spaces for every repair. The smaller donor favored twelve and missed the discovery gate, 63/256 versus 64/256. [Paired programs, model choices and decision](indentation/README.md)

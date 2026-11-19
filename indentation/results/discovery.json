@@ -1,0 +1,68 @@
+{
+  "n": 256,
+  "families": 8,
+  "host": 64,
+  "donor": 63,
+  "donor_only": 62,
+  "host_only": 63,
+  "donor_minus_host": -0.00390625,
+  "family_interval": [
+    -0.01171875,
+    0.0
+  ],
+  "host_full_quartets": 0,
+  "donor_full_quartets": 0,
+  "families_raw": {
+    "112": {
+      "problems": 32,
+      "host": 8,
+      "donor": 7
+    },
+    "131": {
+      "problems": 32,
+      "host": 8,
+      "donor": 8
+    },
+    "202": {
+      "problems": 32,
+      "host": 8,
+      "donor": 8
+    },
+    "210": {
+      "problems": 32,
+      "host": 8,
+      "donor": 8
+    },
+    "222": {
+      "problems": 32,
+      "host": 8,
+      "donor": 8
+    },
+    "301": {
+      "problems": 32,
+      "host": 8,
+      "donor": 8
+    },
+    "320": {
+      "problems": 32,
+      "host": 8,
+      "donor": 8
+    },
+    "323": {
+      "problems": 32,
+      "host": 8,
+      "donor": 8
+    }
+  },
+  "discovery_qualified": false,
+  "inference_and_load_seconds": {
+    "host": 1.378185042005498,
+    "donor": 0.5625130840053316
+  },
+  "choice_ids": [
+    257,
+    260,
+    1797,
+    338
+  ]
+}
