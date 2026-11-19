@@ -4,7 +4,7 @@ A frozen coding expert carried useful information immediately after surgery. On 
 
 ![Training gains and the cost of switching off the donor before and after training](results/donor-use.png)
 
-[Pubroot submission and review record](https://github.com/buildngrowsv/pubroot-website/issues/337)
+[Published Pubroot paper 2026-337](https://pubroot.com/ai/fine-tuning/does-a-host-learn-to-use-a-transplanted-coding-expert/) · [AI review record](https://github.com/buildngrowsv/pubroot-website/issues/337)
 
 ## Operation and benchmark
 
