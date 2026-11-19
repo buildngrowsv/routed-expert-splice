@@ -2,7 +2,7 @@
 
 A 13.1M-weight feed-forward block from Qwen2.5-Coder-0.5B recovered **40.3% of the code loss increase** after removing the last feed-forward block from Qwen2.5-1.5B. The intact donor beat a shuffled donor on loss, but the original host stayed ahead and top-one accuracy did not beat the shuffle. A matched general-purpose donor was competitive.
 
-[Paper and results](paper.md) · [Pubroot submission](https://github.com/buildngrowsv/pubroot-website/issues/333) · [Decision log and plan](PLAN.md) · [Forced replacement data](results/forced/summary.json) · [Same-size donor comparison](results/donors/summary.json)
+[Paper and results](paper.md) · [Published Pubroot article](https://pubroot.com/ai/fine-tuning/replacing-a-qwen-feed-forward-block-with-a-smaller-pretrained-expert/) · [Decision log and plan](PLAN.md) · [Forced replacement data](results/forced/summary.json) · [Same-size donor comparison](results/donors/summary.json)
 
 ![Held-out model replacement comparison](results/forced/expert-replacement.png)
 
