@@ -1,0 +1,24 @@
+{
+  "models": {
+    "host": [
+      "Qwen/Qwen2.5-1.5B",
+      "8faed761d45a263340a0528343f099c05c9a4323"
+    ],
+    "donor": [
+      "Qwen/Qwen2.5-Coder-0.5B",
+      "8123ea2e9354afb7ffcc6c8641d1b2f5ecf18301"
+    ]
+  },
+  "cpython": "60403a5409ff2c3f3b07dd2ca91a7a3e096839c7",
+  "device": "Apple M5 Ultra",
+  "positions": [
+    31,
+    39,
+    47,
+    55
+  ],
+  "donor_layer": 23,
+  "host_layer": 27,
+  "shuffle_seed": 9917,
+  "ridge_trace_factor": 0.02
+}
