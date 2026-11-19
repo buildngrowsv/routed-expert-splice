@@ -4,7 +4,7 @@
 
 ![Before and after training and the identity-matched removal result](results/new-solves.png)
 
-[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/339)
+[Published Pubroot paper 2026-339](https://pubroot.com/ai/fine-tuning/do-newly-learned-python-repairs-depend-on-a-transplanted-coding-expert/) · [AI review record](https://github.com/buildngrowsv/pubroot-website/issues/339)
 
 ## Finding a task the donor could solve better
 
