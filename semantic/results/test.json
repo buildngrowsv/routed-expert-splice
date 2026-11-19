@@ -1,0 +1,35 @@
+{
+  "host": {
+    "solves": 136,
+    "pairs": 0
+  },
+  "donor": {
+    "solves": 134,
+    "pairs": 2
+  },
+  "routed": {
+    "solves": 131,
+    "pairs": 3
+  },
+  "native-101": {
+    "solves": 124,
+    "pairs": 3
+  },
+  "oracle": 268,
+  "donor_minus_host": [
+    -0.00390625,
+    -0.052734375,
+    0.044921875
+  ],
+  "routed_donor_calls": 467,
+  "route_minus_host": [
+    -0.009765625,
+    -0.05859375,
+    0.037109375
+  ],
+  "route_minus_donor": [
+    -0.005859375,
+    -0.01953125,
+    0.0078125
+  ]
+}

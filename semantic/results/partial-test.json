@@ -1,0 +1,19 @@
+{
+  "n": 512,
+  "second_calls": 268,
+  "solves": {
+    "donor": 117,
+    "host": 135,
+    "donor_checked": 248,
+    "host_checked": 259,
+    "first_consistent": 254,
+    "cascade": 243
+  },
+  "cascade_minus_checked_donor": [
+    -0.009765625,
+    -0.052734375,
+    0.033203125
+  ],
+  "gained": 72,
+  "lost": 77
+}

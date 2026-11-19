@@ -1,0 +1,27 @@
+{
+  "discovery": {
+    "host": 59,
+    "donor": 73,
+    "donor_lead": [
+      0.0546875,
+      -0.01171875,
+      0.12109375
+    ],
+    "n": 256
+  },
+  "val": {
+    "host": 84,
+    "donor": 114,
+    "donor_lead": [
+      0.078125,
+      0.020833333333333332,
+      0.13541666666666666
+    ],
+    "n": 384
+  },
+  "native_validation": 96,
+  "surgery_qualified": false,
+  "oracle_headroom": 0.2109375,
+  "router_qualified": true,
+  "router_threshold": 0.9375
+}
