@@ -1,0 +1,181 @@
+{
+  "qualified": false,
+  "qualification": {
+    "n": 256,
+    "families": [
+      "020",
+      "101",
+      "123",
+      "130",
+      "212",
+      "213",
+      "220",
+      "321"
+    ],
+    "scores": {
+      "host_base": {
+        "correct": 64,
+        "complete_quartets": 0
+      },
+      "host_101": {
+        "correct": 92,
+        "complete_quartets": 0
+      },
+      "host_211": {
+        "correct": 88,
+        "complete_quartets": 0
+      },
+      "host_307": {
+        "correct": 84,
+        "complete_quartets": 0
+      },
+      "donor_base": {
+        "correct": 65,
+        "complete_quartets": 0
+      },
+      "donor_101": {
+        "correct": 63,
+        "complete_quartets": 0
+      },
+      "exchange0_101": {
+        "correct": 63,
+        "complete_quartets": 0
+      },
+      "exchange1_101": {
+        "correct": 65,
+        "complete_quartets": 0
+      },
+      "exchange2_101": {
+        "correct": 65,
+        "complete_quartets": 0
+      },
+      "exchange3_101": {
+        "correct": 65,
+        "complete_quartets": 0
+      },
+      "revert_101": {
+        "correct": 65,
+        "complete_quartets": 0
+      },
+      "donor_211": {
+        "correct": 67,
+        "complete_quartets": 0
+      },
+      "exchange0_211": {
+        "correct": 67,
+        "complete_quartets": 0
+      },
+      "exchange1_211": {
+        "correct": 62,
+        "complete_quartets": 0
+      },
+      "exchange2_211": {
+        "correct": 66,
+        "complete_quartets": 0
+      },
+      "exchange3_211": {
+        "correct": 68,
+        "complete_quartets": 0
+      },
+      "revert_211": {
+        "correct": 65,
+        "complete_quartets": 0
+      },
+      "donor_307": {
+        "correct": 67,
+        "complete_quartets": 0
+      },
+      "exchange0_307": {
+        "correct": 67,
+        "complete_quartets": 0
+      },
+      "exchange1_307": {
+        "correct": 64,
+        "complete_quartets": 0
+      },
+      "exchange2_307": {
+        "correct": 61,
+        "complete_quartets": 0
+      },
+      "exchange3_307": {
+        "correct": 63,
+        "complete_quartets": 0
+      },
+      "revert_307": {
+        "correct": 65,
+        "complete_quartets": 0
+      }
+    },
+    "paired": {
+      "101": {
+        "donor_minus_host": [
+          -0.11328125,
+          -0.171875,
+          -0.0546875
+        ],
+        "donor_minus_base": [
+          -0.0078125,
+          -0.01953125,
+          0.0
+        ],
+        "new_lost_on_reversion": 61,
+        "baseline_solves_lost": 63,
+        "identity_prediction_disagreements": 0,
+        "intact_minus_exchange": [
+          -0.0078125,
+          -0.01953125,
+          8.673617379884035e-19
+        ],
+        "intact_donor_only": 7,
+        "adapted_host_only": 36,
+        "gate": false
+      },
+      "211": {
+        "donor_minus_host": [
+          -0.08203125,
+          -0.11337890624999997,
+          -0.04296875
+        ],
+        "donor_minus_base": [
+          0.0078125,
+          -0.015625,
+          0.03515625
+        ],
+        "new_lost_on_reversion": 63,
+        "baseline_solves_lost": 61,
+        "identity_prediction_disagreements": 0,
+        "intact_minus_exchange": [
+          0.006510416666666671,
+          -0.010416666666666664,
+          0.0234375
+        ],
+        "intact_donor_only": 15,
+        "adapted_host_only": 36,
+        "gate": false
+      },
+      "307": {
+        "donor_minus_host": [
+          -0.06640625,
+          -0.109375,
+          -0.0234375
+        ],
+        "donor_minus_base": [
+          0.0078125,
+          -0.0078125,
+          0.02734375
+        ],
+        "new_lost_on_reversion": 8,
+        "baseline_solves_lost": 6,
+        "identity_prediction_disagreements": 0,
+        "intact_minus_exchange": [
+          0.016927083333333336,
+          0.0,
+          0.04166666666666667
+        ],
+        "intact_donor_only": 7,
+        "adapted_host_only": 24,
+        "gate": false
+      }
+    }
+  }
+}

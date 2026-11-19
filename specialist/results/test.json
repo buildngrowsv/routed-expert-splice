@@ -1,0 +1,182 @@
+{
+  "n": 384,
+  "families": [
+    "010",
+    "013",
+    "030",
+    "102",
+    "111",
+    "120",
+    "121",
+    "132",
+    "200",
+    "311",
+    "322",
+    "333"
+  ],
+  "scores": {
+    "host_base": {
+      "correct": 96,
+      "complete_quartets": 0
+    },
+    "host_101": {
+      "correct": 137,
+      "complete_quartets": 0
+    },
+    "host_211": {
+      "correct": 139,
+      "complete_quartets": 0
+    },
+    "host_307": {
+      "correct": 141,
+      "complete_quartets": 0
+    },
+    "donor_base": {
+      "correct": 94,
+      "complete_quartets": 0
+    },
+    "donor_101": {
+      "correct": 96,
+      "complete_quartets": 0
+    },
+    "exchange0_101": {
+      "correct": 96,
+      "complete_quartets": 0
+    },
+    "exchange1_101": {
+      "correct": 91,
+      "complete_quartets": 0
+    },
+    "exchange2_101": {
+      "correct": 96,
+      "complete_quartets": 0
+    },
+    "exchange3_101": {
+      "correct": 103,
+      "complete_quartets": 0
+    },
+    "revert_101": {
+      "correct": 94,
+      "complete_quartets": 0
+    },
+    "donor_211": {
+      "correct": 100,
+      "complete_quartets": 0
+    },
+    "exchange0_211": {
+      "correct": 100,
+      "complete_quartets": 0
+    },
+    "exchange1_211": {
+      "correct": 103,
+      "complete_quartets": 0
+    },
+    "exchange2_211": {
+      "correct": 103,
+      "complete_quartets": 0
+    },
+    "exchange3_211": {
+      "correct": 105,
+      "complete_quartets": 0
+    },
+    "revert_211": {
+      "correct": 94,
+      "complete_quartets": 0
+    },
+    "donor_307": {
+      "correct": 102,
+      "complete_quartets": 0
+    },
+    "exchange0_307": {
+      "correct": 102,
+      "complete_quartets": 0
+    },
+    "exchange1_307": {
+      "correct": 94,
+      "complete_quartets": 0
+    },
+    "exchange2_307": {
+      "correct": 95,
+      "complete_quartets": 0
+    },
+    "exchange3_307": {
+      "correct": 102,
+      "complete_quartets": 0
+    },
+    "revert_307": {
+      "correct": 94,
+      "complete_quartets": 0
+    }
+  },
+  "paired": {
+    "101": {
+      "donor_minus_host": [
+        -0.10677083333333333,
+        -0.13541666666666666,
+        -0.08072916666666667
+      ],
+      "donor_minus_base": [
+        0.005208333333333333,
+        -0.010416666666666666,
+        0.018229166666666668
+      ],
+      "new_lost_on_reversion": 90,
+      "baseline_solves_lost": 88,
+      "identity_prediction_disagreements": 0,
+      "intact_minus_exchange": [
+        -0.001736111111111109,
+        -0.019097222222222217,
+        0.014756944444444442
+      ],
+      "intact_donor_only": 19,
+      "adapted_host_only": 60,
+      "gate": false
+    },
+    "211": {
+      "donor_minus_host": [
+        -0.1015625,
+        -0.13541666666666666,
+        -0.06770833333333333
+      ],
+      "donor_minus_base": [
+        0.015625,
+        0.005208333333333333,
+        0.028645833333333332
+      ],
+      "new_lost_on_reversion": 99,
+      "baseline_solves_lost": 93,
+      "identity_prediction_disagreements": 0,
+      "intact_minus_exchange": [
+        -0.00954861111111111,
+        -0.020833333333333332,
+        0.0
+      ],
+      "intact_donor_only": 10,
+      "adapted_host_only": 49,
+      "gate": false
+    },
+    "307": {
+      "donor_minus_host": [
+        -0.1015625,
+        -0.1484375,
+        -0.046875
+      ],
+      "donor_minus_base": [
+        0.020833333333333332,
+        0.0026041666666666665,
+        0.044270833333333336
+      ],
+      "new_lost_on_reversion": 28,
+      "baseline_solves_lost": 20,
+      "identity_prediction_disagreements": 0,
+      "intact_minus_exchange": [
+        0.013020833333333337,
+        -0.005230034722222214,
+        0.036458333333333336
+      ],
+      "intact_donor_only": 14,
+      "adapted_host_only": 53,
+      "gate": false
+    }
+  }
+}

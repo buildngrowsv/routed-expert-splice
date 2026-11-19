@@ -1,0 +1,38 @@
+{
+  "all_baseline_and_adapted_logits_reproduced": true,
+  "all_live_identity_choices_equal_intact": true,
+  "calibration_and_discovery_families_disjoint": true,
+  "all_group_counts": {
+    "train": 32,
+    "calibration": 4,
+    "qualification": 8,
+    "test": 12,
+    "old_discovery": 8
+  },
+  "cached_vs_live_exchange_prediction_disagreements": {
+    "qualification_exchange0_101": 0,
+    "qualification_exchange1_101": 0,
+    "qualification_exchange2_101": 0,
+    "qualification_exchange3_101": 0,
+    "qualification_exchange0_211": 0,
+    "qualification_exchange1_211": 0,
+    "qualification_exchange2_211": 0,
+    "qualification_exchange3_211": 0,
+    "qualification_exchange0_307": 0,
+    "qualification_exchange1_307": 0,
+    "qualification_exchange2_307": 0,
+    "qualification_exchange3_307": 0,
+    "test_exchange0_101": 0,
+    "test_exchange1_101": 0,
+    "test_exchange2_101": 0,
+    "test_exchange3_101": 0,
+    "test_exchange0_211": 0,
+    "test_exchange1_211": 0,
+    "test_exchange2_211": 0,
+    "test_exchange3_211": 0,
+    "test_exchange0_307": 0,
+    "test_exchange1_307": 0,
+    "test_exchange2_307": 0,
+    "test_exchange3_307": 0
+  }
+}

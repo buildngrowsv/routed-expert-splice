@@ -1,0 +1,180 @@
+{
+  "donor": {
+    "101": {
+      "selected": 96,
+      "validation": [
+        {
+          "step": 0,
+          "loss": 1.7648194949741995,
+          "solves": 32
+        },
+        {
+          "step": 8,
+          "loss": 1.6735371790797449,
+          "solves": 32
+        },
+        {
+          "step": 32,
+          "loss": 1.4581403634936239,
+          "solves": 33
+        },
+        {
+          "step": 96,
+          "loss": 1.4226627064911495,
+          "solves": 36
+        }
+      ],
+      "seconds": 1.119219415995758,
+      "peak_mlx_bytes": 2270929968,
+      "parameters": 13074432,
+      "sha256": "371df3079bad978b093ccb757f4ebe5338697bc52ec9f08597554ab42f5c2bbc"
+    },
+    "211": {
+      "selected": 96,
+      "validation": [
+        {
+          "step": 0,
+          "loss": 1.7648194949741995,
+          "solves": 32
+        },
+        {
+          "step": 8,
+          "loss": 1.5792023251210172,
+          "solves": 32
+        },
+        {
+          "step": 32,
+          "loss": 1.504740640550665,
+          "solves": 33
+        },
+        {
+          "step": 96,
+          "loss": 1.4300889321480001,
+          "solves": 33
+        }
+      ],
+      "seconds": 1.103970958996797,
+      "peak_mlx_bytes": 2270929968,
+      "parameters": 13074432,
+      "sha256": "dfd033c0af2971cb889294123ef26abac845a766ee169f2b93c7fa8fe335ceca"
+    },
+    "307": {
+      "selected": 96,
+      "validation": [
+        {
+          "step": 0,
+          "loss": 1.7648194949741995,
+          "solves": 32
+        },
+        {
+          "step": 8,
+          "loss": 1.5584902541887486,
+          "solves": 33
+        },
+        {
+          "step": 32,
+          "loss": 1.4844607823163138,
+          "solves": 33
+        },
+        {
+          "step": 96,
+          "loss": 1.4641299335089237,
+          "solves": 32
+        }
+      ],
+      "seconds": 1.1038810830068542,
+      "peak_mlx_bytes": 2270929968,
+      "parameters": 13074432,
+      "sha256": "5cbdf9237dfe4335d2478bb5e5db0f55e952e1bf75e6a237bd1fce2443433021"
+    }
+  },
+  "host": {
+    "101": {
+      "selected": 96,
+      "validation": [
+        {
+          "step": 0,
+          "loss": 1.647326893521611,
+          "solves": 32
+        },
+        {
+          "step": 8,
+          "loss": 1.3925542229492949,
+          "solves": 32
+        },
+        {
+          "step": 32,
+          "loss": 1.3844415232490217,
+          "solves": 36
+        },
+        {
+          "step": 96,
+          "loss": 1.2984445806932612,
+          "solves": 47
+        }
+      ],
+      "seconds": 3.2460765419964446,
+      "peak_mlx_bytes": 6123789792,
+      "parameters": 46797824,
+      "sha256": "1db5e798aa6e2f82ee6f699812af8bddf950ddea24c5d64c172641427d057aec"
+    },
+    "211": {
+      "selected": 96,
+      "validation": [
+        {
+          "step": 0,
+          "loss": 1.647326893521611,
+          "solves": 32
+        },
+        {
+          "step": 8,
+          "loss": 1.5287357447500556,
+          "solves": 32
+        },
+        {
+          "step": 32,
+          "loss": 1.382849646518518,
+          "solves": 33
+        },
+        {
+          "step": 96,
+          "loss": 1.2771475245161346,
+          "solves": 48
+        }
+      ],
+      "seconds": 2.88398783300363,
+      "peak_mlx_bytes": 6123788768,
+      "parameters": 46797824,
+      "sha256": "2bec26eb7b43084c2e162ca9e8e2e3f64c0de77572c57d19fba1ce9a500ca771"
+    },
+    "307": {
+      "selected": 96,
+      "validation": [
+        {
+          "step": 0,
+          "loss": 1.647326893521611,
+          "solves": 32
+        },
+        {
+          "step": 8,
+          "loss": 1.600371476452417,
+          "solves": 32
+        },
+        {
+          "step": 32,
+          "loss": 1.409903253011123,
+          "solves": 33
+        },
+        {
+          "step": 96,
+          "loss": 1.38964590235078,
+          "solves": 44
+        }
+      ],
+      "seconds": 2.881016458006343,
+      "peak_mlx_bytes": 6123788768,
+      "parameters": 46797824,
+      "sha256": "b6de78eb9ae310ac3cd8309e7515feeb0e94500abbb2726eefe449cc5285c872"
+    }
+  }
+}

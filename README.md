@@ -39,3 +39,7 @@ For CPU-only verification of the published scores, use `uv run --with numpy pyth
 ## Executable indentation repairs
 
 The host chose four spaces for every repair. The smaller donor favored twelve and missed the discovery gate, 63/256 versus 64/256. [Paired programs, model choices and decision](indentation/README.md)
+
+## Specializing the exact coding block proposed for transfer
+
+Training the smaller model’s final feed-forward block gained 28–99 new repairs across three runs and lost 20–93 former solves. It trailed the adapted host on every qualification and test panel. [Specialist study, checkpoint release and per-repair reversion ledger](specialist/README.md)

@@ -1,0 +1,14 @@
+{
+  "host-specialist-checkpoints.zip": {
+    "sha256": "7cb3f16019133c7cf21a158eba2507f8da5d204c0923fd2947c9a6b74177e238",
+    "bytes": 280802832,
+    "upstream_model": "Qwen/Qwen2.5-1.5B",
+    "upstream_revision": "8faed761d45a263340a0528343f099c05c9a4323"
+  },
+  "donor-specialist-checkpoints.zip": {
+    "sha256": "14ffa15a5151ee55ce58265f53d84fa7214114842fc9c8cce78279116bf8d274",
+    "bytes": 78459907,
+    "upstream_model": "Qwen/Qwen2.5-Coder-0.5B",
+    "upstream_revision": "8123ea2e9354afb7ffcc6c8641d1b2f5ecf18301"
+  }
+}
