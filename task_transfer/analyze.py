@@ -63,6 +63,11 @@ def main():
         np.testing.assert_array_equal(gold,z["gold"])
         preds={k:z[k].argmax(-1) for k in z.files if k not in ("gold","patch_token_ids")}
         assert all(np.isfinite(z[k]).all() for k in preds)
+        nll={}
+        for k in preds:
+            raw=z[k].astype("float64")
+            centered=raw-raw.max(-1,keepdims=True)
+            nll[k]=np.log(np.exp(centered).sum(-1))-centered[:,np.arange(n),gold]
     ok={k:oracle[np.arange(n),p] for k,p in preds.items()}
     native,donor,pre,on,off=(ok[k] for k in ("frozen_native","donor","frozen_coder","trained_coder","coder_on_knockout"))
     delta=lambda a,b:a.astype(float)-b.astype(float)
@@ -104,6 +109,8 @@ def main():
     write("summary.json",dict(n=n,seed_order=SEEDS,counts=counts,standalone_discordant=[wins,losses],
           standalone_exact_p=exact_p(wins,losses),comparisons=comparisons,
           ledger_counts={k:{j:len(x) for j,x in d.items()} for k,d in groups.items()},
+          exploratory_confidence=dict(task_nll={k:v.mean(1).tolist() for k,v in nll.items()},
+                                      withdrawal_nll=paired(nll["coder_on_knockout"]-nll["trained_coder"])),
           parser_solves=parse_solves,unique_parse=sum(len(x)==1 for x in parser),
           unique_prompts_and_sources=len(seen[0]),
           by_token={PATCHES[g]:{k:v[:,gold==g].sum(1).tolist() for k,v in ok.items()} for g in range(4)}))

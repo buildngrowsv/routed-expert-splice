@@ -1,0 +1,699 @@
+{
+  "n": 384,
+  "seed_order": [
+    101,
+    211,
+    307
+  ],
+  "counts": {
+    "donor": [
+      344
+    ],
+    "plain_donor": [
+      98
+    ],
+    "plain_host": [
+      127
+    ],
+    "frozen_native": [
+      111
+    ],
+    "trained_native": [
+      384,
+      384,
+      384
+    ],
+    "frozen_knockout": [
+      123
+    ],
+    "trained_knockout": [
+      384,
+      384,
+      384
+    ],
+    "frozen_direct": [
+      96
+    ],
+    "trained_direct": [
+      384,
+      384,
+      384
+    ],
+    "frozen_shuffled": [
+      118
+    ],
+    "trained_shuffled": [
+      384,
+      384,
+      384
+    ],
+    "shuffled_on_coder": [
+      384,
+      384,
+      384
+    ],
+    "frozen_general": [
+      120
+    ],
+    "trained_general": [
+      384,
+      384,
+      384
+    ],
+    "general_on_coder": [
+      384,
+      384,
+      384
+    ],
+    "frozen_coder": [
+      128
+    ],
+    "trained_coder": [
+      384,
+      384,
+      384
+    ],
+    "coder_on_knockout": [
+      384,
+      384,
+      384
+    ],
+    "coder_on_shuffled": [
+      384,
+      384,
+      384
+    ],
+    "coder_on_general": [
+      384,
+      384,
+      384
+    ]
+  },
+  "standalone_discordant": [
+    241,
+    8
+  ],
+  "standalone_exact_p": 7.478870706073412e-61,
+  "comparisons": {
+    "training_gain_coder": {
+      "mean": 0.6666666666666666,
+      "interval": [
+        0.6171875,
+        0.7135416666666666
+      ]
+    },
+    "withdrawal_before": {
+      "mean": 0.013020833333333334,
+      "interval": [
+        0.0,
+        0.026041666666666668
+      ]
+    },
+    "withdrawal_after": {
+      "mean": 0.0,
+      "interval": [
+        0.0,
+        0.0
+      ]
+    },
+    "change_in_reliance": {
+      "mean": -0.013020833333333334,
+      "interval": [
+        -0.028645833333333332,
+        0.0
+      ]
+    },
+    "donor_vs_host": {
+      "mean": 0.6067708333333334,
+      "interval": [
+        0.5520833333333334,
+        0.6614583333333334
+      ]
+    },
+    "coder_vs_trained_native": {
+      "mean": 0.0,
+      "interval": [
+        0.0,
+        0.0
+      ]
+    },
+    "coder_vs_trained_shuffled": {
+      "mean": 0.0,
+      "interval": [
+        0.0,
+        0.0
+      ]
+    },
+    "coder_vs_trained_general": {
+      "mean": 0.0,
+      "interval": [
+        0.0,
+        0.0
+      ]
+    },
+    "coder_vs_trained_direct": {
+      "mean": 0.0,
+      "interval": [
+        0.0,
+        0.0
+      ]
+    },
+    "coder_vs_trained_knockout": {
+      "mean": 0.0,
+      "interval": [
+        0.0,
+        0.0
+      ]
+    },
+    "matching_general": {
+      "mean": 0.0,
+      "interval": [
+        0.0,
+        0.0
+      ]
+    },
+    "matching_shuffled": {
+      "mean": 0.0,
+      "interval": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "ledger_counts": {
+    "new": {
+      "101": 273,
+      "211": 273,
+      "307": 273,
+      "all_seeds": 273,
+      "any_seed": 273,
+      "majority": 273
+    },
+    "new_lost_when_off": {
+      "101": 0,
+      "211": 0,
+      "307": 0,
+      "all_seeds": 0,
+      "any_seed": 0,
+      "majority": 0
+    },
+    "new_still_solved_off": {
+      "101": 273,
+      "211": 273,
+      "307": 273,
+      "all_seeds": 273,
+      "any_seed": 273,
+      "majority": 273
+    },
+    "new_vs_frozen_graft": {
+      "101": 256,
+      "211": 256,
+      "307": 256,
+      "all_seeds": 256,
+      "any_seed": 256,
+      "majority": 256
+    },
+    "new_vs_both_untouched_host_and_frozen_graft": {
+      "101": 249,
+      "211": 249,
+      "307": 249,
+      "all_seeds": 249,
+      "any_seed": 249,
+      "majority": 249
+    },
+    "loss_on_withdrawal": {
+      "101": 0,
+      "211": 0,
+      "307": 0,
+      "all_seeds": 0,
+      "any_seed": 0,
+      "majority": 0
+    },
+    "gained_on_withdrawal": {
+      "101": 0,
+      "211": 0,
+      "307": 0,
+      "all_seeds": 0,
+      "any_seed": 0,
+      "majority": 0
+    },
+    "donor_supported_new_lost": {
+      "101": 0,
+      "211": 0,
+      "307": 0,
+      "all_seeds": 0,
+      "any_seed": 0,
+      "majority": 0
+    },
+    "strict_new_lost": {
+      "101": 0,
+      "211": 0,
+      "307": 0,
+      "all_seeds": 0,
+      "any_seed": 0,
+      "majority": 0
+    },
+    "strict_all_controls_fail": {
+      "101": 0,
+      "211": 0,
+      "307": 0,
+      "all_seeds": 0,
+      "any_seed": 0,
+      "majority": 0
+    }
+  },
+  "exploratory_confidence": {
+    "task_nll": {
+      "donor": [
+        0.19051736490416485
+      ],
+      "plain_donor": [
+        1.1607666690167961
+      ],
+      "plain_host": [
+        1.4768576835236729
+      ],
+      "frozen_native": [
+        1.6629262772917188
+      ],
+      "trained_native": [
+        0.0011653529432279713,
+        0.0008464521901904624,
+        0.00188990829469461
+      ],
+      "frozen_knockout": [
+        1.6325969673270038
+      ],
+      "trained_knockout": [
+        0.0015659587212329372,
+        0.0010744067180329855,
+        0.0023119063536211886
+      ],
+      "frozen_direct": [
+        1.9177889649425086
+      ],
+      "trained_direct": [
+        0.0016363407839664011,
+        0.0012431328402262582,
+        0.0023832727825941935
+      ],
+      "frozen_shuffled": [
+        1.698015750207255
+      ],
+      "trained_shuffled": [
+        0.0018667505212601014,
+        0.0013632807956080225,
+        0.0026974449259653636
+      ],
+      "shuffled_on_coder": [
+        0.0024043905107057405,
+        0.0017899592675548436,
+        0.0036056386887827045
+      ],
+      "frozen_general": [
+        1.7398832619534275
+      ],
+      "trained_general": [
+        0.001824616650362915,
+        0.0013222450462678913,
+        0.0025318235920867484
+      ],
+      "general_on_coder": [
+        0.0021209036830148243,
+        0.0016835145901891735,
+        0.0026606292781664984
+      ],
+      "frozen_coder": [
+        1.6075955358336975
+      ],
+      "trained_coder": [
+        0.0016151211176763495,
+        0.0011672600673497575,
+        0.0023802526456532477
+      ],
+      "coder_on_knockout": [
+        0.004073937089662247,
+        0.002945603739078045,
+        0.0059581323283516155
+      ],
+      "coder_on_shuffled": [
+        0.002204855111723705,
+        0.0016551032127698562,
+        0.0030048861514352047
+      ],
+      "coder_on_general": [
+        0.0026700158238885433,
+        0.0018122938061139755,
+        0.004033399450612848
+      ]
+    },
+    "withdrawal_nll": {
+      "mean": 0.002605013108804184,
+      "interval": [
+        0.0017827439024687692,
+        0.003586945533900589
+      ]
+    }
+  },
+  "parser_solves": 384,
+  "unique_parse": 384,
+  "unique_prompts_and_sources": 2560,
+  "by_token": {
+    ")": {
+      "donor": [
+        96
+      ],
+      "plain_donor": [
+        0
+      ],
+      "plain_host": [
+        76
+      ],
+      "frozen_native": [
+        0
+      ],
+      "trained_native": [
+        96,
+        96,
+        96
+      ],
+      "frozen_knockout": [
+        0
+      ],
+      "trained_knockout": [
+        96,
+        96,
+        96
+      ],
+      "frozen_direct": [
+        0
+      ],
+      "trained_direct": [
+        96,
+        96,
+        96
+      ],
+      "frozen_shuffled": [
+        0
+      ],
+      "trained_shuffled": [
+        96,
+        96,
+        96
+      ],
+      "shuffled_on_coder": [
+        96,
+        96,
+        96
+      ],
+      "frozen_general": [
+        0
+      ],
+      "trained_general": [
+        96,
+        96,
+        96
+      ],
+      "general_on_coder": [
+        96,
+        96,
+        96
+      ],
+      "frozen_coder": [
+        0
+      ],
+      "trained_coder": [
+        96,
+        96,
+        96
+      ],
+      "coder_on_knockout": [
+        96,
+        96,
+        96
+      ],
+      "coder_on_shuffled": [
+        96,
+        96,
+        96
+      ],
+      "coder_on_general": [
+        96,
+        96,
+        96
+      ]
+    },
+    "]": {
+      "donor": [
+        56
+      ],
+      "plain_donor": [
+        96
+      ],
+      "plain_host": [
+        0
+      ],
+      "frozen_native": [
+        39
+      ],
+      "trained_native": [
+        96,
+        96,
+        96
+      ],
+      "frozen_knockout": [
+        31
+      ],
+      "trained_knockout": [
+        96,
+        96,
+        96
+      ],
+      "frozen_direct": [
+        5
+      ],
+      "trained_direct": [
+        96,
+        96,
+        96
+      ],
+      "frozen_shuffled": [
+        26
+      ],
+      "trained_shuffled": [
+        96,
+        96,
+        96
+      ],
+      "shuffled_on_coder": [
+        96,
+        96,
+        96
+      ],
+      "frozen_general": [
+        24
+      ],
+      "trained_general": [
+        96,
+        96,
+        96
+      ],
+      "general_on_coder": [
+        96,
+        96,
+        96
+      ],
+      "frozen_coder": [
+        32
+      ],
+      "trained_coder": [
+        96,
+        96,
+        96
+      ],
+      "coder_on_knockout": [
+        96,
+        96,
+        96
+      ],
+      "coder_on_shuffled": [
+        96,
+        96,
+        96
+      ],
+      "coder_on_general": [
+        96,
+        96,
+        96
+      ]
+    },
+    "}": {
+      "donor": [
+        96
+      ],
+      "plain_donor": [
+        0
+      ],
+      "plain_host": [
+        0
+      ],
+      "frozen_native": [
+        0
+      ],
+      "trained_native": [
+        96,
+        96,
+        96
+      ],
+      "frozen_knockout": [
+        0
+      ],
+      "trained_knockout": [
+        96,
+        96,
+        96
+      ],
+      "frozen_direct": [
+        0
+      ],
+      "trained_direct": [
+        96,
+        96,
+        96
+      ],
+      "frozen_shuffled": [
+        0
+      ],
+      "trained_shuffled": [
+        96,
+        96,
+        96
+      ],
+      "shuffled_on_coder": [
+        96,
+        96,
+        96
+      ],
+      "frozen_general": [
+        0
+      ],
+      "trained_general": [
+        96,
+        96,
+        96
+      ],
+      "general_on_coder": [
+        96,
+        96,
+        96
+      ],
+      "frozen_coder": [
+        0
+      ],
+      "trained_coder": [
+        96,
+        96,
+        96
+      ],
+      "coder_on_knockout": [
+        96,
+        96,
+        96
+      ],
+      "coder_on_shuffled": [
+        96,
+        96,
+        96
+      ],
+      "coder_on_general": [
+        96,
+        96,
+        96
+      ]
+    },
+    ":": {
+      "donor": [
+        96
+      ],
+      "plain_donor": [
+        2
+      ],
+      "plain_host": [
+        51
+      ],
+      "frozen_native": [
+        72
+      ],
+      "trained_native": [
+        96,
+        96,
+        96
+      ],
+      "frozen_knockout": [
+        92
+      ],
+      "trained_knockout": [
+        96,
+        96,
+        96
+      ],
+      "frozen_direct": [
+        91
+      ],
+      "trained_direct": [
+        96,
+        96,
+        96
+      ],
+      "frozen_shuffled": [
+        92
+      ],
+      "trained_shuffled": [
+        96,
+        96,
+        96
+      ],
+      "shuffled_on_coder": [
+        96,
+        96,
+        96
+      ],
+      "frozen_general": [
+        96
+      ],
+      "trained_general": [
+        96,
+        96,
+        96
+      ],
+      "general_on_coder": [
+        96,
+        96,
+        96
+      ],
+      "frozen_coder": [
+        96
+      ],
+      "trained_coder": [
+        96,
+        96,
+        96
+      ],
+      "coder_on_knockout": [
+        96,
+        96,
+        96
+      ],
+      "coder_on_shuffled": [
+        96,
+        96,
+        96
+      ],
+      "coder_on_general": [
+        96,
+        96,
+        96
+      ]
+    }
+  }
+}
