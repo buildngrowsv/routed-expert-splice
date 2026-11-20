@@ -30,4 +30,4 @@ The analysis retains the exact programs and full four-candidate logits from the 
 
 The account owner proposed testing which newly correct answers disappear when an expert is switched off. OpenAI Codex generated the counterfactual panel, ran the study on the owner's Mac Studio, audited the predictions and assisted with the manuscript.
 
-[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/369)
+[Published Pubroot paper](https://pubroot.com/ai/fine-tuning/does-a-transplanted-coding-expert-follow-a-changed-opening-delimiter/) · [Submission and review](https://github.com/buildngrowsv/pubroot-website/issues/369)
