@@ -25,7 +25,11 @@ def whole_vocabulary(model,h,ends,cut,candidates):
     item = mx.arange(len(ends))
     vectors = model.model.norm(h[item,ends])
     head = model.model.embed_tokens.as_linear if model.args.tie_word_embeddings else model.lm_head
-    z = head(vectors).astype(mx.float32)
+    return vocabulary_ranks(head(vectors).astype(mx.float32),candidates)
+
+
+def vocabulary_ranks(z,candidates):
+    item = mx.arange(len(candidates))
     true_idx = mx.array(candidates)
     other_idx = mx.array(candidates[np.arange(len(candidates))^1])
     true_logit = z[item,true_idx]

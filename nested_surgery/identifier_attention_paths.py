@@ -34,14 +34,14 @@ def masks(width, source, readout):
     return {k:m[:,None,:,:] for k,m in zip(MODES,(all_rows,direct,relay),strict=True)}
 
 
-def read_masked(model, h, ends, cut, candidates, mask):
+def read_masked(model, h, ends, cut, candidates, mask, *, scoring=odds):
     layers = model.model.layers[cut:]
     schedule = mask if isinstance(mask,tuple) else repeat(mask,len(layers))
     for layer,active_mask in zip(layers,schedule,strict=True):
         h = layer(h,active_mask)
     state = model.model.norm(h[mx.arange(len(ends)),ends])
     head = model.model.embed_tokens.as_linear if model.args.tie_word_embeddings else model.lm_head
-    return odds(head(state).astype(mx.float32),candidates)
+    return scoring(head(state).astype(mx.float32),candidates)
 
 
 def evaluate(model, rows, axis, cut, *, modes=MODES, mask_factory=masks):
