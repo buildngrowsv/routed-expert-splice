@@ -1,0 +1,51 @@
+{
+  "decision": "complete",
+  "models": {
+    "donor": [
+      "Qwen/Qwen2.5-Coder-7B",
+      "0396a76181e127dfc13e5c5ec48a8cee09938b02"
+    ],
+    "host": [
+      "Qwen/Qwen2.5-14B",
+      "97e1e76335b7017d8f67c08a19d103c0504298c9"
+    ]
+  },
+  "test_pairs": 512,
+  "calibration_pairs": 512,
+  "arms": {
+    "donor": {
+      "width": 3584,
+      "lane": 448,
+      "cut": 6,
+      "eligible": 512,
+      "switches": {
+        "last": 0,
+        "adjacent": 0,
+        "whole_site": 512,
+        "whole_state": 512
+      },
+      "decoded": {
+        "last": 512,
+        "adjacent": 512
+      },
+      "reproduces": true
+    },
+    "host": {
+      "width": 5120,
+      "lane": 640,
+      "cut": 10,
+      "eligible": 512,
+      "switches": {
+        "last": 0,
+        "adjacent": 0,
+        "whole_site": 512,
+        "whole_state": 512
+      },
+      "decoded": {
+        "last": 512,
+        "adjacent": 512
+      },
+      "reproduces": true
+    }
+  }
+}

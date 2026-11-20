@@ -1,0 +1,9 @@
+{
+  "job": "qwen-identifier-source-intervention",
+  "revision": "78c3181ae1f7dc2c044ad8b8a14ef73c46ae2731",
+  "attempt": 1,
+  "started": "2026-11-20T06:46:29+00:00",
+  "status": "done",
+  "finished": "2026-11-20T06:50:35+00:00",
+  "exit": 0
+}
