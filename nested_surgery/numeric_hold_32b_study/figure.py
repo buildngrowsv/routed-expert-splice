@@ -30,5 +30,5 @@ for j, (arm, label, color) in enumerate(zip(keys, labels, colors, strict=True)):
     data = [100 * row["correct"][arm] / row["total"] for row in audit["directions"].values()]
     bars = right.bar(np.arange(2) + (j - .5) * .26, data, color=color, width=.23, label=label)
     right.bar_label(bars, labels=[f"{v:.1f}%" for v in data], padding=4)
-right.legend(loc="lower right", frameon=False)
+right.legend(loc="upper center", bbox_to_anchor=(.5, -.15), ncol=2, frameon=False)
 fig.savefig(root / "held-carry.png", dpi=160)

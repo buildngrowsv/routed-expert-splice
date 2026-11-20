@@ -23,4 +23,4 @@ The hold improved 27 groups and lost 52, yielding **−4.88 percentage points** 
 
 Recompute program validity, outcome overlaps and paired intervals with `uv run --with numpy python nested_surgery/numeric_hold_32b_study/verify.py`. The run took 6 minutes 40 seconds and used 67.1 GB peak MLX allocation on an Apple M5 Ultra with 80 GPU cores, 256 GiB unified memory and Metal 4. The environment was macOS 27.2 (26B118), Python 3.12.16, MLX 0.32.4, MLX-LM 0.32.2, NumPy 2.5.5 and tokenizers 0.23.3. The owner proposed the fixed reference and transplanted experts. OpenAI Codex implemented and ran the paired comparison, audited the outputs and assisted with writing. [Execution receipt](results/receipt.json) · [Independent audit](audit.json)
 
-[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/486)
+[Published Pubroot article](https://pubroot.com/ai/fine-tuning/a-seven-block-fixed-reference-reduced-complete-32b-carry-reversals/) · [Submission and review](https://github.com/buildngrowsv/pubroot-website/issues/486)
