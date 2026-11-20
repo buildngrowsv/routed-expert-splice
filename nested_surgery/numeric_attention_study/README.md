@@ -27,3 +27,5 @@ Run `uv run --with numpy python nested_surgery/numeric_attention_study/verify.py
 ## Follow-up qualification of a single first-hop span
 
 A separate 512-pair panel tested two equally long spans near the return expression. One span was the operand's identifier and the other immediately preceded it. We restricted the edited assignment to sending only to one span at a time, while its self-read remained available. Both restricted clean arms solved zero complete native pairs. Unrestricted attention solved 508, and leaving all relays available solved 441. Blocking the final direct edge and the variable-use span, while leaving other relays available, solved 435. The shared native-correct cohort for the five-arm analysis was empty. That leaves the first-hop hypothesis unidentified under these restrictions. [Registered follow-up](../NUMERIC_FIRST_RELAY.md) · [Saved ranks and spans](relay-results) · [Independent audit](verify_relay.py) · [Qualification counts](relay-audit.json)
+
+[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/472)

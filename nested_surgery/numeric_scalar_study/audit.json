@@ -1,0 +1,61 @@
+{
+  "models": {
+    "donor": [
+      "Qwen/Qwen2.5-Coder-7B",
+      "0396a76181e127dfc13e5c5ec48a8cee09938b02"
+    ],
+    "14b": [
+      "Qwen/Qwen2.5-14B",
+      "97e1e76335b7017d8f67c08a19d103c0504298c9"
+    ],
+    "32b": [
+      "Qwen/Qwen2.5-32B",
+      "1818d35814b8319459f4bd55ed1ac8709630f003"
+    ]
+  },
+  "groups": 512,
+  "gain": 2.624716970336347,
+  "map_digest": "4b5c46001809387bdf9195bf77d70de2ac9e98ffcaf6281fc4b4a9a5802acc3f",
+  "prompts_digest": "13497255d397fe710e8784f6a50ab90644dd70d933a7422be3a9df983f506a9e",
+  "decision": "answer_free_gain",
+  "eligible": 507,
+  "native_by_run": [
+    507,
+    507,
+    507
+  ],
+  "reversals": {
+    "gain": 434,
+    "random": 0,
+    "raw": 92,
+    "fitted_magnitude": 414
+  },
+  "gain_minus": {
+    "raw": {
+      "mean": 0.6745562130177515,
+      "interval": [
+        0.6351084812623274,
+        0.7159763313609467
+      ]
+    },
+    "random": {
+      "mean": 0.8560157790927022,
+      "interval": [
+        0.8264299802761341,
+        0.8856015779092702
+      ]
+    },
+    "fitted_magnitude": {
+      "mean": 0.03944773175542406,
+      "interval": [
+        0.021696252465483234,
+        0.05917159763313609
+      ]
+    }
+  },
+  "norm_ratio_to_previous_match": [
+    1.3942002058029175,
+    1.6889445185661316,
+    1.869497537612915
+  ]
+}

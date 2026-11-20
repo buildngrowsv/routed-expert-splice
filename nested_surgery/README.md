@@ -58,3 +58,4 @@ On the registered identical-suffix follow-up the same coding graft solved zero o
 - [32B receiver comparison](numeric_scale_study/README.md) tests a newly fitted interface against the borrowed 14B direction at the same edit norm.
 - [Numeric attention reuse](numeric_attention_study/README.md) tests the identifier masks on a transplanted operand and records the first-hop qualification.
 - [Raw versus norm-matched 32B reuse](numeric_raw_32b_study/README.md) compares one edit direction at two magnitude rules.
+- [Single-gain 32B transfer](numeric_scalar_study/README.md) uses native assignment-state differences to set edit magnitude without answers.
