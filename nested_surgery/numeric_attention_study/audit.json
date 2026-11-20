@@ -1,0 +1,73 @@
+{
+  "models": {
+    "donor": [
+      "Qwen/Qwen2.5-Coder-7B",
+      "0396a76181e127dfc13e5c5ec48a8cee09938b02"
+    ],
+    "host": [
+      "Qwen/Qwen2.5-14B",
+      "97e1e76335b7017d8f67c08a19d103c0504298c9"
+    ]
+  },
+  "groups": 512,
+  "strong": [
+    20,
+    21,
+    26,
+    33,
+    37,
+    38,
+    44,
+    45
+  ],
+  "weak": [
+    22,
+    24,
+    27,
+    32,
+    34,
+    35,
+    42,
+    48
+  ],
+  "map_sha256": "4b5c46001809387bdf9195bf77d70de2ac9e98ffcaf6281fc4b4a9a5802acc3f",
+  "route_sha256": "5ac315fc63d7b28484afaa0b77583f5ce228efcaeef3ca0a8123d1ae105d3b6b",
+  "decision": "unresolved",
+  "eligible": 456,
+  "clean_groups": {
+    "unrestricted": 510,
+    "blocked": 458,
+    "strong_eight": 501,
+    "weak_eight": 481,
+    "without_strong": 506
+  },
+  "reversals": {
+    "unrestricted": 456,
+    "blocked": 384,
+    "strong_eight": 456,
+    "weak_eight": 434,
+    "without_strong": 456
+  },
+  "strong_minus_full": {
+    "mean": 0.0,
+    "interval": [
+      0.0,
+      0.0
+    ]
+  },
+  "strong_minus_weak": {
+    "mean": 0.04824561403508772,
+    "interval": [
+      0.02850877192982456,
+      0.07017543859649122
+    ]
+  },
+  "removal": {
+    "mean": 0.0,
+    "interval": [
+      0.0,
+      0.0
+    ]
+  },
+  "unrestricted_control_qualified": true
+}

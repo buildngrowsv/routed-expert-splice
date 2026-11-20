@@ -1,0 +1,9 @@
+{
+  "job": "qwen-numeric-first-relay",
+  "revision": "37c57362200595f8d323e3d16ae88a253ce93be3",
+  "attempt": 1,
+  "started": "2026-11-20T08:55:42+00:00",
+  "status": "done",
+  "finished": "2026-11-20T08:59:18+00:00",
+  "exit": 0
+}

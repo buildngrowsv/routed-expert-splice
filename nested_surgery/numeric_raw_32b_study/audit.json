@@ -1,0 +1,44 @@
+{
+  "models": {
+    "donor": [
+      "Qwen/Qwen2.5-Coder-7B",
+      "0396a76181e127dfc13e5c5ec48a8cee09938b02"
+    ],
+    "host": [
+      "Qwen/Qwen2.5-32B",
+      "1818d35814b8319459f4bd55ed1ac8709630f003"
+    ]
+  },
+  "groups": 512,
+  "map_digest": "4b5c46001809387bdf9195bf77d70de2ac9e98ffcaf6281fc4b4a9a5802acc3f",
+  "prompts_digest": "13497255d397fe710e8784f6a50ab90644dd70d933a7422be3a9df983f506a9e",
+  "norm_ratio_quantiles": [
+    0.53118115067482,
+    0.643476814031601,
+    0.7122662961483002
+  ],
+  "decision": "unresolved",
+  "eligible": 507,
+  "native_new": 507,
+  "native_prior": 507,
+  "reversals": {
+    "borrowed_raw": 92,
+    "norm_matched": 0,
+    "borrowed_scaled": 414
+  },
+  "raw_minus_random": {
+    "mean": 0.1814595660749507,
+    "interval": [
+      0.14985207100591716,
+      0.21499013806706113
+    ]
+  },
+  "raw_minus_scaled": {
+    "mean": -0.6351084812623274,
+    "interval": [
+      -0.6765285996055227,
+      -0.591715976331361
+    ]
+  },
+  "near_scaled": false
+}

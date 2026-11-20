@@ -1,0 +1,9 @@
+{
+  "job": "qwen-numeric-identifier-route-transfer",
+  "revision": "2a11706fb2ee80eb9394f3dab5a003e5a706512f",
+  "attempt": 1,
+  "started": "2026-11-20T08:45:39+00:00",
+  "status": "done",
+  "finished": "2026-11-20T08:49:12+00:00",
+  "exit": 0
+}

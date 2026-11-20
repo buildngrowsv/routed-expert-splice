@@ -1,0 +1,24 @@
+{
+  "models": {
+    "donor": [
+      "Qwen/Qwen2.5-Coder-7B",
+      "0396a76181e127dfc13e5c5ec48a8cee09938b02"
+    ],
+    "host": [
+      "Qwen/Qwen2.5-14B",
+      "97e1e76335b7017d8f67c08a19d103c0504298c9"
+    ]
+  },
+  "groups": 512,
+  "earlier_route_sha256": "ef4cfc1d6f8597e414f83e900215cdd60171d000288253417068b90dc033a3e3",
+  "map_sha256": "4b5c46001809387bdf9195bf77d70de2ac9e98ffcaf6281fc4b4a9a5802acc3f",
+  "decision": "unresolved",
+  "eligible": 0,
+  "native_by_mask": {
+    "unrestricted": 508,
+    "all_relays": 441,
+    "use_only": 0,
+    "control_only": 0,
+    "without_use": 435
+  }
+}
