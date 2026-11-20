@@ -26,23 +26,24 @@ ROUTE_JOB="qwen-identifier-sparse-edge-sets"
 ROUTE_REV="7f8d9bdd92d2e3ab0e918f213a0d29c79507f4f3"
 
 
-def collect(host,rows,source_states,mapping,make_masks):
+def collect(host,rows,source_states,mapping,make_masks,*,modes=MODES):
     donor_axis,host_axis,_,_,weights,bias=mapping
     cut=SITES["host"]
-    scores={m+"_"+a:[] for m in MODES for a in ("clean","edited")}
+    scores={m+"_"+a:[] for m in modes for a in ("clean","edited")}
     norms=[]
     offset=0
     for i,(ids,source,end,choices,_) in enumerate(encoded_batches(rows)):
         h=prefix(host,ids,cut)
         current=h[mx.arange(len(source)),source].astype(mx.float32)
         partner=mx.array(np.arange(len(source))^1)
+        start=offset
         donor=mx.array(source_states[offset:offset+len(source)].astype(np.float32))
         offset+=len(source)
         target=donor[partner]@donor_axis@weights+bias
         change=(target-current@host_axis)@host_axis.T
         edited=patch(h,source,current+change)
         norms.extend(np.array(mx.linalg.norm(change,axis=1)))
-        for m,mask in make_masks(ids.shape[1],source,end).items():
+        for m,mask in make_masks(ids.shape[1],source,end,start).items():
             scores[m+"_clean"].extend(read_masked(host,h,end,cut,choices,mask,scoring=vocabulary_ranks))
             scores[m+"_edited"].extend(read_masked(host,edited,end,cut,choices,mask,scoring=vocabulary_ranks))
         if (i+1)%8==0:
@@ -96,7 +97,7 @@ def main():
     host,_=load_model(host_path,strict=True)
     assert len(host.model.layers)==48
     make=partial(schedules,cut=10,depth=48,strong=tuple(config["strong"]),weak=tuple(config["weak"]))
-    scores,norms=collect(host,panel,states,mapping,make)
+    scores,norms=collect(host,panel,states,mapping,lambda width,src,end,_:make(width,src,end))
     assert all(v.shape==(512,2,4) and np.isfinite(v).all() for v in scores.values())
     np.savez_compressed(out/"numeric-attention.npz",norms=norms,**scores)
     (out/"programs.json").write_text(json.dumps(dict(host=panel,donor=source),separators=(",",":"))+"\n")
