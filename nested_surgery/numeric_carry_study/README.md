@@ -23,3 +23,5 @@ Qwen tokenizes these one- and two-digit answers as one token per digit. We appen
 All 512 groups qualified in the unedited host. Expected answers changed length in 1,494 of the 2,048 prompt variants. The group-level advantage over random was +100 points with the same two bootstrap bounds, reflecting uniform outcomes on this panel. The experiment uses short generated addition programs, known activation sites, and two donor runs per operand. [Raw top-token trajectories and edit doses](results) · [Independent verifier](verify.py) · [Audit output](audit.json)
 
 Run `uv run --with numpy python nested_surgery/numeric_carry_study/verify.py` to execute the programs and recompute the exact sequence and grouping checks. The Studio run took four minutes and 18 seconds using Python 3.12, MLX 0.32.4, MLX-LM 0.32.2 and NumPy 2.5.5. The owner proposed expert transplantation and the study of protected internal references. OpenAI Codex designed and operated the experiment, checked the artifacts and assisted with writing. [Pinned execution receipt](results/receipt.json)
+
+[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/462)

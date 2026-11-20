@@ -24,3 +24,7 @@ A native pair qualifies if the correct next-token digit is the unique maximum ov
 The one-pass and paired arms agree in 495 of 497 eligible full-vocabulary pairs. Each passed one pair the other missed. The one-pass advantage above random was +98.59 percentage points with a paired 95% interval of +97.38 to +99.60. The source location, projection, and output task are supplied. This supports using one target-state read for this numeric variable in these two frozen checkpoints. [Independent verifier](verify.py) · [Audited counts and map digest](audit.json)
 
 Run `uv run --with numpy python nested_surgery/numeric_absolute_study/verify.py` to execute the prompts and reconstruct the dose and rank checks. The Studio run took 118 seconds under Python 3.12, MLX 0.32.4, MLX-LM 0.32.2 and NumPy 2.5.5. The owner proposed expert transplantation. OpenAI Codex designed and implemented this comparison, ran it, verified its outputs and assisted with writing. [Version-pinned receipt](results/receipt.json)
+
+[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/463)
+
+[Registered 32B comparison](../NUMERIC_TRANSFER_32B.md)

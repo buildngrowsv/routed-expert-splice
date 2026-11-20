@@ -30,13 +30,12 @@ def fit_absolute(donor,host,axes):
     return weights.astype(np.float32),bias.astype(np.float32)
 
 
-def evaluate(host,rows,states,axes,fit):
+def evaluate(host,rows,states,axes,fit,*,cut=SITES["host"],borrowed=None):
     donor_axis,host_axis,random_axis,_=axes
     weights,bias=fit
-    scores={name:[] for name in MODES}
+    scores={name:[] for name in (MODES if borrowed is None else (*MODES,"borrowed"))}
     doses=[]
     for i,(ids,source,end,choices,_) in enumerate(encoded_batches(rows)):
-        cut=SITES["host"]
         hidden=prefix(host,ids,cut)
         index=mx.arange(len(source))
         partner=mx.array(np.arange(len(source))^1)
@@ -51,10 +50,20 @@ def evaluate(host,rows,states,axes,fit):
         assert bool(mx.all((actual>0)|(wanted==0)).item())
         random=random*(wanted/mx.maximum(actual,1e-12))
         paired,_=transform(donor,*axes)
-        doses.extend(np.column_stack([np.array(mx.linalg.norm(z,axis=1)) for z in (single,random,paired)]))
         place=(mx.arange(ids.shape[1])[None,:]==source[:,None])[...,None]
         replacements=dict(transfer=original+single,norm_matched=original+random,
                           paired=original+paired,whole_site=original[partner])
+        injected=[single,random,paired]
+        if borrowed is not None:
+            old_donor,old_host,old_weights,old_bias=borrowed
+            old_target=donor[partner]@old_donor@old_weights+old_bias
+            direction=(old_target-original@old_host)@old_host.T
+            magnitude=mx.linalg.norm(direction,axis=1,keepdims=True)
+            assert bool(mx.all((magnitude>0)|(wanted==0)).item())
+            edit=direction*(wanted/mx.maximum(magnitude,1e-12))
+            replacements["borrowed"]=original+edit
+            injected.append(edit)
+        doses.extend(np.column_stack([np.array(mx.linalg.norm(z,axis=1)) for z in injected]))
         scores["native"].extend(whole_vocabulary(host,hidden,end,cut,choices))
         for name,value in replacements.items():
             modified=mx.where(place,value[:,None,:].astype(hidden.dtype),hidden)
@@ -62,6 +71,8 @@ def evaluate(host,rows,states,axes,fit):
     evidence={m:np.array(a) for m,a in scores.items()}
     doses=np.array(doses)
     np.testing.assert_allclose(doses[:,0],doses[:,1],atol=1e-6,rtol=1e-5)
+    if borrowed is not None:
+        np.testing.assert_allclose(doses[:,0],doses[:,-1],atol=1e-6,rtol=1e-5)
     assert all(a.shape==(len(rows),2,4) and np.isfinite(a).all() for a in evidence.values())
     return evidence,doses
 
