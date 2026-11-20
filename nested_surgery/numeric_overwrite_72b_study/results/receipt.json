@@ -1,0 +1,9 @@
+{
+  "job": "qwen-context-matched-overwrite-72b",
+  "revision": "b5a8e086a68aeac4808d9bc14d9c79a722d0ac6c",
+  "attempt": 1,
+  "started": "2026-11-20T12:06:58+00:00",
+  "status": "done",
+  "finished": "2026-11-20T12:25:55+00:00",
+  "exit": 0
+}

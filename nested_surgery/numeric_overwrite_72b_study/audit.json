@@ -1,0 +1,63 @@
+{
+  "decision": "unresolved",
+  "screen_eligible": 43,
+  "screen_groups": 64,
+  "models": {
+    "donor": [
+      "Qwen/Qwen2.5-Coder-7B",
+      "0396a76181e127dfc13e5c5ec48a8cee09938b02"
+    ],
+    "recipient": [
+      "Qwen/Qwen2.5-72B",
+      "efba10c8e54e91e0d9570ab5f7b51a958474d4cb"
+    ]
+  },
+  "map_digest": "4b5c46001809387bdf9195bf77d70de2ac9e98ffcaf6281fc4b4a9a5802acc3f",
+  "alignment_digest": "318a75288da95e284052d86c3e9235aca6c661736cb3305b545ad1a0f80695da",
+  "groups": 256,
+  "eligible": 146,
+  "current_switches": {
+    "donor": 145,
+    "orthogonal": 0,
+    "whole": 145
+  },
+  "saved_preserved": {
+    "donor": 137,
+    "orthogonal": 143,
+    "whole": 138
+  },
+  "overwritten_answer": {
+    "donor": 4,
+    "orthogonal": 0,
+    "whole": 0
+  },
+  "paired": {
+    "donor_minus_whole": {
+      "mean": 0.0273972602739726,
+      "interval": [
+        0.00684931506849315,
+        0.0547945205479452
+      ]
+    },
+    "donor_minus_orthogonal": {
+      "mean": 0.0273972602739726,
+      "interval": [
+        0.00684931506849315,
+        0.0547945205479452
+      ]
+    },
+    "whole_minus_orthogonal": {
+      "mean": 0.0,
+      "interval": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "runtime_s": 1135.4211264170008,
+  "peak_mlx_bytes": 147242773724,
+  "overwrite_intrusion_donor_only": 4,
+  "overwrite_intrusion_whole_only": 0,
+  "posthoc_exact_two_sided": 0.125,
+  "both_edits_intrude": 0
+}
