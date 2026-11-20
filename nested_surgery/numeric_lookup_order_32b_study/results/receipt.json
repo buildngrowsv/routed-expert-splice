@@ -1,0 +1,9 @@
+{
+  "job": "qwen-dictionary-order-second-host-32b",
+  "revision": "4d0348e77fafbb3a0a6c12015f20cc341197288f",
+  "attempt": 1,
+  "started": "2026-11-20T13:38:37+00:00",
+  "status": "done",
+  "finished": "2026-11-20T13:43:55+00:00",
+  "exit": 0
+}

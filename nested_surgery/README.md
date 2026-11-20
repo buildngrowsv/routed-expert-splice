@@ -1,5 +1,9 @@
 # Which new Python repairs disappear when a transplanted coding expert is switched off?
 
+## Dictionary placement at 32B
+
+A whole-state swap switched all 151 natively shared groups after the table, compared with 84 before it. Restoring the early token gap with a comment retained 149 switches in the 150-group three-layout cohort. [32B results and shared 72B audit](numeric_lookup_order_32b_study/README.md)
+
 ## Fresh dictionary replication at 72B
 
 The same donor switched 135 of 137 native-shared groups at the late key versus 86 at the early key. It preserved every constant-table answer. [Independent replication](numeric_lookup_fresh_72b_study/README.md)

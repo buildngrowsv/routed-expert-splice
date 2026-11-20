@@ -1,0 +1,78 @@
+{
+  "decision": "late_key_control_replicates_at_32b",
+  "recipient": [
+    "Qwen/Qwen2.5-32B",
+    "1818d35814b8319459f4bd55ed1ac8709630f003"
+  ],
+  "cut": 13,
+  "source_programs_digest": "c7e2e3ff66fcd6fce22d7c30e99bc9e0118c0cee709c90be556309df26a4e70a",
+  "native": {
+    "early": 200,
+    "late": 176,
+    "gap": 177
+  },
+  "paired": {
+    "n": 151,
+    "switches": {
+      "early": 84,
+      "late": 151
+    },
+    "preserved": {
+      "early": 151,
+      "late": 150
+    },
+    "effects": {
+      "late": {
+        "mean": 0.44370860927152317,
+        "interval": [
+          0.36423841059602646,
+          0.5231788079470199
+        ]
+      }
+    }
+  },
+  "triple": {
+    "n": 150,
+    "switches": {
+      "early": 84,
+      "late": 150,
+      "gap": 149
+    },
+    "preserved": {
+      "early": 150,
+      "late": 149,
+      "gap": 150
+    },
+    "effects": {
+      "late": {
+        "mean": 0.44,
+        "interval": [
+          0.36,
+          0.52
+        ]
+      },
+      "gap": {
+        "mean": 0.43333333333333335,
+        "interval": [
+          0.35333333333333333,
+          0.5133333333333333
+        ]
+      }
+    }
+  },
+  "runtime_s": 316.9240407079924,
+  "peak_mlx_bytes": 66396830336,
+  "posthoc_all_six_native_groups": 107,
+  "posthoc_shared_switches": {
+    "32b": {
+      "early": 62,
+      "late": 107,
+      "gap": 107
+    },
+    "72b": {
+      "early": 66,
+      "late": 106,
+      "gap": 106
+    }
+  }
+}
