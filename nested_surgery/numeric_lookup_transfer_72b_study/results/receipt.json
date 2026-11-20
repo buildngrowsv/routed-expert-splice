@@ -1,0 +1,9 @@
+{
+  "job": "qwen-late-key-donor-transfer-72b",
+  "revision": "436d2c7edfa8b3ab6f103cd22678f61d1d5633b7",
+  "attempt": 1,
+  "started": "2026-11-20T12:35:03+00:00",
+  "status": "done",
+  "finished": "2026-11-20T12:41:50+00:00",
+  "exit": 0
+}
