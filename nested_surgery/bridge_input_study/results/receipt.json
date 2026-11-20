@@ -1,0 +1,9 @@
+{
+  "job": "large-qwen-native-vs-bridged-input",
+  "revision": "4fce8c0bad0a1c6c20436e748549361fe04864c6",
+  "attempt": 1,
+  "started": "2026-11-20T05:05:05+00:00",
+  "status": "done",
+  "finished": "2026-11-20T05:05:31+00:00",
+  "exit": 0
+}
