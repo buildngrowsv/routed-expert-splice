@@ -21,6 +21,8 @@ The original and counterfactual candidate ranks count every score at or above th
 | Norm-matched random edits | 0 / 256 | 0 / 256 | 0 / 512 | 0 / 512 |
 | Both full host states | 256 / 256 | 256 / 256 | 512 / 512 | 512 / 512 |
 
-Within this panel, the difference from random is +100 points and the paired bootstrap gives +100 at both endpoints. In all four arms, the overall top token was one of the four candidate digits in every prompt, although the scoring did not enforce this. The probes still involve one-step arithmetic, known intervention sites, and one output token. The next planned comparison checks complete numbers that can cross the decimal boundary. [Ranks, logits and dose checks](results) · [Independent audit](verify.py) · [Audit output](audit.json)
+Within this panel, the difference from random is +100 points and the paired bootstrap gives +100 at both endpoints. In all four arms, the overall top token was one of the four candidate digits in every prompt, although the scoring did not enforce this. The probes still involve one-step arithmetic, known intervention sites, and one output token. The follow-up checks complete numbers that can cross the decimal boundary. [Carry protocol](../NUMERIC_CARRY.md) [Ranks, logits and dose checks](results) · [Independent audit](verify.py) · [Audit output](audit.json)
 
 Run `uv run --with numpy python nested_surgery/numeric_simple_open_study/verify.py` to verify the archive identities, rank invariants, shortlisted winners and group-level metrics. The Studio run took three minutes and 21 seconds using Python 3.12, MLX 0.32.4, MLX-LM 0.32.2 and NumPy 2.5.5. The owner proposed donor transplantation and larger controlled tests. OpenAI Codex designed and implemented this comparison, operated the run, verified the results and assisted with writing. [Execution receipt](results/receipt.json)
+
+[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/458)
