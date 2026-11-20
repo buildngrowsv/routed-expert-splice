@@ -25,22 +25,24 @@ MAP_JOB = "qwen-numeric-operand-cross-model"
 MAP_REV = "3eacf5424a46a4e2efb328de5fb0ad77f391bc15"
 
 
-def recipes(sign):
+def recipes(sign, simple=False):
     result = []
     pairs = list(combinations(DIGITS, 2))
+    factor = 1 if simple else 2
     for left, right in product(pairs, repeat=2):
-        initial = [a + sign * 2 * b for a, b in product(left, right)]
+        initial = [a + sign * factor * b for a, b in product(left, right)]
         if len(set(initial)) != 4:
             continue
-        for shift in range(-min(initial), 10 - max(initial)):
+        shifts = (0,) if simple else range(-min(initial), 10 - max(initial))
+        for shift in shifts:
             answers = {n + shift for n in initial}
-            if answers.isdisjoint((*left, *right)):
+            if min(answers) >= 0 and max(answers) <= 9 and answers.isdisjoint((*left, *right)):
                 result.append((left, right, shift))
     return result
 
 
-def host_panel(tokenizer, count=1024, start=80000):
-    source = {sign: recipes(sign) for sign in (-1, 1)}
+def host_panel(tokenizer, count=1024, start=80000, *, simple=False):
+    source = {sign: recipes(sign,simple) for sign in (-1, 1)}
     groups = []
     for index in range(start, start + count):
         rng = random.Random(f"numeric-composition-v1-{index}")
@@ -50,10 +52,11 @@ def host_panel(tokenizer, count=1024, start=80000):
         pairs = list(product(left, right))
         x, y = f"left_{900000+index}", f"right_{900000+index}"
         scratch = "".join(f"    scratch_{k} = {rng.randrange(10,99)}\n" for k in range(rng.randint(3,7)))
-        expression = f"{x} {'+' if sign>0 else '-'} 2 * {y} {'+' if shift>=0 else '-'} {abs(shift)}"
+        operator = '+' if sign>0 else '-'
+        expression = f"{x} {operator} {y}" if simple else f"{x} {operator} 2 * {y} {'+' if shift>=0 else '-'} {abs(shift)}"
         prompts = [f"def fetch():\n    {x} = {u}\n    {y} = {v}\n{scratch}    return {expression}\n\nassert fetch() == "
                    for u, v in pairs]
-        answers = [str(u + sign * 2 * v + shift) for u, v in pairs]
+        answers = [str(u + sign * (1 if simple else 2) * v + shift) for u, v in pairs]
         ids = [tokenizer.encode(p, add_special_tokens=False).ids for p in prompts]
         full = [tokenizer.encode(p+c, add_special_tokens=False).ids for p,c in zip(prompts,answers,strict=True)]
         assert [s[:-1] for s in full] == ids
@@ -94,9 +97,9 @@ def replace(h, locations, vectors):
     return h
 
 
-def evaluate(model, panel, changes):
+def evaluate(model, panel, changes=None):
     cut = SITES["host"]
-    raw = {k:[] for k in ARMS}
+    raw = {k:[] for k in (ARMS if changes is not None else ("native",))}
     for start in range(0,len(panel),4):
         block = panel[start:start+4]
         seqs = [seq for row in block for seq in row["ids"]]
@@ -107,6 +110,9 @@ def evaluate(model, panel, changes):
         sites = mx.array(np.repeat([r["sites"] for r in block],4,axis=0))
         index = mx.arange(len(seqs))
         h = prefix(model,tokens,cut)
+        raw["native"].extend(readout(model,h,ends,cut,choices))
+        if changes is None:
+            continue
         state = h[index[:,None],sites].astype(mx.float32)
         state_left,state_right = state[:,0],state[:,1]
         deltas = []
@@ -116,7 +122,6 @@ def evaluate(model, panel, changes):
             deltas.append([mx.array(v[subset][:,pattern].reshape(len(seqs),-1)) for v in (d,r)])
         (left,left_random),(right,right_random) = deltas
         altered = {
-            "native": h,
             "left": replace(h,sites,(state_left+left,state_right)),
             "right": replace(h,sites,(state_left,state_right+right)),
             "both": replace(h,sites,(state_left+left,state_right+right)),
