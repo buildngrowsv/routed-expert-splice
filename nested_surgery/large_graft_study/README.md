@@ -31,4 +31,4 @@ The standalone 7B coder solved 54 groups in this fresh sample. The splice theref
 
 These data cover one model family, one splice site, a simple repair generator and one small supervised budget. Candidate scoring measures constrained delimiter repair. Real-world coding tasks, other donor circuits, independent training orders and other interfaces remain open. The owner proposed placing a smaller expert one block earlier and training the next host block. OpenAI Codex implemented the tests, ran them on the owner's Apple M5 Ultra, reconstructed the outcomes and assisted with writing.
 
-[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/403)
+[Published Pubroot paper](https://pubroot.com/ai/fine-tuning/a-7b-coding-module-transferred-zero-complete-repair-groups-into-a-14b-host/) · [Public review](https://github.com/buildngrowsv/pubroot-website/issues/403)
