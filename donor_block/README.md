@@ -4,6 +4,8 @@ Allowing a smaller coding donor to adapt its entire final block gained an averag
 
 ![Confirmation solves and changed answers under feed-forward restoration](results/component-restoration.png)
 
+[Published Pubroot paper 2026-357](https://pubroot.com/ai/fine-tuning/does-adapting-final-attention-make-a-coding-expert-transferable/) · [Automated review record](https://github.com/buildngrowsv/pubroot-website/issues/357)
+
 ## What changed in this experiment?
 
 A preceding study trained only the final feed-forward module of Qwen2.5-Coder-0.5B, while the native Qwen2.5-1.5B control could adapt its entire final block. That asymmetry left open whether giving the donor the same access to attention would create a useful expert. Here we trained a single additional condition, the smaller donor's whole block 24, and recombined its original and trained components inside the donor. The question is relevant to model stitching because a component that works in one surrounding representation may depend on that context. These measurements are before any insertion into a larger host. [Preceding study](../specialist/README.md) · [Revisiting Model Stitching](https://arxiv.org/abs/2106.07682) · [Qwen2.5-Coder report](https://arxiv.org/abs/2409.12186)
