@@ -34,4 +34,4 @@ The alignment method builds on prior affine model stitching. The paired interven
 
 Run `uv run --with numpy python nested_surgery/numeric_width_study/verify.py 32b`, repeat with `72b`, then use `paired` to reproduce the shared count and interval. The 32B and 72B paths ran for 215.5 and 529.4 seconds and reported peaks of 66.9 and 147.1 GB MLX allocation. The Studio used an Apple M5 Ultra with 80 GPU cores, 256 GiB unified memory, Metal 4, macOS 27.2 (26B118), Python 3.12.16, MLX 0.32.4, MLX-LM 0.32.2, NumPy 2.5.5 and tokenizers 0.23.3. Model loads were sequential. The owner proposed larger-scale expert transplant comparisons. OpenAI Codex implemented, ran and verified the study and assisted with writing. [32B artifacts and receipt](32b) · [72B artifacts and receipt](72b)
 
-[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/490)
+[Published Pubroot article](https://pubroot.com/ai/fine-tuning/seven-aligned-coordinates-reversed-502-of-504-answer-pairs-in-a-frozen-72b-model/) · [Submission and review](https://github.com/buildngrowsv/pubroot-website/issues/490)
