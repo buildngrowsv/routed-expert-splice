@@ -1,0 +1,79 @@
+{
+  "decision": "unresolved",
+  "shared": 143,
+  "counts": {
+    "alias_copy": {
+      "switch": 0,
+      "preserve": 143
+    },
+    "relocated_definition": {
+      "switch": 117,
+      "preserve": 141
+    },
+    "lookup_read": {
+      "switch": 0,
+      "preserve": 143
+    },
+    "close_bracket": {
+      "switch": 0,
+      "preserve": 143
+    },
+    "joint": {
+      "switch": 0,
+      "preserve": 143
+    }
+  },
+  "paired": {
+    "lookup_read": {
+      "alias_copy": {
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "close_bracket": {
+      "alias_copy": {
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "joint": {
+      "alias_copy": {
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "lookup_read": {
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "close_bracket": {
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "qualified_single_sites": [],
+  "cut": 40,
+  "model": [
+    "Qwen/Qwen2.5-72B",
+    "efba10c8e54e91e0d9570ab5f7b51a958474d4cb"
+  ],
+  "panel_sha256": "f16290cc6bd94c0a04af87d420574f97b581f65562b3b5fc2e7721834805fc1d",
+  "compared_ranks_sha256": "0c948d11401cb9240cefb2aaad4c05c7388ae56ab0d895fd6005ff5187fd3342",
+  "seconds": 291.24630541700753,
+  "peak_mlx_bytes": 146569126784
+}

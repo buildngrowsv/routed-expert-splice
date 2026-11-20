@@ -1,0 +1,33 @@
+{
+  "counts": {
+    "alias_copy": {
+      "switch": 0,
+      "preserve": 143
+    },
+    "relocated_definition": {
+      "switch": 117,
+      "preserve": 141
+    },
+    "lookup_read": {
+      "switch": 0,
+      "preserve": 143
+    },
+    "close_bracket": {
+      "switch": 0,
+      "preserve": 143
+    },
+    "joint": {
+      "switch": 0,
+      "preserve": 143
+    }
+  },
+  "individual_switches": {
+    "alias_copy": 4,
+    "relocated_definition": 546,
+    "lookup_read": 1,
+    "close_bracket": 0,
+    "joint": 1
+  },
+  "individual_total": 572,
+  "group_total": 143
+}

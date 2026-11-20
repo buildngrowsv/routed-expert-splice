@@ -1,0 +1,9 @@
+{
+  "job": "qwen-dictionary-alias-use-72b",
+  "revision": "cd94356923c246be5bcbe549bfb32dd18d37cd88",
+  "attempt": 1,
+  "started": "2026-11-20T15:52:14+00:00",
+  "status": "done",
+  "finished": "2026-11-20T15:57:07+00:00",
+  "exit": 0
+}
