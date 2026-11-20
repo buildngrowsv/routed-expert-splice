@@ -16,7 +16,7 @@ import prepare
 prepare.CACHE = Path(os.environ.get("STUDIO_QWEN_CACHE",Path.home()/"research/routed-expert-splice/cache"))
 sys.path.insert(0,str(ROOT/"task_transfer"))
 from screen import encode, full_logits, write, load_model
-from surgery import train_entrances, modules, ARMS, bf16, create_attention_mask
+from surgery import graft_scores, train_entrances, modules, ARMS, bf16, create_attention_mask
 from delimiters import delimiter_panel, solved
 OUT = Path(os.environ["STUDIO_JOB_DIR"])
 
@@ -70,12 +70,17 @@ def main():
     write(OUT/"training_ids.json",[r["id"] for r in train_rows])
     tr=encode(train_rows,PATCHES)
     train=train_entrances(host,arms,tr[0])
-    test=train_entrances(host,arms,ids)
-    pre={k:scores(host,test[k],pos,head) for k in ARMS}
+    pre={k:graft_scores(host,arms[k],data) for k in ARMS}
     mini=tuple(a[:8] if j!=2 else a for j,a in enumerate(data))
     end_to_end=full_logits(host,mini)
-    np.testing.assert_allclose(end_to_end,pre["native"][:8],atol=.25,rtol=.02)
-    assert np.array_equal(end_to_end.argmax(1),pre["native"][:8].argmax(1))
+    np.testing.assert_array_equal(end_to_end,pre["native"][:8])
+    cached=train_entrances(host,arms,mini[0])["native"]
+    manual=scores(host,cached,mini[1],head)
+    np.testing.assert_allclose(end_to_end,manual,atol=.25,rtol=.02)
+    write(OUT/"scoring-audit.json",dict(exact_native_logits=True,items=len(manual),
+        cached_max_absolute_error=float(abs(end_to_end-manual).max()),
+        cached_changed_choices=int((end_to_end.argmax(1)!=manual.argmax(1)).sum()),
+        scoring="end-to-end full model and vocabulary, all reported arms"))
     block=host.model.layers[-1]
     logits={"pre-"+k:v for k,v in pre.items()}
     for k in ARMS:
@@ -90,10 +95,10 @@ def main():
             loss,grad=vg(weights);weights=opt.apply_gradients(grad,weights)
             mx.eval(loss,weights,opt.state)
         block.update(bf16(weights))
-        logits[k]=scores(host,test[k],pos,head)
+        logits[k]=graft_scores(host,arms[k],data)
         if k=="coder":
-            logits["off"]=scores(host,test["knockout"],pos,head)
-            logits["swapped"]=scores(host,test["shuffled"],pos,head)
+            logits["off"]=graft_scores(host,arms["knockout"],data)
+            logits["swapped"]=graft_scores(host,arms["shuffled"],data)
             block.save_weights(str(OUT/"trained-around-donor.safetensors"))
         block.update(initial)
     ok={k:v.argmax(1)==gold for k,v in logits.items()}
