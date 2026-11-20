@@ -1,4 +1,5 @@
 """Compare a fixed donor edit at a read assignment and at a matched unused assignment."""
+import argparse
 from hashlib import sha256
 from itertools import product
 import gc
@@ -37,12 +38,13 @@ def recipes():
     return choices
 
 
-def panel(tok,count,start):
+def panel(tok,count,start,*,snapshot=False):
     pool=recipes()
     rows=[]
     pair_values={name:[] for name in ("left","right")}
     for key in range(start,start+count):
-        rng=random.Random(f"known-read-72b-{key}")
+        template="snapshot" if snapshot else "known-read"
+        rng=random.Random(f"{template}-72b-{key}")
         offset,left,right=rng.choice(pool)
         left,right=rng.sample(left,2),rng.sample(right,2)
         for name,values in (("left",left),("right",right)):
@@ -50,8 +52,14 @@ def panel(tok,count,start):
         x,y=f"left_{key}",f"right_{key}"
         fillers="".join(f"    temp_{i} = {rng.randrange(10,99)}\n" for i in range(rng.randrange(3,6)))
         operation=f" + {offset}" if offset>0 else f" - {-offset}"
-        for chosen,(name,source) in enumerate(((x,left),(y,right))):
-            prompts=[f"def fetch():\n    {x} = {u}\n    {y} = {v}\n{fillers}    return {name}{operation}\n\nassert fetch() == "
+        if snapshot:
+            body=f"    {x} = {{}}\n    {y} = {x}\n{fillers}    {x} = {{}}\n"
+            readers=((y,left),(x,right))
+        else:
+            body=f"    {x} = {{}}\n    {y} = {{}}\n{fillers}"
+            readers=((x,left),(y,right))
+        for chosen,(name,source) in enumerate(readers):
+            prompts=[f"def fetch():\n{body.format(u,v)}    return {name}{operation}\n\nassert fetch() == "
                      for u,v in zip(left,right,strict=True)]
             answers=[str(v+offset) for v in source]
             ids=[tok.encode(p,add_special_tokens=False).ids for p in prompts]
@@ -113,6 +121,10 @@ def summarize(scores):
 
 
 def main():
+    parser=argparse.ArgumentParser()
+    parser.add_argument("--snapshot",action="store_true")
+    args=parser.parse_args()
+    starts=(164000,165000,166000,167000) if args.snapshot else (135000,136000,137000,138000)
     begun=time.perf_counter()
     mx.set_cache_limit(2*1024**3)
     out=Path(os.environ["STUDIO_JOB_DIR"])
@@ -122,15 +134,16 @@ def main():
     donor_path=model_files("donor")
     tok=Tokenizer.from_file(str(recipient/"tokenizer.json"))
     donor_tok=Tokenizer.from_file(str(donor_path/"tokenizer.json"))
-    screen,_=panel(tok,64,135000)
-    rows,values=panel(tok,256,136000)
+    screen,_=panel(tok,64,starts[0],snapshot=args.snapshot)
+    rows,values=panel(tok,256,starts[1],snapshot=args.snapshot)
     model,_=load_model(recipient,strict=True)
     first,_=evaluate(model,screen)
     eligible=int((first["native"][...,0]==1).reshape(-1,2,2).all(axis=(1,2)).sum())
     np.savez_compressed(out/"screen.npz",**first)
+    (out/"screen.json").write_text(json.dumps(screen,separators=(",",":"))+"\n")
     print(f"Native read-vs-unused qualification: {eligible}/64",flush=True)
     report=dict(decision="benchmark_below_floor",screen_eligible=eligible,screen_groups=64,
-                models={"donor":MODELS["donor"],"recipient":HOST},cut=CUT)
+                models={"donor":MODELS["donor"],"recipient":HOST},cut=CUT,snapshot=args.snapshot)
     if eligible>=48:
         del model
         gc.collect()
@@ -139,7 +152,7 @@ def main():
         donor_axis,_,_,_,affine,bias=axes
         donor,_=load_model(donor_path,strict=True)
         inputs,targets={},[]
-        for name,start in (("left",137000),("right",138000)):
+        for name,start in zip(("left","right"),starts[2:],strict=True):
             source=programs(donor_tok,len(values[name]),start,computed=False,values_by_pair=values[name])
             inputs[name]=source
             state=mx.array(gather(donor,source,SITES["donor"]).astype(np.float32))
