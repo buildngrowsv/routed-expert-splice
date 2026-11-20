@@ -24,4 +24,4 @@ All 384 groups remained eligible in every clean arm. The 347 stronger-set succes
 
 Run `uv run --with numpy python nested_surgery/attention_sparse_study/verify.py` to reconstruct the calibration selections, execute the saved prompts and audit every comparison. The Studio run took eight minutes and 27 seconds using Python 3.12, MLX 0.32.4, MLX-LM 0.32.2 and NumPy 2.5.5. The owner proposed spatial walls and controlled paths. OpenAI Codex designed and operated the study, verified the outputs and assisted with writing. [Pinned execution receipt](results/receipt.json)
 
-[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/468)
+[Published Pubroot article](https://pubroot.com/ai/fine-tuning/eight-calibrated-attention-blocks-carried-most-declaration-reversals-in-qwen2-5-14b/) · [Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/468)

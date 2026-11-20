@@ -26,3 +26,5 @@ There were 502 pairs both recipients solved natively. On those, the 14B fitted a
 As an exploratory diagnostic, the seven singular values of the two fitted host bases' overlap matrix range from 0.74 to 0.84. Their mean square was 0.633, versus 0.00049 for the old basis against the 32B orthogonal control. The fitted subspaces overlap in ambient coordinates in this family. The study uses fitted edit magnitudes, known sites, and one-step arithmetic. [Exploratory overlap calculation](verify.py)
 
 Run `uv run --with numpy python nested_surgery/numeric_scale_study/verify.py` to check every prompt, rank, norm and comparison. The run took six minutes and 59 seconds on the owner's Apple M5 Ultra. The owner proposed expert transplantation and larger-scale tests. OpenAI Codex designed and operated the comparison, verified its outputs and assisted with writing. [Version-pinned receipt](results/receipt.json)
+
+[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/470)
