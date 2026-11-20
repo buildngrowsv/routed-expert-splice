@@ -29,7 +29,7 @@ a.set_ylabel("Both mirrored contexts switch")
 n=r["posthoc_all_six_native_groups"]
 for j,(model,color) in enumerate((("32b","#84dfc2"),("72b","#b6acf0"))):
     v=[r["posthoc_shared_switches"][model][k] for k in keys]
-    bars=b.bar(np.arange(3)+(j-.5)*.28,100*np.array(v)/n,color=color,width=.25,label=model.upper())
+    bars=b.bar(np.arange(3)+(j-.5)*.36,100*np.array(v)/n,color=color,width=.27,label=model.upper())
     b.bar_label(bars,labels=[f"{x}/{n}" for x in v],padding=4,fontsize=8)
 b.set_title("Shared across both hosts and all layouts",loc="left")
 b.legend(loc="upper center",bbox_to_anchor=(.5,-.12),ncol=2,frameon=False,fontsize=8)
