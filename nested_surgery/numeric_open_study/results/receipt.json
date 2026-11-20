@@ -1,0 +1,9 @@
+{
+  "job": "qwen-numeric-operand-open-vocabulary",
+  "revision": "1fc65de34e1236722b9fbb4956ee0a7fe71d872f",
+  "attempt": 1,
+  "started": "2026-11-20T07:52:46+00:00",
+  "status": "done",
+  "finished": "2026-11-20T07:54:16+00:00",
+  "exit": 0
+}

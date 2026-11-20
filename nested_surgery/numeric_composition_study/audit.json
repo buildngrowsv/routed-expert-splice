@@ -1,0 +1,71 @@
+{
+  "models": {
+    "donor": [
+      "Qwen/Qwen2.5-Coder-7B",
+      "0396a76181e127dfc13e5c5ec48a8cee09938b02"
+    ],
+    "host": [
+      "Qwen/Qwen2.5-14B",
+      "97e1e76335b7017d8f67c08a19d103c0504298c9"
+    ]
+  },
+  "groups": 1024,
+  "map_digest": "314f780d33cdb572add76953d9fbebfeeeee1e3eccdb5cadca188dddadf30b68",
+  "decision": "unresolved",
+  "eligible": 8,
+  "cells": {
+    "native": 8,
+    "left": 8,
+    "right": 7,
+    "both": 8,
+    "random": 0,
+    "whole": 8
+  },
+  "both_minus_random": {
+    "mean": 1.0,
+    "interval": [
+      1.0,
+      1.0
+    ]
+  },
+  "by_operator": {
+    "addition": {
+      "eligible": 1,
+      "cells": {
+        "native": 1,
+        "left": 1,
+        "right": 0,
+        "both": 1,
+        "random": 0,
+        "whole": 1
+      }
+    },
+    "subtraction": {
+      "eligible": 7,
+      "cells": {
+        "native": 7,
+        "left": 7,
+        "right": 7,
+        "both": 7,
+        "random": 0,
+        "whole": 7
+      }
+    }
+  },
+  "mean_margin": {
+    "native": 1.9140625,
+    "left": 1.84375,
+    "right": 1.8515625,
+    "both": 1.8125,
+    "random": -2.65234375,
+    "whole": 1.85546875
+  },
+  "native_item_accuracy": 0.29638671875,
+  "native_groups_by_correct_items": [
+    66,
+    749,
+    170,
+    31,
+    8
+  ]
+}

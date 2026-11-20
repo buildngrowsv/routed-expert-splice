@@ -1,0 +1,9 @@
+{
+  "job": "qwen-numeric-compose-two-operands",
+  "revision": "b640590b733111878fc3d15497940e4913ab667e",
+  "attempt": 1,
+  "started": "2026-11-20T07:42:42+00:00",
+  "status": "done",
+  "finished": "2026-11-20T07:52:46+00:00",
+  "exit": 0
+}

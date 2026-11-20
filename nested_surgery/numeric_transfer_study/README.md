@@ -20,4 +20,4 @@ The native host solved both completions on 511 of 512 pairs. For those pairs, th
 
 Run `uv run --with numpy python nested_surgery/numeric_transfer_study/verify.py` to check every saved program, map dimensions, edit norms and paired results. The run took 98 seconds on the owner's Apple M5 Ultra with MLX 0.32.4, MLX-LM 0.32.2, Python 3.12, NumPy 2.5.5 and Tokenizers 0.23.3. The owner proposed expert transplantation and research on fixed internal references. OpenAI Codex designed and implemented the experiment, ran it, verified the results and assisted with writing.
 
-[Full-vocabulary follow-up](../NUMERIC_OPEN_VOCABULARY.md) · [Published Pubroot article](https://pubroot.com/ai/fine-tuning/a-7b-donor-changed-the-operand-the-14b-model-used-in-511-arithmetic-pairs/) · [Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/444)
+[Full-vocabulary result](../numeric_open_study/README.md) · [Published Pubroot article](https://pubroot.com/ai/fine-tuning/a-7b-donor-changed-the-operand-the-14b-model-used-in-511-arithmetic-pairs/) · [Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/444)

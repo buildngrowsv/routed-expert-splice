@@ -1,0 +1,48 @@
+{
+  "decision": "unrestricted_transfer",
+  "models": {
+    "donor": [
+      "Qwen/Qwen2.5-Coder-7B",
+      "0396a76181e127dfc13e5c5ec48a8cee09938b02"
+    ],
+    "host": [
+      "Qwen/Qwen2.5-14B",
+      "97e1e76335b7017d8f67c08a19d103c0504298c9"
+    ]
+  },
+  "groups": 512,
+  "map_sha256": "314f780d33cdb572add76953d9fbebfeeeee1e3eccdb5cadca188dddadf30b68",
+  "source_sha256": "805953fc6141a2713ebd4e61c9b9cc1d0a72124a5f120aa4dd30f94a68b76eda",
+  "full_vocabulary": {
+    "eligible": 491,
+    "reversals": {
+      "transfer": 488,
+      "norm_matched": 0,
+      "whole_site": 488
+    },
+    "transfer_minus_random": {
+      "mean": 0.9938900203665988,
+      "interval": [
+        0.9857433808553971,
+        1.0
+      ]
+    },
+    "qualifies": true
+  },
+  "forced_two_choice": {
+    "eligible": 511,
+    "reversals": {
+      "transfer": 511,
+      "norm_matched": 0,
+      "whole_site": 511
+    },
+    "transfer_minus_random": {
+      "mean": 1.0,
+      "interval": [
+        1.0,
+        1.0
+      ]
+    },
+    "qualifies": true
+  }
+}

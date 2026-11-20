@@ -45,4 +45,5 @@ On the registered identical-suffix follow-up the same coding graft solved zero o
 - [Cross-model feature transfer](identifier_transfer_study/README.md) reports the fitted interface from the 7B coder to the 14B model. [Cross-context follow-up](IDENTIFIER_TRANSFER_BINDING.md)
 - [Cross-context transplant](identifier_transfer_binding_study/README.md) puts the donor's edit into either of two competing host classes.
 - [Assignment-token wall](identifier_doorway_study/README.md) tests whether a single intermediate token can relay the edit. [Query-token follow-up](IDENTIFIER_QUERY_RELAY.md)
-- [Computed integer result](computation_study/README.md) tests whether a declaration edit changes the result of arithmetic. [Cross-model operand result](numeric_transfer_study/README.md) · [Two-operand protocol](NUMERIC_COMPOSITION.md)
+- [Computed integer result](computation_study/README.md) tests whether a declaration edit changes the result of arithmetic. [Cross-model operand result](numeric_transfer_study/README.md) · [Full-vocabulary result](numeric_open_study/README.md) · [Two-operand comparison](numeric_composition_study/README.md)
+- [Direct and relayed paths](IDENTIFIER_ATTENTION_PATHS.md) restrict which later tokens can read an edited declaration.
