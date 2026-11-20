@@ -34,3 +34,5 @@ The release includes all prompts, hidden cases, candidate logits, training IDs, 
 The account owner proposed moving an expert one block earlier, adapting the following block, and measuring which newly correct answers disappear when the donor is removed. OpenAI Codex implemented the study, ran it over SSH on the owner's Studio, audited the outcomes and assisted with writing.
 
 [Published Pubroot article](https://pubroot.com/ai/fine-tuning/which-new-python-repairs-disappear-when-a-transplanted-coding-expert-is-switched-off/) · [Submission and review](https://github.com/buildngrowsv/pubroot-website/issues/362)
+
+On the registered identical-suffix follow-up the same coding graft solved zero of 256 complete counterfactual triplets. Its 243 correct individual completions were all closing parentheses. Disabling it lost 47 parentheses and gained 69 braces. This closes the planned syntax-transfer branch. [Follow-up and independent executable audit](opener_study/README.md)
