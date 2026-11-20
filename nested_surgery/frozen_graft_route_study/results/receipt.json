@@ -1,0 +1,9 @@
+{
+  "job": "large-qwen-frozen-graft-route-v2",
+  "revision": "45ffd5c9d0dca431774d7e02d677aa05a0233749",
+  "attempt": 1,
+  "started": "2026-11-20T15:06:52+00:00",
+  "status": "done",
+  "finished": "2026-11-20T15:09:43+00:00",
+  "exit": 0
+}

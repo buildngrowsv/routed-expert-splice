@@ -1,0 +1,72 @@
+{
+  "neutral": {
+    "complete": {
+      "intact": 652,
+      "graft": 303,
+      "always_blend": 644,
+      "hard_route": 606,
+      "confidence_blend": 646
+    },
+    "mean_random_complete": 650.25,
+    "paired": {
+      "intact": {
+        "mean": -0.0078125,
+        "interval": [
+          -0.026041666666666668,
+          0.010416666666666666
+        ]
+      },
+      "random_blend": {
+        "mean": -0.005533854166666667,
+        "interval": [
+          -0.022015380859375,
+          0.010661824544270818
+        ]
+      }
+    },
+    "recovered": 25,
+    "lost": 31,
+    "calls": 284,
+    "prompts": 2304,
+    "call_fraction": 0.1232638888888889,
+    "actual_subset_audit": {
+      "calls": 12,
+      "candidate_differences": 0
+    }
+  },
+  "decoys": {
+    "complete": {
+      "intact": 443,
+      "graft": 224,
+      "always_blend": 509,
+      "hard_route": 455,
+      "confidence_blend": 504
+    },
+    "mean_random_complete": 459.34375,
+    "paired": {
+      "intact": {
+        "mean": 0.07942708333333333,
+        "interval": [
+          0.0546875,
+          0.10546875
+        ]
+      },
+      "random_blend": {
+        "mean": 0.058146158854166664,
+        "interval": [
+          0.03877665201822917,
+          0.07837015787760415
+        ]
+      }
+    },
+    "recovered": 82,
+    "lost": 21,
+    "calls": 528,
+    "prompts": 2304,
+    "call_fraction": 0.22916666666666666,
+    "actual_subset_audit": {
+      "calls": 19,
+      "candidate_differences": 0
+    }
+  }
+}

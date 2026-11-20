@@ -1,0 +1,92 @@
+{
+  "decision": "unresolved",
+  "layouts": {
+    "neutral": {
+      "complete": {
+        "intact": 652,
+        "graft": 303,
+        "always_blend": 644,
+        "hard_route": 606,
+        "confidence_blend": 646
+      },
+      "mean_random_complete": 650.25,
+      "paired": {
+        "intact": {
+          "mean": -0.0078125,
+          "interval": [
+            -0.026041666666666668,
+            0.010416666666666666
+          ]
+        },
+        "random_blend": {
+          "mean": -0.005533854166666667,
+          "interval": [
+            -0.022015380859375,
+            0.010661824544270818
+          ]
+        }
+      },
+      "recovered": 25,
+      "lost": 31,
+      "calls": 284,
+      "prompts": 2304,
+      "call_fraction": 0.1232638888888889,
+      "actual_subset_audit": {
+        "calls": 12,
+        "candidate_differences": 0
+      }
+    },
+    "decoys": {
+      "complete": {
+        "intact": 443,
+        "graft": 224,
+        "always_blend": 509,
+        "hard_route": 455,
+        "confidence_blend": 504
+      },
+      "mean_random_complete": 459.34375,
+      "paired": {
+        "intact": {
+          "mean": 0.07942708333333333,
+          "interval": [
+            0.0546875,
+            0.10546875
+          ]
+        },
+        "random_blend": {
+          "mean": 0.058146158854166664,
+          "interval": [
+            0.03877665201822917,
+            0.07837015787760415
+          ]
+        }
+      },
+      "recovered": 82,
+      "lost": 21,
+      "calls": 528,
+      "prompts": 2304,
+      "call_fraction": 0.22916666666666666,
+      "actual_subset_audit": {
+        "calls": 19,
+        "candidate_differences": 0
+      }
+    }
+  },
+  "models": {
+    "donor": [
+      "Qwen/Qwen2.5-Coder-7B",
+      "0396a76181e127dfc13e5c5ec48a8cee09938b02"
+    ],
+    "host": [
+      "Qwen/Qwen2.5-14B",
+      "97e1e76335b7017d8f67c08a19d103c0504298c9"
+    ]
+  },
+  "groups": 768,
+  "weight": 0.25,
+  "threshold": 0.5625,
+  "calibration_sha256": "44fa26200e6c151687c7191175b1c65102f09065d92fcfa9427d1d27bf31dd47",
+  "port_sha256": "f0ecb60d3b335e34d23ce248091aa2e431e1bb1511aca817fadf4e5dbf347ca9",
+  "runtime_s": 170.19793504101108,
+  "peak_mlx_bytes": 49773958888
+}
