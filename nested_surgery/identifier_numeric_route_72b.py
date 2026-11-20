@@ -1,4 +1,5 @@
 """Exchange a branch selector while leaving the host's two payloads intact."""
+import argparse
 from hashlib import sha256
 from itertools import combinations
 import gc
@@ -42,12 +43,16 @@ def recipes():
     return out
 
 
-def panel(tokenizer, count, start):
+def panel(tokenizer, count, start, *, lookup=False):
     rows = []
     selectors = []
     choices = recipes()
+    if lookup:
+        choices = sorted({(pair, pair[1], pair[0], offset, payloads)
+                          for pair, _, _, offset, payloads in choices})
     for key in range(start, start + count):
-        rng = random.Random(f"numeric-router-72b-{key}")
+        seed = f"numeric-lookup-72b-{key}" if lookup else f"numeric-router-72b-{key}"
+        rng = random.Random(seed)
         pair, cut, inert, offset, payloads = rng.choice(choices)
         pair = rng.sample(pair, 2)
         first, second = rng.sample(payloads, 2)
@@ -59,10 +64,17 @@ def panel(tokenizer, count, start):
         for context, (a, b, threshold) in zip(
             CONTEXTS, ((first, second, cut), (second, first, cut), (first, second, inert)), strict=True
         ):
-            suffix = body.format(selector, threshold, left, operation, right, operation)
-            prompts = [f"def fetch():\n    {selector} = {v}\n    {left} = {a}\n    {right} = {b}\n{suffix}"
-                       for v in pair]
-            answers = [str((a if v < threshold else b) + offset) for v in pair]
+            if lookup:
+                low, high = sorted(pair)
+                right_value = a if context == "inert" else b
+                suffix = (f"    table = {{{low}: {a}, {high}: {right_value}}}\n"
+                          f"    return table[{selector}]{operation}\n\nassert fetch() == ")
+                answers = [str((a if v == low else right_value) + offset) for v in pair]
+            else:
+                rule = body.format(selector, threshold, left, operation, right, operation)
+                suffix = f"    {left} = {a}\n    {right} = {b}\n{rule}"
+                answers = [str((a if v < threshold else b) + offset) for v in pair]
+            prompts = [f"def fetch():\n    {selector} = {v}\n{suffix}" for v in pair]
             assert (answers[0] == answers[1]) == (context == "inert")
             ids = [tokenizer.encode(p, add_special_tokens=False).ids for p in prompts]
             site, = [i for i, (u, v) in enumerate(zip(*ids, strict=True)) if u != v]
@@ -74,8 +86,9 @@ def panel(tokenizer, count, start):
                 exec(compile(p + answer + "\n", "<selector probe>", "exec"), {})
             rows.append(dict(id=key, context=context, prompts=prompts, ids=ids, site=site,
                              answers=answers, choices=[seq[-1] for seq in entire],
-                             labels=list(map(int, answers)), selector=pair, threshold=threshold,
-                             payloads=[a, b], offset=offset))
+                             labels=list(map(int, answers)), selector=pair, offset=offset,
+                             threshold=None if lookup else threshold,
+                             payloads=[a, right_value] if lookup else [a, b]))
     return rows, selectors
 
 
@@ -130,6 +143,10 @@ def summarize(scores):
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--lookup", action="store_true")
+    lookup = parser.parse_args().lookup
+    starts = (168000, 169000, 170000) if lookup else (161000, 162000, 163000)
     began = time.perf_counter()
     mx.set_cache_limit(2 * 1024**3)
     out = Path(os.environ["STUDIO_JOB_DIR"])
@@ -137,7 +154,7 @@ def main():
     prior = verified_result(jobs / ALIGNMENT_JOB, ALIGNMENT_REVISION, "cross_width_transfer")
     recipient = checkpoint_files(*HOST)
     tok = Tokenizer.from_file(str(recipient / "tokenizer.json"))
-    screen, _ = panel(tok, 64, 161000)
+    screen, _ = panel(tok, 64, starts[0], lookup=lookup)
     model, _ = load_model(recipient, strict=True)
     assert len(model.model.layers) == 80 and model.args.hidden_size == 8192
     first, _ = evaluate(model, screen)
@@ -146,17 +163,17 @@ def main():
     np.savez_compressed(out / "screen.npz", **first)
     (out / "screen.json").write_text(json.dumps(screen, separators=(",", ":")) + "\n")
     report = dict(decision="benchmark_below_floor", screen_eligible=eligible, screen_groups=64,
-                  models={"donor": MODELS["donor"], "recipient": HOST}, cut=CUT)
+                  models={"donor": MODELS["donor"], "recipient": HOST}, cut=CUT, lookup=lookup)
     if eligible >= 48:
         del model
         gc.collect()
-        rows, selectors = panel(tok, 256, 162000)
+        rows, selectors = panel(tok, 256, starts[1], lookup=lookup)
         axes, digest = archived_maps(jobs / MAP_JOB)
         assert digest == prior["map_digest"]
         donor_axis, _, _, _, affine, bias = axes
         donor_path = model_files("donor")
         donor_tok = Tokenizer.from_file(str(donor_path / "tokenizer.json"))
-        source = programs(donor_tok, len(selectors), 163000, computed=False, values_by_pair=selectors)
+        source = programs(donor_tok, len(selectors), starts[2], computed=False, values_by_pair=selectors)
         donor, _ = load_model(donor_path, strict=True)
         state = mx.array(gather(donor, source, SITES["donor"]).astype(np.float32))
         coordinates = (state @ donor_axis @ affine + bias).reshape(len(source), 2, -1)
