@@ -1,5 +1,6 @@
 """Test a frozen operand interface on conditional and loop completions."""
 
+from argparse import ArgumentParser
 import gc
 from hashlib import sha256
 import json
@@ -32,6 +33,8 @@ ARMS = ("native", "bridge", "wrong", "orthogonal", "dense", "whole")
 SUFFIX = "\nassert fetch() == ("
 TUPLE_END = re.compile(r"^\)[ \t]*(?:$|[\n\r#])")
 BUDGET_SECONDS = 3 * 60 * 60
+SCREEN_JOB = "flagship-exact-transfer-72b"
+SCREEN_REVISION = "be55503fb1560375e66547d28d74e250485111da"
 
 
 def make_group(tok, family, index):
@@ -181,32 +184,50 @@ def summarize(wins):
 
 
 def main():
+    parser = ArgumentParser()
+    parser.add_argument("--qualified-loop", action="store_true", help="Use the previously qualified loop screen")
+    args = parser.parse_args()
     start = time.monotonic()
     out = Path(os.environ["STUDIO_JOB_DIR"])
     root = Path(os.environ["STUDIO_QUEUE_ROOT"]) / "runs"
     mx.set_cache_limit(2 * 1024**3)
     recipient_path = checkpoint_files(*HOST)
     recipient_tok = Tokenizer.from_file(str(recipient_path / "tokenizer.json"))
-    screen = panel(recipient_tok, 64, 210000)
-    host, _ = load_model(recipient_path, strict=True)
-    assert len(host.model.layers) == 80 and host.args.hidden_size == 8192
-    scores = {}
-    for family, rows in screen.items():
-        hits, ledger = score(host, recipient_tok, rows, ("native",))
-        scores[family] = int(hits["native"].sum())
-        (out / f"{family}-screen.json").write_text(json.dumps(dict(rows=rows, **ledger)))
-    report = dict(decision="native_screen_below_floor", screen_qualified=scores,
-                  models={"donor": MODELS["donor"], "recipient": HOST}, cuts=[SITES["donor"], CUT])
-    print(f"Native screen, out of 64 per family: {scores}", flush=True)
-    if min(scores.values()) >= 32:
-        del host
-        gc.collect()
-        report.update(run_panel(recipient_tok, recipient_path, root, out))
+    report = dict(decision="native_screen_below_floor", models={"donor": MODELS["donor"], "recipient": HOST},
+                  cuts=[SITES["donor"], CUT])
+    if args.qualified_loop:
+        prior = verified_result(root / SCREEN_JOB, SCREEN_REVISION, "native_screen_below_floor")
+        assert prior["models"]["recipient"] == list(HOST) and prior["cuts"] == report["cuts"]
+        scores = prior["screen_qualified"]
+        assert scores == {"conditional": 0, "loop": 43}
+        print("Reusing the pinned native loop qualification: 43/64", flush=True)
+        report.update(screen_qualified=scores, qualification_revision=SCREEN_REVISION,
+                      **run_panel(recipient_tok, recipient_path, root, out, ("loop",)))
+    else:
+        scores = screen_native(recipient_tok, recipient_path, out)
+        report["screen_qualified"] = scores
+        if min(scores.values()) >= 32:
+            report.update(run_panel(recipient_tok, recipient_path, root, out, FAMILIES))
     report.update(runtime_s=time.monotonic() - start, peak_mlx_bytes=mx.get_peak_memory())
     (out / "result.json").write_text(json.dumps(report, indent=2) + "\n")
 
 
-def run_panel(tok, host_path, root, out):
+def screen_native(tok, model_path, out):
+    screen = panel(tok, 64, 210000)
+    host, _ = load_model(model_path, strict=True)
+    assert len(host.model.layers) == 80 and host.args.hidden_size == 8192
+    scores = {}
+    for family, rows in screen.items():
+        hits, ledger = score(host, tok, rows, ("native",))
+        scores[family] = int(hits["native"].sum())
+        (out / f"{family}-screen.json").write_text(json.dumps(dict(rows=rows, **ledger)))
+    print(f"Native screen, out of 64 per family: {scores}", flush=True)
+    del host
+    gc.collect()
+    return scores
+
+
+def run_panel(tok, host_path, root, out, families):
     alignment = root / ALIGNMENT_JOB
     prior = verified_result(alignment, ALIGNMENT_REVISION, "cross_width_transfer")
     mapping, digest = archived_maps(root / PRIOR)
@@ -218,7 +239,8 @@ def run_panel(tok, host_path, root, out):
         geometry = tuple(mx.array(artifact[key].astype(np.float32)) for key in keys)
         calibration_target = artifact["y"]
     assert geometry[0].shape == (8192, 7)
-    rows_by_family = panel(tok, 768, 220000)
+    rows_by_family = {family: [make_group(tok, family, i) for i in range(220000, 220768)]
+                      for family in families}
     (out / "programs.json").write_text(json.dumps(rows_by_family, separators=(",", ":")))
     donor_path = model_files("donor")
     donor_tok = Tokenizer.from_file(str(donor_path / "tokenizer.json"))
@@ -228,8 +250,8 @@ def run_panel(tok, host_path, root, out):
     assert [p["prompts"] for p in calibration] == [p["prompts"] for p in old_calibration]
     donor_cal = gather(donor, calibration, SITES["donor"])
     payload = {}
-    for j, (family, rows) in enumerate(rows_by_family.items()):
-        paired, wrong = donor_states(donor_tok, donor, rows, 260000 + j * 20000)
+    for family, rows in rows_by_family.items():
+        paired, wrong = donor_states(donor_tok, donor, rows, 260000 + FAMILIES.index(family) * 20000)
         desired = mx.array(paired[:, ::-1].reshape(2 * len(rows), -1).astype(np.float32))
         decoy = mx.array(np.repeat(wrong, 2, axis=0).astype(np.float32))
         dense = dense_projection(donor_cal, calibration_target, (paired[:, ::-1] - paired).reshape(2 * len(rows), -1))
@@ -239,6 +261,7 @@ def run_panel(tok, host_path, root, out):
     del donor
     gc.collect()
     host, _ = load_model(host_path, strict=True)
+    assert len(host.model.layers) == 80 and host.args.hidden_size == 8192
     deadline = time.monotonic() + BUDGET_SECONDS
     comparisons = {}
     for family, rows in rows_by_family.items():
