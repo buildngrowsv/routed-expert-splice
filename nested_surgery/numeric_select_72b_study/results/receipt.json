@@ -1,0 +1,9 @@
+{
+  "job": "qwen-selected-vs-unused-72b",
+  "revision": "1d24543e9b451368dbeefedbb881e55588a6b256",
+  "attempt": 1,
+  "started": "2026-11-20T10:32:49+00:00",
+  "status": "done",
+  "finished": "2026-11-20T10:43:12+00:00",
+  "exit": 0
+}

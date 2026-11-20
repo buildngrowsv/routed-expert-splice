@@ -1,0 +1,35 @@
+{
+  "decision": "selective_operand_use",
+  "screen_eligible": 62,
+  "screen_groups": 64,
+  "models": {
+    "donor": [
+      "Qwen/Qwen2.5-Coder-7B",
+      "0396a76181e127dfc13e5c5ec48a8cee09938b02"
+    ],
+    "recipient": [
+      "Qwen/Qwen2.5-72B",
+      "efba10c8e54e91e0d9570ab5f7b51a958474d4cb"
+    ]
+  },
+  "cut": 17,
+  "groups": 256,
+  "map_digest": "4b5c46001809387bdf9195bf77d70de2ac9e98ffcaf6281fc4b4a9a5802acc3f",
+  "alignment_digest": "318a75288da95e284052d86c3e9235aca6c661736cb3305b545ad1a0f80695da",
+  "eligible": 250,
+  "counts": {
+    "selected": 245,
+    "unused": 246,
+    "orthogonal": 0,
+    "whole": 246
+  },
+  "selected_minus_orthogonal": {
+    "mean": 0.98,
+    "interval": [
+      0.96,
+      0.996
+    ]
+  },
+  "runtime_s": 621.2613383330026,
+  "peak_mlx_bytes": 147012882116
+}

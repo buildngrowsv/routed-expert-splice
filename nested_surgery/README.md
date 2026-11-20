@@ -1,5 +1,9 @@
 # Which new Python repairs disappear when a transplanted coding expert is switched off?
 
+## Selective operand use at 72B
+
+Seven donor coordinates switched 245 of 250 native-qualified groups when applied at the assignment the program read. Editing the unused assignment preserved 246 groups. An equal-norm orthogonal edit switched zero, and a full-state swap switched 246. The next registered test exchanges a branch selector across mirrored payloads. [Outcome and audit](numeric_select_72b_study/README.md) · [Branch selector protocol](NUMERIC_ROUTE_72B.md)
+
 A smaller coding model solved all 256 repairs used to qualify a donor, while the larger host solved 119. We transplanted the donor's final feed-forward module into host block 27 and trained host block 28 on 16 examples. On 512 more deeply nested Python programs the coding graft solved 335 and the equally adapted native host solved 331. Disabling the donor erased 44 of 140 new solves relative to the untouched host. Seven of those 44 had also been missed by the adapted native host. A four-entry suffix-only lookup solved all 512 problems, limiting what the result establishes about syntax.
 
 ![Correct repairs with intact, native, shuffled, general and disabled grafts](results/graft-outcomes.png)
