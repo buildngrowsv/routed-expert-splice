@@ -1,5 +1,6 @@
 """Counterfactual opening-delimiter transfers with an identical FIM suffix."""
 import ast
+import sys
 import json
 import random
 from pathlib import Path
@@ -7,7 +8,8 @@ import numpy as np
 import mlx.core as mx
 import mlx.nn as nn
 import mlx.optimizers as optim
-from run import (prepare,load_model,encode,modules,tree_map,train_entrances,delimiter_panel,
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
+from nested_surgery.run import (prepare,load_model,encode,modules,tree_map,train_entrances,delimiter_panel,
                  final_logits,bf16,graft_scores,full_logits,PATCHES,OUT,write,interval)
 import os
 
