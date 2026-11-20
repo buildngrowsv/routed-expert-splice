@@ -33,4 +33,4 @@ ln -s "$PWD/nested_surgery/numeric_lookup_fresh_72b_study/results" "$root/runs/q
 STUDIO_QUEUE_ROOT="$root" STUDIO_JOB_DIR="$root/out" python nested_surgery/identifier_lookup_alias_depth_72b.py
 ```
 
-[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/546)
+[Published Pubroot article](https://pubroot.com/ai/nlp/at-the-72b-midpoint-a-relocated-key-switched-117-of-143-lookups-and-its-late-copy-switched-zero/) · [Public review](https://github.com/buildngrowsv/pubroot-website/issues/546)
