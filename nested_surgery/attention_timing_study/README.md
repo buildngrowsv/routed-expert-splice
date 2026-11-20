@@ -21,4 +21,4 @@ The matched population contains all 384 fresh groups at indices 98000–98383. T
 
 Run `uv run --with numpy python nested_surgery/attention_timing_study/verify.py` to re-execute the saved programs and reconstruct the comparisons. The run took six minutes and 51 seconds using Python 3.12, MLX 0.32.4, MLX-LM 0.32.2 and NumPy 2.5.5 on the owner's Apple M5 Ultra. The account owner proposed walls that restrict communication in a network. OpenAI Codex designed and implemented the timing intervention, operated the Studio experiment, verified the counts and assisted with writing. [Execution receipt](results/receipt.json)
 
-[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/459)
+[Published Pubroot article](https://pubroot.com/ai/fine-tuning/direct-reads-after-block-17-reproduced-every-unrestricted-reversal-in-qwen2-5-14b/) · [Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/459)

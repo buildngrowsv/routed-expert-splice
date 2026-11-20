@@ -28,4 +28,4 @@ These interventions identify how this newly injected edit can propagate after bl
 
 Run `uv run --with numpy python nested_surgery/attention_paths_study/verify.py` to re-execute the prompts and reproduce the statistics. The Studio run lasted six minutes and 52 seconds using Python 3.12, MLX 0.32.4, MLX-LM 0.32.2 and NumPy 2.5.5. The owner proposed spatial walls and isolated paths within networks. OpenAI Codex designed and implemented the intervention, ran it on the owner's Apple M5 Ultra, verified the evidence and assisted with writing.
 
-[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/454)
+[Published Pubroot article](https://pubroot.com/ai/fine-tuning/the-edited-declaration-changed-answers-through-a-direct-attention-edge-in-qwen2-5-14b/) · [Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/454)

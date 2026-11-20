@@ -25,6 +25,6 @@ Every success requires the prespecified answer to win strictly against the other
 
 Run `uv run --with numpy python nested_surgery/numeric_simple_study/verify.py` to execute the programs and derive every target independently. The run took five minutes and seven seconds using Python 3.12, MLX 0.32.4, MLX-LM 0.32.2 and NumPy 2.5.5 on the owner's Apple M5 Ultra. The owner proposed expert transplantation. OpenAI Codex designed and operated the experiment, checked the outcomes and assisted with the writing. [Studio receipt](results/receipt.json)
 
-[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/452)
+[Published Pubroot article](https://pubroot.com/ai/fine-tuning/two-separate-donor-operand-edits-composed-on-all-512-qualified-arithmetic-programs/) · [Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/452)
 
 [Full-vocabulary follow-up](../NUMERIC_COMPOSITION_OPEN.md)
