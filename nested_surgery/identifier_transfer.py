@@ -22,9 +22,9 @@ def gather(model, rows, cut):
     return np.concatenate(out).astype(np.float64)
 
 
-def fit_map(donor, host, labels):
-    donor_basis,_ = bases(donor,labels)
-    host_basis,random_basis = bases(host,labels)
+def fit_map(donor, host, labels, *, classes=26):
+    donor_basis,_ = bases(donor,labels,classes)
+    host_basis,random_basis = bases(host,labels,classes)
     x = (donor[1::2]-donor[::2])@donor_basis
     y = (host[1::2]-host[::2])@host_basis
     gram = x.T@x

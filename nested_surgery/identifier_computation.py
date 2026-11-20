@@ -23,7 +23,7 @@ def options(offset):
             if all(0<=n+offset<=9 for n in v) and set(v).isdisjoint(n+offset for n in v)]
 
 
-def programs(tokenizer, count, start, *, computed):
+def programs(tokenizer, count, start, *, computed, values_by_pair=None):
     output=[]
     for i in range(start,start+count):
         rng=random.Random(f"integer-computation-v1-{i}")
@@ -31,6 +31,8 @@ def programs(tokenizer, count, start, *, computed):
         pair=rng.choice(options(offset)) if computed else rng.sample(DIGITS,2)
         values=list(pair)
         rng.shuffle(values)
+        if values_by_pair is not None:
+            values=values_by_pair[i-start]
         rhs=f" + {offset}" if offset>0 else f" - {-offset}" if offset<0 else ""
         stem=f"amount_{900000+i}"
         scratch="".join(f"    scratch_{j} = {rng.randrange(10,99)}\n" for j in range(rng.randint(3,7)))
