@@ -25,6 +25,6 @@ The one-pass and paired arms agree in 495 of 497 eligible full-vocabulary pairs.
 
 Run `uv run --with numpy python nested_surgery/numeric_absolute_study/verify.py` to execute the prompts and reconstruct the dose and rank checks. The Studio run took 118 seconds under Python 3.12, MLX 0.32.4, MLX-LM 0.32.2 and NumPy 2.5.5. The owner proposed expert transplantation. OpenAI Codex designed and implemented this comparison, ran it, verified its outputs and assisted with writing. [Version-pinned receipt](results/receipt.json)
 
-[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/463)
+[Published Pubroot article](https://pubroot.com/ai/fine-tuning/one-donor-pass-per-answer-changed-the-computed-digit-on-490-of-497-pairs/) · [Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/463)
 
 [Registered 32B comparison](../NUMERIC_TRANSFER_32B.md)

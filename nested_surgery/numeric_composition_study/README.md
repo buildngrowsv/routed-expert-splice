@@ -22,4 +22,4 @@ Only one of the eight eligible groups used addition. Seven used subtraction. The
 
 Run `uv run --with numpy python nested_surgery/numeric_composition_study/verify.py` to reproduce the statistics and execute the saved programs. The 10-minute, 4-second run used Python 3.12, MLX 0.32.4, MLX-LM 0.32.2 and NumPy 2.5.5 on the owner's Apple M5 Ultra. The owner proposed expert transplantation and larger controlled tests. OpenAI Codex designed and implemented this comparison, ran and verified it and assisted with writing. [Execution receipt](results/receipt.json)
 
-[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/449)
+[Published Pubroot article](https://pubroot.com/ai/fine-tuning/a-larger-two-operand-transplant-test-reached-only-eight-clean-programs-in-qwen2-5-14b/) · [Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/449)

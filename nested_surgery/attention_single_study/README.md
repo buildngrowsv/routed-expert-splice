@@ -21,4 +21,4 @@ A reversal requires both letter variants to prefer the partner letter. All four 
 
 Run `uv run --with numpy python nested_surgery/attention_single_study/verify.py` to re-execute the prompts and reproduce the calibration choice, comparisons and decision. The Studio run lasted seven minutes and 26 seconds using Python 3.12, MLX 0.32.4, MLX-LM 0.32.2 and NumPy 2.5.5. The owner proposed architectural walls and controlled paths. OpenAI Codex designed and operated the intervention, checked the evidence and assisted with writing. [Pinned execution receipt](results/receipt.json)
 
-[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/464)
+[Published Pubroot article](https://pubroot.com/ai/fine-tuning/the-strongest-calibration-block-did-not-carry-the-declaration-edit-by-itself/) · [Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/464)

@@ -25,4 +25,4 @@ Within this panel, the difference from random is +100 points and the paired boot
 
 Run `uv run --with numpy python nested_surgery/numeric_simple_open_study/verify.py` to verify the archive identities, rank invariants, shortlisted winners and group-level metrics. The Studio run took three minutes and 21 seconds using Python 3.12, MLX 0.32.4, MLX-LM 0.32.2 and NumPy 2.5.5. The owner proposed donor transplantation and larger controlled tests. OpenAI Codex designed and implemented this comparison, operated the run, verified the results and assisted with writing. [Execution receipt](results/receipt.json)
 
-[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/458)
+[Published Pubroot article](https://pubroot.com/ai/fine-tuning/two-independently-transferred-operands-composed-without-a-shortlist-on-all-512-groups/) · [Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/458)

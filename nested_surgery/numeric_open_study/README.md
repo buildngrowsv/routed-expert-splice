@@ -19,4 +19,4 @@ The difference over the randomized directions was +99.39 percentage points under
 
 Run `uv run --with numpy python nested_surgery/numeric_open_study/verify.py` to verify the archive identities, ranks, dose matches, and paired counts against the prior scores. Studio inference took 90 seconds on the owner's Apple M5 Ultra under Python 3.12, MLX 0.32.4, MLX-LM 0.32.2 and NumPy 2.5.5. The owner proposed expert transplantation. OpenAI Codex implemented this follow-up, ran and verified it, and assisted with writing. [Version-pinned receipt](results/receipt.json)
 
-[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/448)
+[Published Pubroot article](https://pubroot.com/ai/fine-tuning/a-transferred-operand-changed-the-top-token-in-488-of-491-arithmetic-pairs-without-a-shortlist/) · [Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/448)
