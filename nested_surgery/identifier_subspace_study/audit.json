@@ -1,0 +1,54 @@
+{
+  "donor": {
+    "eligible": 512,
+    "switches": {
+      "learned": 512,
+      "matched": 0,
+      "whole_site": 512
+    },
+    "learned_minus_matched": {
+      "mean": 1.0,
+      "interval": [
+        1.0,
+        1.0
+      ]
+    },
+    "qualifies": true,
+    "depth": 6,
+    "rank": 25,
+    "median_projected_norm_fraction": 0.9489995241165161,
+    "max_dose_mismatch": 3.814697265625e-06,
+    "average_correct_log_odds": {
+      "native": 12.8695068359375,
+      "learned": -12.6966552734375,
+      "matched": 12.7049560546875,
+      "whole_site": -12.80364990234375
+    }
+  },
+  "host": {
+    "eligible": 512,
+    "switches": {
+      "learned": 512,
+      "matched": 0,
+      "whole_site": 512
+    },
+    "learned_minus_matched": {
+      "mean": 1.0,
+      "interval": [
+        1.0,
+        1.0
+      ]
+    },
+    "qualifies": true,
+    "depth": 10,
+    "rank": 25,
+    "median_projected_norm_fraction": 0.9739814400672913,
+    "max_dose_mismatch": 7.62939453125e-06,
+    "average_correct_log_odds": {
+      "native": 12.1444091796875,
+      "learned": -12.02935791015625,
+      "matched": 12.01654052734375,
+      "whole_site": -12.08819580078125
+    }
+  }
+}
