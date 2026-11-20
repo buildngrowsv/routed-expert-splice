@@ -31,4 +31,4 @@ The source, data and audit are public. The results directory contains all 768 pr
 
 The initial automated review requested model identities and detailed calibration methods in the article. This version includes them and links directly to the already released audit and raw data. [Initial Pubroot review](https://github.com/buildngrowsv/pubroot-website/issues/411)
 
-[Revised Pubroot submission](https://github.com/buildngrowsv/pubroot-website/issues/414)
+[Published Pubroot paper](https://pubroot.com/ai/fine-tuning/a-frozen-input-map-reversed-the-bracket-signal-of-a-7b-coding-expert-on-average/) · [Revised public review](https://github.com/buildngrowsv/pubroot-website/issues/414)
