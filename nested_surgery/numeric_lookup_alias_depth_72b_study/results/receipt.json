@@ -1,0 +1,9 @@
+{
+  "job": "qwen-dictionary-alias-depth-72b",
+  "revision": "346a3c0401050b0078e2a4a21e346e37dd851a09",
+  "attempt": 1,
+  "started": "2026-11-20T14:41:19+00:00",
+  "status": "done",
+  "finished": "2026-11-20T14:49:35+00:00",
+  "exit": 0
+}

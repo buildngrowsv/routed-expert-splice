@@ -1,0 +1,80 @@
+{
+  "decision": "alias_gap_persists_at_viable_cuts",
+  "shared": 143,
+  "metrics": {
+    "source_17": {
+      "switch": 94,
+      "preserve": 141
+    },
+    "alias_17": {
+      "switch": 0,
+      "preserve": 143
+    },
+    "source_40": {
+      "switch": 0,
+      "preserve": 139
+    },
+    "alias_40": {
+      "switch": 0,
+      "preserve": 143
+    },
+    "source_60": {
+      "switch": 0,
+      "preserve": 142
+    },
+    "alias_60": {
+      "switch": 0,
+      "preserve": 143
+    },
+    "relocated_17": {
+      "switch": 140,
+      "preserve": 143
+    },
+    "relocated_40": {
+      "switch": 117,
+      "preserve": 141
+    },
+    "relocated_60": {
+      "switch": 0,
+      "preserve": 143
+    }
+  },
+  "contrasts": {
+    "40": {
+      "alias_minus_initial": {
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "alias_minus_relocated": {
+        "mean": -0.8181818181818182,
+        "interval": [
+          -0.8881118881118881,
+          -0.7412587412587412
+        ]
+      }
+    },
+    "60": {
+      "alias_minus_initial": {
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "alias_minus_relocated": {
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "viable_cuts": [
+    40
+  ],
+  "recovered_cuts": []
+}
