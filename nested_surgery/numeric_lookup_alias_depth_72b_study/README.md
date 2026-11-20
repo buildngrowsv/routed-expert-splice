@@ -32,3 +32,5 @@ ln -s "$PWD/nested_surgery/numeric_lookup_alias_72b_study/results" "$root/runs/q
 ln -s "$PWD/nested_surgery/numeric_lookup_fresh_72b_study/results" "$root/runs/qwen-late-key-donor-fresh-72b"
 STUDIO_QUEUE_ROOT="$root" STUDIO_JOB_DIR="$root/out" python nested_surgery/identifier_lookup_alias_depth_72b.py
 ```
+
+[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/546)

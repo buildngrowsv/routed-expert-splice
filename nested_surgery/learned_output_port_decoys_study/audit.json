@@ -1,0 +1,32 @@
+{
+  "neutral": {
+    "complete": {
+      "native": 0,
+      "intact_donor": 221,
+      "host_feature": 104,
+      "shuffled_donor": 84,
+      "donor": 86,
+      "off": 0,
+      "swap": 0
+    },
+    "strict": 36,
+    "donor_off_loss": 86,
+    "complete_follows": 0,
+    "passes": false
+  },
+  "decoys": {
+    "complete": {
+      "native": 0,
+      "intact_donor": 150,
+      "host_feature": 33,
+      "shuffled_donor": 18,
+      "donor": 63,
+      "off": 0,
+      "swap": 37
+    },
+    "strict": 30,
+    "donor_off_loss": 63,
+    "complete_follows": 0,
+    "passes": true
+  }
+}
