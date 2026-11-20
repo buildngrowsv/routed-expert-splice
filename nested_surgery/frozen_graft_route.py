@@ -100,8 +100,11 @@ def check_subset(host, rows, tokens, projected, calls, expected, weights):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--smoke", action="store_true")
-    small = parser.parse_args().smoke
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--smoke", action="store_true")
+    mode.add_argument("--confirmation", action="store_true")
+    options = parser.parse_args()
+    small = options.smoke
     started = time.perf_counter()
     mx.set_cache_limit(2 * 1024**3)
     calibration = HERE / "learned_output_port_decoys_study/results"
@@ -123,7 +126,8 @@ def main():
     tokens = {k: Tokenizer.from_file(str(p / "tokenizer.json")) for k, p in models.items()}
     host, _ = load_model(models["host"], strict=True)
     coder, _ = load_model(models["donor"], strict=True)
-    programs_base = programs(4 if small else N, start=85000)
+    size, start = (3*N, 87000) if options.confirmation else (4 if small else N, 85000)
+    programs_base = programs(size, start=start)
     matched = {name: rewrite(programs_base, mode) for name, mode in (("neutral", False), ("decoys", True))}
     out = None if small else Path(os.environ["STUDIO_JOB_DIR"])
     results = {}
@@ -146,7 +150,8 @@ def main():
             and max(d["call_fraction"] for d in results.values()) <= .33
             and all(d["actual_subset_audit"]["candidate_differences"] == 0 for d in results.values()))
     report = dict(decision="sparse_fusion_adds_repairs" if good else "unresolved", layouts=results, models=MODELS,
-                  groups=len(programs_base)//3, weight=DECISION_WEIGHT, threshold=threshold,
+                  groups=len(programs_base)//3, first_group=start,
+                  weight=DECISION_WEIGHT, threshold=threshold,
                   calibration_sha256=sha256(calibration_raw.read_bytes()).hexdigest(),
                   port_sha256=result["port_sha256"], runtime_s=time.perf_counter()-started,
                   peak_mlx_bytes=mx.get_peak_memory())
