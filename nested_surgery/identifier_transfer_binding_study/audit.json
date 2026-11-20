@@ -1,0 +1,62 @@
+{
+  "models": {
+    "donor": [
+      "Qwen/Qwen2.5-Coder-7B",
+      "0396a76181e127dfc13e5c5ec48a8cee09938b02"
+    ],
+    "host": [
+      "Qwen/Qwen2.5-14B",
+      "97e1e76335b7017d8f67c08a19d103c0504298c9"
+    ]
+  },
+  "map_digest": "74c75a25e5e9cc5c93b8f0c347ea8c0802d631538e6a910630273056848f9389",
+  "map_job": "qwen-transfer-identifier-subspace-dose-fix",
+  "groups": 256,
+  "rank": 25,
+  "decision": "binding_sensitive",
+  "eligible_groups": 256,
+  "reversals_by_site": {
+    "selected": [
+      248,
+      256
+    ],
+    "unselected": [
+      0,
+      0
+    ],
+    "whole_site": [
+      250,
+      256
+    ]
+  },
+  "reversal_rates": {
+    "selected": 0.984375,
+    "unselected": 0.0,
+    "whole_site": 0.98828125
+  },
+  "selected_minus_unselected": {
+    "mean": 0.984375,
+    "interval": [
+      0.97265625,
+      0.994140625
+    ]
+  },
+  "mean_original_letter_margin": {
+    "native": [
+      12.718994140625,
+      12.7178955078125
+    ],
+    "selected": [
+      -4.871337890625,
+      -5.910400390625
+    ],
+    "unselected": [
+      5.028564453125,
+      5.8740234375
+    ],
+    "whole_site": [
+      -4.99658203125,
+      -5.817138671875
+    ]
+  }
+}

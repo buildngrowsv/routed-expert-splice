@@ -1,0 +1,9 @@
+{
+  "job": "qwen-transfer-across-binding-contexts",
+  "revision": "3d0030edb7e7a778abe06400719b9b4335d51a5c",
+  "attempt": 1,
+  "started": "2026-11-20T07:26:53+00:00",
+  "status": "done",
+  "finished": "2026-11-20T07:29:16+00:00",
+  "exit": 0
+}

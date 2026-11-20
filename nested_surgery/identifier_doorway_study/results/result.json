@@ -1,0 +1,58 @@
+{
+  "model": [
+    "Qwen/Qwen2.5-14B",
+    "97e1e76335b7017d8f67c08a19d103c0504298c9"
+  ],
+  "cut": 10,
+  "relay_blocks": 7,
+  "groups": 256,
+  "decision": "unresolved",
+  "eligible_groups": 256,
+  "reversals": {
+    "unrestricted": {
+      "first": 242,
+      "second": 0,
+      "differential": {
+        "mean": 0.9453125,
+        "interval": [
+          0.91796875,
+          0.97265625
+        ]
+      }
+    },
+    "same_class_relay": {
+      "first": 0,
+      "second": 0,
+      "differential": {
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "other_class_relay": {
+      "first": 0,
+      "second": 0,
+      "differential": {
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "relay_advantage": {
+    "mean": 0.0,
+    "interval": [
+      0.0,
+      0.0
+    ]
+  },
+  "median_release_norm": [
+    11.911773681640625,
+    1.133852481842041
+  ],
+  "qualifying_relays": []
+}
