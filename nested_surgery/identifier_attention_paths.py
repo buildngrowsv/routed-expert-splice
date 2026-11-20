@@ -3,6 +3,7 @@
 import json
 import os
 from pathlib import Path
+from itertools import repeat
 
 import mlx.core as mx
 from mlx_lm.utils import load_model
@@ -34,16 +35,18 @@ def masks(width, source, readout):
 
 
 def read_masked(model, h, ends, cut, candidates, mask):
-    for layer in model.model.layers[cut:]:
-        h = layer(h,mask)
+    layers = model.model.layers[cut:]
+    schedule = mask if isinstance(mask,tuple) else repeat(mask,len(layers))
+    for layer,active_mask in zip(layers,schedule,strict=True):
+        h = layer(h,active_mask)
     state = model.model.norm(h[mx.arange(len(ends)),ends])
     head = model.model.embed_tokens.as_linear if model.args.tie_word_embeddings else model.lm_head
     return odds(head(state).astype(mx.float32),candidates)
 
 
-def evaluate(model, rows, axis, cut):
+def evaluate(model, rows, axis, cut, *, modes=MODES, mask_factory=masks):
     vectors = mx.array(axis)
-    margins = {f"{mode}_{arm}":[] for mode in MODES for arm in ("clean","edited")}
+    margins = {f"{mode}_{arm}":[] for mode in modes for arm in ("clean","edited")}
     for i,(ids,source,end,choices,_) in enumerate(encoded_batches(rows)):
         index = mx.arange(len(source))
         canonical = mx.array(np.arange(len(source)) & ~2)
@@ -53,7 +56,7 @@ def evaluate(model, rows, axis, cut):
         np.testing.assert_array_equal(np.array(value),np.array(value[canonical]))
         change = ((value[canonical][partner]-value)@vectors)@vectors.T
         altered = patch(h,source,value+change)
-        for mode,mask in masks(ids.shape[1],source,end).items():
+        for mode,mask in mask_factory(ids.shape[1],source,end).items():
             margins[mode+"_clean"].extend(read_masked(model,h,end,cut,choices,mask))
             margins[mode+"_edited"].extend(read_masked(model,altered,end,cut,choices,mask))
         if (i+1)%16==0:
