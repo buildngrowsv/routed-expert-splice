@@ -22,7 +22,7 @@ REVISION="ea4014f0edf250fa8abf5d0bb52657371998aea3"
 MODES=("native","borrowed_raw","norm_matched")
 
 
-def evaluate(host,rows,states,basis,*,cut=13):
+def evaluate(host,rows,states,basis,*,cut=13,gain=1.0):
     donor,receiver,random,_,weights,bias=basis
     result={k:[] for k in MODES}
     norms=[]
@@ -34,7 +34,7 @@ def evaluate(host,rows,states,basis,*,cut=13):
         offset+=len(site)
         target=x[mx.array(np.arange(len(site))^1)]@donor@weights+bias
         delta=target-source@receiver
-        raw=delta@receiver.T
+        raw=gain*(delta@receiver.T)
         control=delta@random.T
         a=mx.linalg.norm(raw,axis=1,keepdims=True)
         b=mx.linalg.norm(control,axis=1,keepdims=True)
