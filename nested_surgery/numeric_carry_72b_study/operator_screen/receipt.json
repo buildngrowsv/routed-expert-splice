@@ -1,0 +1,9 @@
+{
+  "job": "qwen-opposite-operator-72b",
+  "revision": "cdc5370107f699e70d27036dea94e8226ff27172",
+  "attempt": 1,
+  "started": "2026-11-20T10:24:59+00:00",
+  "status": "done",
+  "finished": "2026-11-20T10:26:40+00:00",
+  "exit": 0
+}
