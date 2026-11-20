@@ -23,3 +23,5 @@ The exact output threshold and the preregistered rescue criteria did not pass fo
 ## Reproduction
 
 The frozen checkpoint is unquantized BF16 Qwen2.5-72B at revision `efba10c8e54e91e0d9570ab5f7b51a958474d4cb`. The arm64 Apple M5 Ultra Studio has 256 GiB unified memory and used macOS build 26B118, Python 3.12.16, MLX 0.32.4, MLX-LM 0.32.2, NumPy 2.5.5 and tokenizers 0.23.3. Use `uv run --with numpy python nested_surgery/numeric_lookup_alias_use_72b_study/verify.py` from the repository root to reconstruct cohorts, exact ranks and contrasts. Reproduce inference using the pinned launcher with a new `STUDIO_JOB_DIR`. The runner reads the prior public dataset and scores from the repository. The owner proposed fixed references. OpenAI Codex registered, implemented, ran and audited the comparison. [Pinned runner](https://github.com/buildngrowsv/routed-expert-splice/blob/cd94356923c246be5bcbe549bfb32dd18d37cd88/nested_surgery/identifier_lookup_alias_use_72b.py) · [Receipt](results/receipt.json) · [Environment](results/studio-environment.txt)
+
+[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/572)
