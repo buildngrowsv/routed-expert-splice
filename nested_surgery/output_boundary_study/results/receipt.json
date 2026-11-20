@@ -1,0 +1,9 @@
+{
+  "job": "large-qwen-donor-output-boundary",
+  "revision": "52bd5fbce030df2ddb3e1a94ed34445982eb9000",
+  "attempt": 1,
+  "started": "2026-11-20T07:02:46+00:00",
+  "status": "done",
+  "finished": "2026-11-20T07:04:13+00:00",
+  "exit": 0
+}

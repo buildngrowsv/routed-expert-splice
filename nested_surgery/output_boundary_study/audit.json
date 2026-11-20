@@ -1,0 +1,55 @@
+{
+  "effects": {
+    "donor_native": {
+      "mean": 2.1109211444854736,
+      "interval": [
+        2.0401455104351043,
+        2.1801764607429504
+      ]
+    },
+    "host_native": {
+      "mean": -0.02290852926671505,
+      "interval": [
+        -0.028171792812645435,
+        -0.017645602952688938
+      ]
+    },
+    "host_exact_donor": {
+      "mean": -0.00895182229578495,
+      "interval": [
+        -0.011664835806004702,
+        -0.00598144622053951
+      ]
+    },
+    "host_refit_donor": {
+      "mean": -0.009616428054869175,
+      "interval": [
+        -0.0122205950319767,
+        -0.00702582485973835
+      ]
+    }
+  },
+  "host_minus_half_native_donor": {
+    "host_exact_donor": {
+      "mean": -1.0644124746322632,
+      "interval": [
+        -1.0994066774845124,
+        -1.0287929713726045
+      ]
+    },
+    "host_refit_donor": {
+      "mean": -1.0650770664215088,
+      "interval": [
+        -1.1005179911851883,
+        -1.0297156304121018
+      ]
+    }
+  },
+  "complete": {
+    "donor_native": 44,
+    "host_native": 0,
+    "host_exact_donor": 0,
+    "host_refit_donor": 0
+  },
+  "decision": "output_below_margin"
+}
