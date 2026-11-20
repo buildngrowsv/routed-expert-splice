@@ -1,0 +1,9 @@
+{
+  "job": "large-qwen-graft-constant-control",
+  "revision": "131020da906d6f8c546e3aa43e9272c3b264548d",
+  "attempt": 1,
+  "started": "2026-11-20T15:51:03+00:00",
+  "status": "done",
+  "finished": "2026-11-20T15:52:14+00:00",
+  "exit": 0
+}

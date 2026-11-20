@@ -1,0 +1,22 @@
+{
+  "scores": {
+    "mapped": 166,
+    "host": 68,
+    "teacher": 166,
+    "shuffled": 143,
+    "off": 0,
+    "aligned": 166,
+    "calibration_mean": 232,
+    "cyclic": 127
+  },
+  "constant_gained": 106,
+  "constant_lost": 40,
+  "decision": "constant_feature_matches_early_graft",
+  "early_minus_constant": {
+    "mean": -0.12890625,
+    "interval": [
+      -0.17578125,
+      -0.083984375
+    ]
+  }
+}
