@@ -83,13 +83,13 @@ def decoded_steps(model,h,positions,cut):
     return np.array(mx.stack((top,unique.astype(mx.int32)),axis=-1)).reshape(-1,4,3,2)
 
 
-def predict(model,rows,changes=None):
-    cut=SITES["host"]
+def predict(model,rows,changes=None,*,cut=SITES["host"],operand_edit=None):
+    intervening=changes is not None or operand_edit is not None
     outputs={}
     for start in range(0,len(rows),4):
         block=rows[start:start+4]
         sites=mx.array(np.repeat([r["sites"] for r in block],4,axis=0))
-        for mode in MODES if changes is not None else ("native",):
+        for mode in MODES if intervening else ("native",):
             target_index=np.arange(4) if mode=="native" else np.arange(4)[::-1]
             original=[ids for row in block for ids in row["ids"]]
             target=[row["answer_tokens"][v] for row in block for v in target_index]
@@ -103,6 +103,8 @@ def predict(model,rows,changes=None):
                 state=h[index[:,None],sites].astype(mx.float32)
                 if mode=="whole":
                     values=state[index^3].transpose(1,0,2)
+                elif operand_edit is not None:
+                    values=operand_edit(state,start,len(block),mode)
                 else:
                     which=1 if mode=="random" else 0
                     rows_slice=slice(start,start+len(block))
@@ -112,7 +114,7 @@ def predict(model,rows,changes=None):
                         values.append(state[:,i]+mx.array(edit))
                 h=replace(h,sites,values)
             outputs.setdefault(mode,[]).extend(decoded_steps(model,h,mx.array(positions),cut))
-        if changes is not None and (start+len(block))%64==0:
+        if intervening and (start+len(block))%64==0:
             print(f"Scored {start+len(block)}/{len(rows)} groups",flush=True)
     return {m:np.array(v) for m,v in outputs.items()}
 
