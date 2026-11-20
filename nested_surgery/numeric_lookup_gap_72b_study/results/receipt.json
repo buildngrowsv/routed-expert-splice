@@ -1,0 +1,9 @@
+{
+  "job": "qwen-dictionary-matched-token-gap-72b",
+  "revision": "c2367e99f66afcd15d61dc053660401bf3062ce6",
+  "attempt": 1,
+  "started": "2026-11-20T13:28:44+00:00",
+  "status": "done",
+  "finished": "2026-11-20T13:38:30+00:00",
+  "exit": 0
+}
