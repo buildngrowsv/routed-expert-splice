@@ -1,0 +1,63 @@
+{
+  "decision": "unresolved",
+  "screen_eligible": 51,
+  "screen_groups": 64,
+  "models": {
+    "donor": [
+      "Qwen/Qwen2.5-Coder-7B",
+      "0396a76181e127dfc13e5c5ec48a8cee09938b02"
+    ],
+    "recipient": [
+      "Qwen/Qwen2.5-72B",
+      "efba10c8e54e91e0d9570ab5f7b51a958474d4cb"
+    ]
+  },
+  "cut": 17,
+  "lookup": true,
+  "groups": 256,
+  "map_digest": "4b5c46001809387bdf9195bf77d70de2ac9e98ffcaf6281fc4b4a9a5802acc3f",
+  "programs_digest": "748736cd9bd0a64ba9a77c8eb4e22bc22f41327f272d5bb570533f7c7224b2ce",
+  "alignment_digest": "318a75288da95e284052d86c3e9235aca6c661736cb3305b545ad1a0f80695da",
+  "eligible": 183,
+  "counts": {
+    "donor": {
+      "routing": 122,
+      "mirrored": 118,
+      "both_switch": 92,
+      "inert": 182,
+      "joint": 92
+    },
+    "orthogonal": {
+      "routing": 0,
+      "mirrored": 0,
+      "both_switch": 0,
+      "inert": 183,
+      "joint": 0
+    },
+    "whole": {
+      "routing": 125,
+      "mirrored": 125,
+      "both_switch": 96,
+      "inert": 181,
+      "joint": 95
+    }
+  },
+  "donor_minus_orthogonal": {
+    "mean": 0.5027322404371585,
+    "interval": [
+      0.43169398907103823,
+      0.5737704918032787
+    ]
+  },
+  "runtime_s": 459.62509183300426,
+  "peak_mlx_bytes": 146694231392,
+  "minimum_switches": 147,
+  "both_switch_donor_minus_whole": {
+    "mean": -0.02185792349726776,
+    "interval": [
+      -0.0546448087431694,
+      0.01092896174863388
+    ]
+  },
+  "switch_overlap": 89
+}

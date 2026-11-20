@@ -1,5 +1,9 @@
 # Which new Python repairs disappear when a transplanted coding expert is switched off?
 
+## Dictionary addresses at 72B
+
+Editing the key switched both mirrored lookups in 92 of 183 natively solved groups. A whole-state exchange switched 96. Both missed the 80% gate. Editing the key preserved 182 groups where both keys led to the same answer. [Audit and evidence](numeric_lookup_72b_study/README.md)
+
 ## Saved values at 72B
 
 The same 7B interface switched 193 of 206 native-qualified groups after adding a saved binding and a later overwrite. Editing the irrelevant assignment preserved 195 groups, one short of the 95% floor. All 14 missed individual answers followed the edited later value. [Audited result](numeric_snapshot_72b_study/README.md)
