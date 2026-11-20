@@ -27,3 +27,5 @@ Allowing the direct path alone increased reversals by 2.34 points over unrestric
 These interventions identify how this newly injected edit can propagate after block 10. Earlier layers may already have copied native declaration information to other tokens, which can help explain intact answers when the direct edge closes. The studied outputs are two candidate letters in generated programs, and the scope includes this checkpoint, source, and readout. A follow-up splits direct access at block 17. [Timing protocol](../IDENTIFIER_ATTENTION_TIMING.md)
 
 Run `uv run --with numpy python nested_surgery/attention_paths_study/verify.py` to re-execute the prompts and reproduce the statistics. The Studio run lasted six minutes and 52 seconds using Python 3.12, MLX 0.32.4, MLX-LM 0.32.2 and NumPy 2.5.5. The owner proposed spatial walls and isolated paths within networks. OpenAI Codex designed and implemented the intervention, ran it on the owner's Apple M5 Ultra, verified the evidence and assisted with writing.
+
+[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/454)

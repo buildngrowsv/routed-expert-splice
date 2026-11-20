@@ -24,3 +24,7 @@ Use Qwen2.5-Coder-7B base revision `0396a76181e127dfc13e5c5ec48a8cee09938b02` an
 Every success requires the prespecified answer to win strictly against the other three logits in all four variants. The both-operand arm's mean target margin was +4.07, versus +4.09 for the full host exchange and −4.74 for the random edits. The group bootstrap interval for the difference over random had both endpoints at +100 percentage points, as every group had the same result. These programs span 44 possible operand-pair recipes before order shuffling. The experiment uses known source sites, two counterfactual donor passes per site, and four allowed next-token completions. Its successful composition applies to direct one-step addition and subtraction in these generated programs. [Independent verifier](verify.py) · [Recomputed results](audit.json) · [Complete scores and doses](results)
 
 Run `uv run --with numpy python nested_surgery/numeric_simple_study/verify.py` to execute the programs and derive every target independently. The run took five minutes and seven seconds using Python 3.12, MLX 0.32.4, MLX-LM 0.32.2 and NumPy 2.5.5 on the owner's Apple M5 Ultra. The owner proposed expert transplantation. OpenAI Codex designed and operated the experiment, checked the outcomes and assisted with the writing. [Studio receipt](results/receipt.json)
+
+[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/452)
+
+[Full-vocabulary follow-up](../NUMERIC_COMPOSITION_OPEN.md)

@@ -79,14 +79,19 @@ def host_panel(tokenizer, count=1024, start=80000, *, simple=False):
     return groups
 
 
-def readout(model, h, ends, cut, choices):
+def completion_logits(model, h, ends, cut):
     mask = create_attention_mask(h,None)
     for block in model.model.layers[cut:]:
         h = block(h,mask)
     index = mx.arange(h.shape[0])
     out = model.model.norm(h[index,ends])
     project = model.model.embed_tokens.as_linear if model.args.tie_word_embeddings else model.lm_head
-    return np.asarray(project(out)[index[:,None],choices].astype(mx.float32)).reshape(-1,4,4)
+    return project(out).astype(mx.float32)
+
+
+def readout(model, h, ends, cut, choices):
+    z = completion_logits(model,h,ends,cut)
+    return np.asarray(z[mx.arange(len(ends))[:,None],choices]).reshape(-1,4,4)
 
 
 def replace(h, locations, vectors):
@@ -97,9 +102,9 @@ def replace(h, locations, vectors):
     return h
 
 
-def evaluate(model, panel, changes=None):
+def evaluate(model, panel, changes=None, *, read=readout, arms=ARMS):
     cut = SITES["host"]
-    raw = {k:[] for k in (ARMS if changes is not None else ("native",))}
+    raw = {k:[] for k in (arms if changes is not None else ("native",))}
     for start in range(0,len(panel),4):
         block = panel[start:start+4]
         seqs = [seq for row in block for seq in row["ids"]]
@@ -110,7 +115,7 @@ def evaluate(model, panel, changes=None):
         sites = mx.array(np.repeat([r["sites"] for r in block],4,axis=0))
         index = mx.arange(len(seqs))
         h = prefix(model,tokens,cut)
-        raw["native"].extend(readout(model,h,ends,cut,choices))
+        raw["native"].extend(read(model,h,ends,cut,choices))
         if changes is None:
             continue
         state = h[index[:,None],sites].astype(mx.float32)
@@ -129,7 +134,8 @@ def evaluate(model, panel, changes=None):
             "whole": replace(h,sites,state[index ^ 3].transpose(1,0,2)),
         }
         for name, alt in altered.items():
-            raw[name].extend(readout(model,alt,ends,cut,choices))
+            if name in raw:
+                raw[name].extend(read(model,alt,ends,cut,choices))
         if (start+len(block))%64==0:
             print(f"Scored {start+len(block)}/{len(panel)} groups",flush=True)
     return {k:np.asarray(v) for k,v in raw.items()}
