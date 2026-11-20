@@ -1,0 +1,9 @@
+{
+  "job": "qwen-identifier-sparse-edge-sets",
+  "revision": "7f8d9bdd92d2e3ab0e918f213a0d29c79507f4f3",
+  "attempt": 1,
+  "started": "2026-11-20T08:30:13+00:00",
+  "status": "done",
+  "finished": "2026-11-20T08:38:40+00:00",
+  "exit": 0
+}

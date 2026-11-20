@@ -1,0 +1,95 @@
+{
+  "model": [
+    "Qwen/Qwen2.5-14B",
+    "97e1e76335b7017d8f67c08a19d103c0504298c9"
+  ],
+  "groups": 384,
+  "strong": [
+    20,
+    21,
+    26,
+    33,
+    37,
+    38,
+    44,
+    45
+  ],
+  "weak": [
+    22,
+    24,
+    27,
+    32,
+    34,
+    35,
+    42,
+    48
+  ],
+  "calibration_digest": "89a9bb02fc6d22363015da060d137e0d8dd726069636620262423d7172d6f7e3",
+  "decision": "sparse_attention_resolved",
+  "eligible": 384,
+  "clean_groups": {
+    "unrestricted": 384,
+    "blocked": 384,
+    "strong_eight": 384,
+    "weak_eight": 384,
+    "without_strong": 384
+  },
+  "reversals": {
+    "unrestricted": [
+      359,
+      0
+    ],
+    "blocked": [
+      0,
+      0
+    ],
+    "strong_eight": [
+      347,
+      0
+    ],
+    "weak_eight": [
+      0,
+      0
+    ],
+    "without_strong": [
+      21,
+      0
+    ]
+  },
+  "relative": {
+    "strong_eight": {
+      "mean": -0.03125,
+      "interval": [
+        -0.049479166666666664,
+        -0.015625
+      ]
+    },
+    "weak_eight": {
+      "mean": -0.9348958333333334,
+      "interval": [
+        -0.9583333333333334,
+        -0.9088541666666666
+      ]
+    }
+  },
+  "strong_minus_weak": {
+    "mean": 0.9036458333333334,
+    "interval": [
+      0.8723958333333334,
+      0.9322916666666666
+    ]
+  },
+  "removal": {
+    "mean": 0.8802083333333334,
+    "interval": [
+      0.8463541666666666,
+      0.9114583333333334
+    ]
+  },
+  "sufficient": [
+    "strong_eight"
+  ],
+  "strong_leads": true,
+  "removal_material": true,
+  "controls_qualified": true
+}

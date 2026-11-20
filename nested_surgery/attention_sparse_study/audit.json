@@ -1,0 +1,138 @@
+{
+  "model": [
+    "Qwen/Qwen2.5-14B",
+    "97e1e76335b7017d8f67c08a19d103c0504298c9"
+  ],
+  "groups": 384,
+  "strong": [
+    20,
+    21,
+    26,
+    33,
+    37,
+    38,
+    44,
+    45
+  ],
+  "weak": [
+    22,
+    24,
+    27,
+    32,
+    34,
+    35,
+    42,
+    48
+  ],
+  "calibration_digest": "89a9bb02fc6d22363015da060d137e0d8dd726069636620262423d7172d6f7e3",
+  "decision": "sparse_attention_resolved",
+  "eligible": 384,
+  "clean_groups": {
+    "unrestricted": 384,
+    "blocked": 384,
+    "strong_eight": 384,
+    "weak_eight": 384,
+    "without_strong": 384
+  },
+  "reversals": {
+    "unrestricted": [
+      359,
+      0
+    ],
+    "blocked": [
+      0,
+      0
+    ],
+    "strong_eight": [
+      347,
+      0
+    ],
+    "weak_eight": [
+      0,
+      0
+    ],
+    "without_strong": [
+      21,
+      0
+    ]
+  },
+  "relative": {
+    "strong_eight": {
+      "mean": -0.03125,
+      "interval": [
+        -0.049479166666666664,
+        -0.015625
+      ]
+    },
+    "weak_eight": {
+      "mean": -0.9348958333333334,
+      "interval": [
+        -0.9583333333333334,
+        -0.9088541666666666
+      ]
+    }
+  },
+  "strong_minus_weak": {
+    "mean": 0.9036458333333334,
+    "interval": [
+      0.8723958333333334,
+      0.9322916666666666
+    ]
+  },
+  "removal": {
+    "mean": 0.8802083333333334,
+    "interval": [
+      0.8463541666666666,
+      0.9114583333333334
+    ]
+  },
+  "sufficient": [
+    "strong_eight"
+  ],
+  "strong_leads": true,
+  "removal_material": true,
+  "controls_qualified": true,
+  "mean_margins": {
+    "unrestricted_clean": [
+      12.96923828125,
+      12.943603515625
+    ],
+    "weak_eight_clean": [
+      13.302653312683105,
+      13.324462890625
+    ],
+    "unrestricted_edited": [
+      -4.343912601470947,
+      5.69921875
+    ],
+    "blocked_edited": [
+      6.530029296875,
+      10.089274406433105
+    ],
+    "weak_eight_edited": [
+      6.045979976654053,
+      9.628987312316895
+    ],
+    "without_strong_edited": [
+      1.605224609375,
+      7.170003414154053
+    ],
+    "blocked_clean": [
+      13.309977531433105,
+      13.339436531066895
+    ],
+    "strong_eight_edited": [
+      -3.1902668476104736,
+      7.986897945404053
+    ],
+    "strong_eight_clean": [
+      13.111165046691895,
+      13.1103515625
+    ],
+    "without_strong_clean": [
+      13.208415031433105,
+      13.164713859558105
+    ]
+  },
+  "overlap_with_full": 347
+}

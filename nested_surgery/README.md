@@ -54,3 +54,4 @@ On the registered identical-suffix follow-up the same coding graft solved zero o
 - [Single-block direct read](attention_single_study/README.md) tests the largest calibration score on a separate panel.
 - [Complete-number composition](numeric_carry_study/README.md) verifies both directions of decimal carry with two donor edits.
 - [One donor pass per operand](numeric_absolute_study/README.md) compares an absolute-state interface to the paired method.
+- [Eight calibrated attention blocks](attention_sparse_study/README.md) compare two equal-size sets chosen in the same depth bins.
