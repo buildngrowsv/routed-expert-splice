@@ -1,0 +1,61 @@
+{
+  "decision": "live_route_confirms_speed_and_quality",
+  "layouts": {
+    "neutral": {
+      "n": 2304,
+      "complete": 1957,
+      "native": 1960,
+      "mismatched_groups": 3,
+      "call_changes": 0,
+      "actual_calls": 825,
+      "call_fraction": 0.1193576388888889,
+      "lift": -0.0013020833333333333,
+      "interval": [
+        -0.011284722222222222,
+        0.008246527777777778
+      ],
+      "median_ms": [
+        134.707313,
+        419.8519165,
+        221.0297085
+      ],
+      "speedup_over_always": 1.900526659283603,
+      "speedup_interval": [
+        1.7575258247264178,
+        1.9840074418158997
+      ]
+    },
+    "decoys": {
+      "n": 2304,
+      "complete": 1482,
+      "native": 1375,
+      "mismatched_groups": 1,
+      "call_changes": 0,
+      "actual_calls": 1593,
+      "call_fraction": 0.23046875,
+      "lift": 0.046440972222222224,
+      "interval": [
+        0.031684027777777776,
+        0.06163194444444445
+      ],
+      "median_ms": [
+        134.71925,
+        420.112604,
+        235.7622915
+      ],
+      "speedup_over_always": 1.6967627727844912,
+      "speedup_interval": [
+        1.6798299925120623,
+        1.7607847674499462
+      ]
+    }
+  },
+  "arms": [
+    "standalone",
+    "always_blend",
+    "conditional"
+  ],
+  "repeats": 3,
+  "seconds": 460.8854792919883,
+  "peak_mlx_bytes": 45580164528
+}

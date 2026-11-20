@@ -1,0 +1,9 @@
+{
+  "job": "large-qwen-frozen-live-route-timing",
+  "revision": "4042f0fd1d2f1d84744a32571e19253912c7a3ed",
+  "attempt": 1,
+  "started": "2026-11-20T15:30:27+00:00",
+  "status": "done",
+  "finished": "2026-11-20T15:38:09+00:00",
+  "exit": 0
+}
