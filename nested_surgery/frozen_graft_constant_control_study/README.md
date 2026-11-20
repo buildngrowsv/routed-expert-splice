@@ -25,3 +25,5 @@ The constant gained 106 groups and lost 40 compared with the aligned early map. 
 ## Reproduction
 
 The BF16 Qwen2.5-14B model ran on the Apple M5 Ultra with 256 GiB unified memory, macOS build 26B118, Python 3.12.16, MLX 0.32.4, MLX-LM 0.32.2, NumPy 2.5.5 and tokenizers 0.23.3. The run took 70.82 seconds and peaked at 30.07 GB MLX allocation. From the repository root, run `uv run --with numpy python nested_surgery/frozen_graft_constant_control_study/verify.py` to audit source hashes, logits and 5,000 paired whole-group draws. To replay inference, set `STUDIO_JOB_DIR` to a fresh results directory and run the pinned source. The owner proposed the frozen graft and fixed references. OpenAI Codex registered, implemented, ran, audited and documented this comparison. [Execution receipt](results/receipt.json) · [Environment](results/studio-environment.txt) · [Verifier](verify.py)
+
+[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/569)
