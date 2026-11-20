@@ -1,0 +1,89 @@
+{
+  "host": [
+    "Qwen/Qwen2.5-32B",
+    "1818d35814b8319459f4bd55ed1ac8709630f003"
+  ],
+  "reference": "relative",
+  "gain": 2.624716970336347,
+  "hold_blocks": 7,
+  "prompts_digest": "5ae081cd2cc499ee45a641d528527844805571686ea3557c178660cb73d2cc95",
+  "map_digest": "4b5c46001809387bdf9195bf77d70de2ac9e98ffcaf6281fc4b4a9a5802acc3f",
+  "peak_mlx_bytes": 67015266528,
+  "decision": "unresolved",
+  "native": 512,
+  "native_held": 512,
+  "eligible": 512,
+  "counts": {
+    "hold": 332,
+    "sham": 0,
+    "one_shot": 358,
+    "whole": 454
+  },
+  "contrasts": {
+    "one_shot": {
+      "mean": -0.05078125,
+      "interval": [
+        -0.08203125,
+        -0.01953125
+      ]
+    },
+    "sham": {
+      "mean": 0.6484375,
+      "interval": [
+        0.607421875,
+        0.69140625
+      ]
+    }
+  },
+  "directions": {
+    "one_to_two": {
+      "total": 747,
+      "correct": {
+        "hold": 700,
+        "sham": 0,
+        "one_shot": 689,
+        "whole": 711
+      }
+    },
+    "two_to_one": {
+      "total": 747,
+      "correct": {
+        "hold": 632,
+        "sham": 0,
+        "one_shot": 669,
+        "whole": 737
+      }
+    }
+  },
+  "hit_original_target": false,
+  "common_native": 512,
+  "common_counts": {
+    "relative": 332,
+    "relative_random": 0,
+    "absolute": 333,
+    "one_shot": 358
+  },
+  "relative_minus": {
+    "relative_random": {
+      "mean": 0.6484375,
+      "interval": [
+        0.607421875,
+        0.689453125
+      ]
+    },
+    "absolute": {
+      "mean": -0.001953125,
+      "interval": [
+        -0.017626953124999983,
+        0.015625
+      ]
+    },
+    "one_shot": {
+      "mean": -0.05078125,
+      "interval": [
+        -0.08203125,
+        -0.01953125
+      ]
+    }
+  }
+}
