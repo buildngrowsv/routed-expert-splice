@@ -33,3 +33,5 @@ The Studio used BF16 frozen base models with the released Qwen checkpoints recor
 ```sh
 uv run --with numpy python nested_surgery/learned_output_port_study/verify.py
 ```
+
+[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/544)
