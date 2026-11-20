@@ -1,0 +1,9 @@
+{
+  "job": "qwen-two-operands-full-vocabulary",
+  "revision": "0305bacfd0837e0ed6d7b15c781fc57ab3dca28a",
+  "attempt": 1,
+  "started": "2026-11-20T08:13:10+00:00",
+  "status": "done",
+  "finished": "2026-11-20T08:16:31+00:00",
+  "exit": 0
+}

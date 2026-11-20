@@ -49,3 +49,5 @@ On the registered identical-suffix follow-up the same coding graft solved zero o
 - [Direct and relayed paths](IDENTIFIER_ATTENTION_PATHS.md) restrict which later tokens can read an edited declaration.
 - [Direct-edge attention wall](attention_paths_study/README.md) compares direct read access with unrestricted relay paths.
 - [Qualified two-operand composition](numeric_simple_study/README.md) tests independent edits on simple sums and differences.
+- [Direct-edge timing](attention_timing_study/README.md) isolates access before and after block 17.
+- [Two operands without a shortlist](numeric_simple_open_study/README.md) verifies the complete-vocabulary result.

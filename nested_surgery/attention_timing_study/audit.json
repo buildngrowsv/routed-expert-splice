@@ -1,0 +1,99 @@
+{
+  "model": [
+    "Qwen/Qwen2.5-14B",
+    "97e1e76335b7017d8f67c08a19d103c0504298c9"
+  ],
+  "groups": 384,
+  "boundary": 17,
+  "cut": 10,
+  "depth": 48,
+  "decision": "timing_resolved",
+  "eligible": 384,
+  "clean_groups": {
+    "unrestricted": 384,
+    "early": 384,
+    "late": 384,
+    "blocked": 384
+  },
+  "reversals": {
+    "unrestricted": [
+      359,
+      0
+    ],
+    "early": [
+      0,
+      0
+    ],
+    "late": [
+      359,
+      0
+    ],
+    "blocked": [
+      0,
+      0
+    ]
+  },
+  "relative_to_full": {
+    "early": {
+      "mean": -0.9348958333333334,
+      "interval": [
+        -0.9583333333333334,
+        -0.9114583333333334
+      ]
+    },
+    "late": {
+      "mean": 0.0,
+      "interval": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "late_minus_early": {
+    "mean": 0.9348958333333334,
+    "interval": [
+      0.9114583333333334,
+      0.9583333333333334
+    ]
+  },
+  "sufficient": [
+    "late"
+  ],
+  "leading_window": "late",
+  "controls_qualified": true,
+  "mean_margin": {
+    "unrestricted_clean": [
+      12.796549797058105,
+      12.786458015441895
+    ],
+    "late_edited": [
+      -4.51220703125,
+      6.01318359375
+    ],
+    "late_clean": [
+      12.980875968933105,
+      12.967854499816895
+    ],
+    "early_edited": [
+      6.465738773345947,
+      9.937174797058105
+    ],
+    "blocked_clean": [
+      13.17041015625,
+      13.178955078125
+    ],
+    "blocked_edited": [
+      6.649332523345947,
+      10.07666015625
+    ],
+    "early_clean": [
+      13.000407218933105,
+      12.98046875
+    ],
+    "unrestricted_edited": [
+      -4.470540523529053,
+      5.947265625
+    ]
+  },
+  "late_full_agree_in_both_queries": 384
+}

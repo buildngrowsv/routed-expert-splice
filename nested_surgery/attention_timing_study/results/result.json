@@ -1,0 +1,64 @@
+{
+  "model": [
+    "Qwen/Qwen2.5-14B",
+    "97e1e76335b7017d8f67c08a19d103c0504298c9"
+  ],
+  "groups": 384,
+  "boundary": 17,
+  "cut": 10,
+  "depth": 48,
+  "decision": "timing_resolved",
+  "eligible": 384,
+  "clean_groups": {
+    "unrestricted": 384,
+    "early": 384,
+    "late": 384,
+    "blocked": 384
+  },
+  "reversals": {
+    "unrestricted": [
+      359,
+      0
+    ],
+    "early": [
+      0,
+      0
+    ],
+    "late": [
+      359,
+      0
+    ],
+    "blocked": [
+      0,
+      0
+    ]
+  },
+  "relative_to_full": {
+    "early": {
+      "mean": -0.9348958333333334,
+      "interval": [
+        -0.9583333333333334,
+        -0.9114583333333334
+      ]
+    },
+    "late": {
+      "mean": 0.0,
+      "interval": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "late_minus_early": {
+    "mean": 0.9348958333333334,
+    "interval": [
+      0.9114583333333334,
+      0.9583333333333334
+    ]
+  },
+  "sufficient": [
+    "late"
+  ],
+  "leading_window": "late",
+  "controls_qualified": true
+}

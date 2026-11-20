@@ -1,0 +1,96 @@
+{
+  "decision": "composition_unrestricted",
+  "models": {
+    "donor": [
+      "Qwen/Qwen2.5-Coder-7B",
+      "0396a76181e127dfc13e5c5ec48a8cee09938b02"
+    ],
+    "host": [
+      "Qwen/Qwen2.5-14B",
+      "97e1e76335b7017d8f67c08a19d103c0504298c9"
+    ]
+  },
+  "groups": 512,
+  "map_digest": "314f780d33cdb572add76953d9fbebfeeeee1e3eccdb5cadca188dddadf30b68",
+  "source_digest": "b20d556d482e6008318a55f7550bbe61b5a843d1c6e7a8f4daee30e343dbfb0c",
+  "full_vocabulary": {
+    "eligible": 512,
+    "correct": {
+      "native": 512,
+      "both": 512,
+      "random": 0,
+      "whole": 512
+    },
+    "both_minus_random": {
+      "mean": 1.0,
+      "interval": [
+        1.0,
+        1.0
+      ]
+    },
+    "qualifies": true,
+    "by_operator": {
+      "addition": {
+        "eligible": 256,
+        "correct": {
+          "native": 256,
+          "both": 256,
+          "random": 0,
+          "whole": 256
+        }
+      },
+      "subtraction": {
+        "eligible": 256,
+        "correct": {
+          "native": 256,
+          "both": 256,
+          "random": 0,
+          "whole": 256
+        }
+      }
+    }
+  },
+  "forced_four_choice": {
+    "eligible": 512,
+    "correct": {
+      "native": 512,
+      "both": 512,
+      "random": 0,
+      "whole": 512
+    },
+    "both_minus_random": {
+      "mean": 1.0,
+      "interval": [
+        1.0,
+        1.0
+      ]
+    },
+    "qualifies": true,
+    "by_operator": {
+      "addition": {
+        "eligible": 256,
+        "correct": {
+          "native": 256,
+          "both": 256,
+          "random": 0,
+          "whole": 256
+        }
+      },
+      "subtraction": {
+        "eligible": 256,
+        "correct": {
+          "native": 256,
+          "both": 256,
+          "random": 0,
+          "whole": 256
+        }
+      }
+    }
+  },
+  "top_token_outside_choices": {
+    "native": 0,
+    "both": 0,
+    "random": 0,
+    "whole": 0
+  }
+}
