@@ -30,4 +30,6 @@ The refitted intact graft underperformed the equally trained native host by 1.56
 
 This is one model pair, calibration draw and receiver training budget. The refit was calibrated at one token position and used at all positions within the host. Both the changed context for downstream attention and the output translation remain possible contributors to the failure. The outcome closes adaptation around this transplanted module under these conditions. Python 3.12, MLX 0.32.4, MLX-LM 0.32.2 and NumPy 2.5.5 ran on the owner’s Apple M5 Ultra. The owner proposed the expert surgery and matched controls. OpenAI Codex implemented and ran the benchmark, verified the scores and assisted with writing.
 
-[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/421)
+[Published Pubroot paper](https://pubroot.com/ai/fine-tuning/restoring-a-7b-expert-s-input-signal-did-not-transfer-complete-repairs-to-its-14b-host/) · [Public review](https://github.com/buildngrowsv/pubroot-website/issues/421)
+
+[Single-position output-boundary comparison](../OUTPUT_BOUNDARY.md)
