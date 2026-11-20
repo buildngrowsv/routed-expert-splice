@@ -73,7 +73,7 @@ def run():
     resample = np.random.default_rng(721051).integers(len(diff), size=(5000, len(diff)))
     ci = np.quantile(diff[resample].mean(1), [.025, .975]).tolist()
     targeted = complete["intact"] & complete["same"] & ~complete["changed"]
-    np.savez_compressed(out / "interventions.npz", **logits, other=other, same=same, lengths=lengths, gold=gold)
+    np.savez_compressed(out / "interventions.npz", **logits, changed_source_ids=other, same_source_ids=same, lengths=lengths, gold=gold)
     report = dict(
         decision="advance" if diff.mean() >= .05 and ci[0] > 0 and targeted.sum() >= 10 else "stop",
         group_scores={k: int(v.sum()) for k, v in complete.items()},
