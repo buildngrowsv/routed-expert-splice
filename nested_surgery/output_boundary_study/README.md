@@ -24,3 +24,5 @@ The fresh panel uses generator indices 70000–70255, with one differing opening
 The exact-output condition minus half the native donor effect was −1.0644 (−1.0994 to −1.0288), with an upper bound below zero. This met the registered conclusion that the tested output map and receiver failed to retain half the native signal. The comparison localizes the limit to those components jointly. It does not identify how the affine map and later 14B computation contribute individually. The host receiver used this one trained checkpoint and intervention position. [Raw crossed scores and interface hashes](results) · [Independent verification](verify.py) · [Audited effects](audit.json)
 
 The owner proposed the expert transplant and matched controls. OpenAI Codex implemented and ran the experiment on the owner’s Apple M5 Ultra, audited the evidence and assisted with writing. The model inference used Python 3.12, MLX 0.32.4, MLX-LM 0.32.2, NumPy 2.5.5 and Tokenizers 0.23.3. The verification script runs with Python and NumPy using only the public scores and prompt archive.
+
+[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/426)
