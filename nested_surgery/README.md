@@ -61,3 +61,5 @@ On the registered identical-suffix follow-up the same coding graft solved zero o
 - [Single-gain 32B transfer](numeric_scalar_study/README.md) uses native assignment-state differences to set edit magnitude without answers.
 
 - [Two-operand transfer into 32B](numeric_carry_32b_study/README.md) measured complete carry answers under an unchanged borrowed gain.
+
+- [Seven-block fixed reference at 32B](numeric_hold_32b_study/README.md) measures a fixed hold through the next seven blocks for both donor operands.

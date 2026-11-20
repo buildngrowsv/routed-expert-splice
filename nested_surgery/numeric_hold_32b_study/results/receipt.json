@@ -1,0 +1,9 @@
+{
+  "job": "qwen-fixed-two-operands-32b",
+  "revision": "708db914683b86fcb7b1acf02fca18fdfd87131f",
+  "attempt": 1,
+  "started": "2026-11-20T09:27:50+00:00",
+  "status": "done",
+  "finished": "2026-11-20T09:34:30+00:00",
+  "exit": 0
+}
