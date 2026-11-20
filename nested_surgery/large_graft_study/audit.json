@@ -1,0 +1,73 @@
+{
+  "group_count": 256,
+  "scores": {
+    "native": {
+      "prompts": 299,
+      "groups": 2
+    },
+    "knockout": {
+      "prompts": 265,
+      "groups": 0
+    },
+    "direct": {
+      "prompts": 222,
+      "groups": 1
+    },
+    "shuffled": {
+      "prompts": 469,
+      "groups": 13
+    },
+    "general": {
+      "prompts": 159,
+      "groups": 0
+    },
+    "coder": {
+      "prompts": 251,
+      "groups": 0
+    },
+    "before-native": {
+      "prompts": 7,
+      "groups": 0
+    },
+    "before-knockout": {
+      "prompts": 10,
+      "groups": 0
+    },
+    "before-direct": {
+      "prompts": 4,
+      "groups": 0
+    },
+    "before-shuffled": {
+      "prompts": 0,
+      "groups": 0
+    },
+    "before-general": {
+      "prompts": 6,
+      "groups": 0
+    },
+    "before-coder": {
+      "prompts": 5,
+      "groups": 0
+    },
+    "coder-to-knockout": {
+      "prompts": 257,
+      "groups": 2
+    },
+    "coder-to-native": {
+      "prompts": 148,
+      "groups": 0
+    },
+    "coder-to-shuffled": {
+      "prompts": 117,
+      "groups": 0
+    }
+  },
+  "standalone_donor_only": 54,
+  "new_groups": 0,
+  "strict_groups": 0,
+  "strict_standalone_overlap": 0,
+  "off_losses": 0,
+  "off_rescues": 2,
+  "native_regressions": 2,
+  "advances": false
+}

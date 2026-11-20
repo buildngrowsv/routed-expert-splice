@@ -1,0 +1,7 @@
+{
+  "items": 8,
+  "full_logits_max_error": 0.0,
+  "qualification_logit_difference": 0.0,
+  "block": 27,
+  "train_block": 28
+}

@@ -1,0 +1,9 @@
+{
+  "job": "large-qwen-fresh-panel-reference",
+  "revision": "f4e1e0d02e7621bb8148f5fbf69c357d959adedb",
+  "attempt": 1,
+  "started": "2026-11-20T03:17:57+00:00",
+  "status": "done",
+  "finished": "2026-11-20T03:18:26+00:00",
+  "exit": 0
+}
