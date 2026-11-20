@@ -1,4 +1,5 @@
 """Test whether access to an early key before the edit limits whole-state steering."""
+import argparse
 from hashlib import sha256
 import json
 import os
@@ -23,20 +24,41 @@ from large_opener import checkpoint_files
 ARMS = ("key_block", "syntax_block")
 
 
-def attention(width, source, offset):
+def attention(width, source, offset, span=None):
     position = mx.arange(width)
     query, key = position[None,:,None], position[None,None,:]
     source = source[:,None,None]
-    return ((query>=key) & ~((query>source) & (key==source+offset)))[:,None,:,:]
+    blocked = query > source
+    if span is not None:
+        blocked = blocked & (query>=span[:,0,None,None]) & (query<span[:,1,None,None])
+    return ((query>=key) & ~(blocked & (key==source+offset)))[:,None,:,:]
 
 
-def collect(model, rows):
+def table_spans(tokenizer, rows):
+    spans=[]
+    for row in rows:
+        for p, ids in zip(row["prompts"],row["ids"],strict=True):
+            text=p.splitlines(keepends=True)
+            assert text[2].startswith("    table =") and text[3].startswith("    return")
+            start=len(text[0])+len(text[1])
+            end=start+len(text[2])
+            encoded=tokenizer.encode(p,add_special_tokens=False)
+            assert encoded.ids==ids
+            inside=[j for j,(a,b) in enumerate(encoded.offsets) if a<end and b>start]
+            assert inside and inside[0]>row["site"] and inside==list(range(inside[0],inside[-1]+1))
+            spans.append([inside[0],inside[-1]+1])
+    return np.asarray(spans,dtype=np.int32)
+
+
+def collect(model, rows, spans=None):
     values = {m: {"native":[], "whole":[]} for m in ARMS}
     for i,(ids,site,end,choices,_) in enumerate(encoded_batches(rows),start=1):
         embedded = model.model.embed_tokens(ids)
         item = mx.arange(len(ids))
+        first=(i-1)*16
+        span=mx.array(spans[first:first+len(ids)]) if spans is not None else None
         for mode,offset in zip(ARMS,(0,-1),strict=True):
-            mask = attention(ids.shape[1],site,offset)
+            mask = attention(ids.shape[1],site,offset,span)
             hidden = embedded
             for layer in model.model.layers[:CUT]:
                 hidden=layer(hidden,mask)
@@ -72,6 +94,9 @@ def score(arms):
 
 
 def main():
+    parser=argparse.ArgumentParser()
+    parser.add_argument("--table-only",action="store_true")
+    table_only=parser.parse_args().table_only
     began=time.perf_counter()
     mx.set_cache_limit(2*1024**3)
     out=Path(os.environ["STUDIO_JOB_DIR"])
@@ -89,13 +114,15 @@ def main():
     with np.load(archive) as saved:
         unrestricted={k:saved[k] for k in ("native","whole")}
     model,_=load_model(path,strict=True)
-    outcomes=collect(model,rows)
+    spans=table_spans(tok,rows) if table_only else None
+    outcomes=collect(model,rows,spans)
     outcomes["unrestricted"]=unrestricted
     result=score(outcomes)
-    np.savez_compressed(out/"attention.npz",**{
-        f"{m}_{k}":x for m,z in outcomes.items() if m in ARMS for k,x in z.items()
-    })
-    result.update(recipient=HOST,cut=CUT,source_programs_digest=prior["programs_digest"],
+    arrays={f"{m}_{k}":x for m,z in outcomes.items() if m in ARMS for k,x in z.items()}
+    if spans is not None:
+        arrays["table_spans"]=spans
+    np.savez_compressed(out/"attention.npz",**arrays)
+    result.update(recipient=HOST,cut=CUT,table_only=table_only,source_programs_digest=prior["programs_digest"],
                   source_ranks_digest=sha256(archive.read_bytes()).hexdigest(),
                   runtime_s=time.perf_counter()-began,peak_mlx_bytes=mx.get_peak_memory())
     (out/"result.json").write_text(json.dumps(result,indent=2)+"\n")
