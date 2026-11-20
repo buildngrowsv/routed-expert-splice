@@ -21,3 +21,5 @@ The swap outcome requires the answer token to rank uniquely first over the full 
 Run `uv run --with numpy python nested_surgery/numeric_lookup_preedit_attention_72b_study/verify.py` to verify the source program and score hashes, execute program assertions, and recompute native coverage and conditional switch comparisons. The Studio run took 491 seconds and reached 146.71 GB peak MLX allocation on Apple M5 Ultra with 80 GPU cores and 256 GiB unified memory. The engine used macOS build 26B118, Python 3.12.16, MLX 0.32.4, MLX-LM 0.32.2, NumPy 2.5.5 and tokenizers 0.23.3. The owner proposed testing walls and conditional routing. OpenAI Codex implemented, ran, audited and documented the comparison. [Execution receipt](results/receipt.json) · [Independent verifier](verify.py)
 
 [Published Pubroot article](https://pubroot.com/ai/nlp/blocking-all-pre-edit-reads-of-an-early-dictionary-key-cut-native-72b-solves/) · [Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/533)
+
+[Completed dictionary-only attention comparison](../numeric_lookup_table_attention_72b_study/README.md)
