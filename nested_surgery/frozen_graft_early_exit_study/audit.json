@@ -1,0 +1,39 @@
+{
+  "counts": {
+    "mapped": 166,
+    "shuffled": 143,
+    "teacher": 166,
+    "host": 68,
+    "off": 0,
+    "intact": 298
+  },
+  "attributable": 49,
+  "teacher_and_student": 119,
+  "centered_error": {
+    "mapped": 0.42653573641480713,
+    "shuffled": 1.5122790623379534
+  },
+  "paired": {
+    "host": {
+      "mean": 0.19140625,
+      "interval": [
+        0.14448242187500002,
+        0.23828125
+      ]
+    },
+    "shuffled": {
+      "mean": 0.044921875,
+      "interval": [
+        -0.001953125,
+        0.08793945312499929
+      ]
+    },
+    "off": {
+      "mean": 0.32421875,
+      "interval": [
+        0.283203125,
+        0.365234375
+      ]
+    }
+  }
+}

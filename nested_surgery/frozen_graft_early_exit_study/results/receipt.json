@@ -1,0 +1,9 @@
+{
+  "job": "large-qwen-graft-early-exit",
+  "revision": "872dbf3e6f9027bb3abd60f2a6eff78413955344",
+  "attempt": 1,
+  "started": "2026-11-20T15:38:13+00:00",
+  "status": "done",
+  "finished": "2026-11-20T15:40:24+00:00",
+  "exit": 0
+}

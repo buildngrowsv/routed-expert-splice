@@ -1,0 +1,55 @@
+{
+  "decision": "unresolved",
+  "complete": {
+    "mapped": 166,
+    "shuffled": 143,
+    "teacher": 166,
+    "host": 68,
+    "off": 0,
+    "intact": 298
+  },
+  "paired": {
+    "host": {
+      "mean": 0.19140625,
+      "interval": [
+        0.14448242187500002,
+        0.23828125
+      ]
+    },
+    "shuffled": {
+      "mean": 0.044921875,
+      "interval": [
+        -0.001953125,
+        0.08793945312499929
+      ]
+    },
+    "off": {
+      "mean": 0.32421875,
+      "interval": [
+        0.283203125,
+        0.365234375
+      ]
+    }
+  },
+  "donor_attributable": 49,
+  "normalized_feature_errors": {
+    "mapped": 0.03979441896080971,
+    "shuffled": 0.14109079539775848
+  },
+  "cut": 10,
+  "train_groups": 192,
+  "test_groups": 512,
+  "models": {
+    "donor": [
+      "Qwen/Qwen2.5-Coder-7B",
+      "0396a76181e127dfc13e5c5ec48a8cee09938b02"
+    ],
+    "host": [
+      "Qwen/Qwen2.5-14B",
+      "97e1e76335b7017d8f67c08a19d103c0504298c9"
+    ]
+  },
+  "port_sha256": "f0ecb60d3b335e34d23ce248091aa2e431e1bb1511aca817fadf4e5dbf347ca9",
+  "seconds": 129.90721624999424,
+  "peak_mlx_bytes": 45638821456
+}
