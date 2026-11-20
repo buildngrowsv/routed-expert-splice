@@ -65,3 +65,4 @@ On the registered identical-suffix follow-up the same coding graft solved zero o
 - [Seven-block fixed reference at 32B](numeric_hold_32b_study/README.md) measures a fixed hold through the next seven blocks for both donor operands.
 - [Operand alignment across widths](numeric_width_study/README.md) compares the same interface in a 5,120-wide 32B model and an 8,192-wide 72B model.
 - [Native-relative hold at 32B](numeric_relative_32b_study/README.md) preserves the original donor displacement while the unedited reference evolves.
+- [Two-operand carry at 72B](numeric_carry_72b_study/README.md) reports complete answer reversals with the existing wider interface.
