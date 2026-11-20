@@ -1,10 +1,12 @@
 """Carry both frozen spliced operand projections through seven additional blocks."""
+import argparse
 from hashlib import sha256
 import json
 import os
 from pathlib import Path
 
 import mlx.core as mx
+from mlx_lm.models.base import create_attention_mask
 from mlx_lm.utils import load_model
 import numpy as np
 from tokenizers import Tokenizer
@@ -23,6 +25,15 @@ HELD = ("native", "both", "random")
 PRIOR = "qwen-borrowed-two-operands-32b"
 REVISION = "f0fc062c821766701472077421ec9cc02c6d11e6"
 STEPS = 7
+ABSOLUTE_JOB = "qwen-fixed-two-operands-32b"
+ABSOLUTE_REVISION = "708db914683b86fcb7b1acf02fca18fdfd87131f"
+
+
+def restore_projection(hidden, sites, axis, target):
+    rows = mx.arange(len(hidden))[:, None]
+    state = hidden[rows, sites].astype(mx.float32)
+    correction = (target - state @ axis) @ axis.T
+    return replace(hidden, sites, (state + correction).transpose(1, 0, 2))
 
 
 def fixed_projection(initial, sites, axis):
@@ -31,11 +42,48 @@ def fixed_projection(initial, sites, axis):
     mx.eval(reference)
 
     def restore(hidden):
-        state = hidden[index, sites].astype(mx.float32)
-        correction = (reference - state @ axis) @ axis.T
-        return replace(hidden, sites, (state + correction).transpose(1, 0, 2))
+        return restore_projection(hidden, sites, axis, reference)
 
     return STEPS, restore
+
+
+def relative_projection(model, initial, original, sites, axis):
+    rows = mx.arange(len(initial))[:, None]
+
+    def coordinates(hidden):
+        return hidden[rows, sites].astype(mx.float32) @ axis
+
+    offset = coordinates(initial) - coordinates(original)
+    mask = create_attention_mask(original, None)
+    reference = []
+    for layer in model.model.layers[CUT:CUT + STEPS]:
+        original = layer(original, mask)
+        reference.append(coordinates(original) + offset)
+    mx.eval(*reference)
+    targets = iter(reference)
+    return STEPS, lambda hidden: restore_projection(hidden, sites, axis, next(targets))
+
+
+def relative_contrast(held, one_shot, absolute):
+    eligible = held["native"].all(1) & one_shot["native"].all(1) & absolute["native"].all(1)
+    n = int(eligible.sum())
+    wins = {name: arm[eligible].all(1) for name, arm in (
+        ("relative", held["both"]), ("relative_random", held["random"]),
+        ("absolute", absolute["both"]), ("one_shot", one_shot["both"]))}
+    counts = {name: int(hits.sum()) for name, hits in wins.items()}
+    differences = {}
+    if n:
+        draws = np.random.default_rng(628177).integers(n, size=(5000, n))
+        differences = {name: interval(wins["relative"].astype(int) - hits, draws)
+                       for name, hits in wins.items() if name != "relative"}
+    enough = n >= .95 * one_shot["native"].all(1).sum()
+    rescued = bool(n and enough and differences["absolute"]["mean"] >= .04
+                   and differences["absolute"]["interval"][0] > 0
+                   and differences["one_shot"]["interval"][0] >= -.04
+                   and differences["relative_random"]["mean"] >= .20
+                   and differences["relative_random"]["interval"][0] > 0)
+    return dict(decision="relative_hold_recovers" if rescued else "unresolved",
+                common_native=n, common_counts=counts, relative_minus=differences)
 
 
 def summarize(held, one_shot, panel):
@@ -67,6 +115,9 @@ def summarize(held, one_shot, panel):
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--reference", choices=("absolute", "relative"), default="absolute")
+    args = parser.parse_args()
     mx.set_cache_limit(2 * 1024**3)
     out = Path(os.environ["STUDIO_JOB_DIR"])
     jobs = Path(os.environ["STUDIO_QUEUE_ROOT"]) / "runs"
@@ -93,16 +144,26 @@ def main():
         changes = edit_both(state, desired, host_axis, orthogonal, gain)[int(mode == "random")]
         return (state + changes).transpose(1, 0, 2)
 
-    def hold(initial_state, sites, mode):
-        return fixed_projection(initial_state, sites, orthogonal if mode == "random" else host_axis)
+    def hold(initial_state, original_state, sites, mode):
+        axis = orthogonal if mode == "random" else host_axis
+        if args.reference == "relative":
+            return relative_projection(model, initial_state, original_state, sites, axis)
+        return fixed_projection(initial_state, sites, axis)
 
     scores = predict(model, panel, cut=CUT, operand_edit=edit, hold_factory=hold, modes=HELD)
     endings = finish_tokens(tok, np.unique(np.concatenate([v[..., 0].ravel() for v in scores.values()])))
     with np.load(jobs / PRIOR / "carry-32b.npz") as prior:
         old = outcomes(panel, {m: prior[m] for m in ("native", "both", "random", "whole")}, prior["terminators"])
-    result = summarize(outcomes(panel, scores, endings), old, panel)
+    current = outcomes(panel, scores, endings)
+    result = summarize(current, old, panel)
+    if args.reference == "relative":
+        held = verified_result(jobs / ABSOLUTE_JOB, ABSOLUTE_REVISION, "unresolved")
+        assert held["prompts_digest"] == digest and held["map_digest"] == map_digest
+        with np.load(jobs / ABSOLUTE_JOB / "held-32b.npz") as archive:
+            absolute = outcomes(panel, {m: archive[m] for m in HELD}, archive["terminators"])
+        result.update(relative_contrast(current, old, absolute))
     np.savez_compressed(out / "held-32b.npz", **scores, terminators=np.array(sorted(endings)))
-    report = dict(host=HOST_32, gain=gain, hold_blocks=STEPS, prompts_digest=digest, map_digest=map_digest,
+    report = dict(host=HOST_32, reference=args.reference, gain=gain, hold_blocks=STEPS, prompts_digest=digest, map_digest=map_digest,
                   peak_mlx_bytes=mx.get_peak_memory(), **result)
     (out / "result.json").write_text(json.dumps(report, indent=2) + "\n")
 

@@ -100,6 +100,7 @@ def predict(model,rows,changes=None,*,cut=SITES["host"],operand_edit=None,hold_f
             positions=[list(range(len(a)-1,len(a)+len(b)))+[len(a)+len(b)-1]*(2-len(b))
                        for a,b in zip(original,target,strict=True)]
             h=prefix(model,mx.array([a+[0]*(max_len-len(a)) for a in seq]),cut)
+            original_state=h
             if mode!="native":
                 index=mx.arange(len(seq))
                 state=h[index[:,None],sites].astype(mx.float32)
@@ -115,7 +116,7 @@ def predict(model,rows,changes=None,*,cut=SITES["host"],operand_edit=None,hold_f
                         edit=changes[name][which][rows_slice][:,pattern].reshape(len(seq),-1)
                         values.append(state[:,i]+mx.array(edit))
                 h=replace(h,sites,values)
-            restore=None if hold_factory is None else hold_factory(h,sites,mode)
+            restore=None if hold_factory is None else hold_factory(h,original_state,sites,mode)
             outputs.setdefault(mode,[]).extend(decoded_steps(model,h,mx.array(positions),cut,restore))
         if intervening and (start+len(block))%64==0:
             print(f"Scored {start+len(block)}/{len(rows)} groups",flush=True)
