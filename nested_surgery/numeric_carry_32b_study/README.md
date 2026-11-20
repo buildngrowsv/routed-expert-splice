@@ -1,0 +1,21 @@
+# A borrowed 14B interface changed complete 32B sums in 358 of 512 groups
+
+Two independently supplied 7B activations changed all four answers in **358 of 512 arithmetic groups** in a frozen 32B model. Equal-norm orthogonal edits succeeded in zero groups. Exchanging both complete native states succeeded in 454. The borrowed method cleared the causal contrast and fell short of the registered 80% complete-group target. The same examples previously yielded 512 complete reversals with the original paired intervention in the 14B model.
+
+![Complete-group outcomes and the one-digit to two-digit transitions](carry-32b.png)
+
+## One donor input per operand
+
+We used the same 512 four-variant Python assignment and addition groups as the prior 14B experiment. Each group has four distinct answers. At least one crosses the decimal threshold of ten, and each candidate differs from both operands. A frozen 7B coder supplied a separate declaration for each operand. The archived 14B affine map converts the source states into target coordinates for the two assignment tokens in the frozen 32B recipient. Reuse the same gain of 2.624717 previously estimated from separate single-operand input contrasts. The 32B model and gain remain frozen. The 32B recipient passed all 128 qualification groups. [Registered protocol](../NUMERIC_CARRY_32B.md) · [Original prompt archive](../numeric_carry_study/results/programs.json) · [Gain calibration](../numeric_scalar_study/README.md)
+
+An outcome requires the uniquely highest-scoring token for each digit and a valid terminator on the subsequent step. The targeted prefix is extended with the expected digit at each step to measure the exact greedy branch. An incorrect earlier argmax invalidates the answer, regardless of the later scores. A group passes only if all four variants pass. An orthogonal edit matches the transplanted edit's pre-cast norm independently for each assignment position. Replacing both full native assignment states uses the partner permutation as a positive control. [Scoring implementation](../identifier_numeric_carry.py) · [32B interface](../identifier_numeric_carry_32b.py)
+
+| Frozen 32B intervention | Complete groups of 512 | One to two digits of 747 | Two to one digit of 747 |
+|---|---:|---:|---:|
+| Borrowed two-operand edit | 358 | 689 | 669 |
+| Equal-norm orthogonal edit | 0 | 0 | 0 |
+| Swap both full native states | 454 | 711 | 737 |
+
+The borrowed-minus-random difference was 69.92 percentage points, with a paired 95% interval of 66.02 to 73.83 points. Both interventions succeeded in 339 groups. The borrowed edit alone succeeded in 19, the full swap alone in 115 and neither in 39. The full swap is an intervention on the model state and does not provide a guaranteed upper bound on each group. The clean variants were all natively solved. This comparison reuses the earlier prompt panel and calibration. The comparison with 14B changes both the recipient and the interface rule, so it cannot isolate a causal effect of model size. [Portable audit and scores](results) · [Comparison at 14B](../numeric_carry_study/README.md)
+
+Run `uv run --with numpy python nested_surgery/numeric_carry_32b_study/verify.py` to execute the candidate Python completions, validate the norms and provenance, and independently recalculate the token-path outcomes. The Studio run took 9 minutes and 24 seconds. The owner proposed expert transplantation at larger scale. OpenAI Codex designed and ran the test, verified its results and assisted with writing. [Verifier](verify.py) · [Audit output](audit.json)

@@ -59,3 +59,5 @@ On the registered identical-suffix follow-up the same coding graft solved zero o
 - [Numeric attention reuse](numeric_attention_study/README.md) tests the identifier masks on a transplanted operand and records the first-hop qualification.
 - [Raw versus norm-matched 32B reuse](numeric_raw_32b_study/README.md) compares one edit direction at two magnitude rules.
 - [Single-gain 32B transfer](numeric_scalar_study/README.md) uses native assignment-state differences to set edit magnitude without answers.
+
+- [Two-operand transfer into 32B](numeric_carry_32b_study/README.md) measured complete carry answers under an unchanged borrowed gain.

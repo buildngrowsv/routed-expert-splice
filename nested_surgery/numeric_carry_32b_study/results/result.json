@@ -1,0 +1,51 @@
+{
+  "decision": "unresolved",
+  "screen_eligible": 128,
+  "screen_groups": 128,
+  "models": {
+    "donor": [
+      "Qwen/Qwen2.5-Coder-7B",
+      "0396a76181e127dfc13e5c5ec48a8cee09938b02"
+    ],
+    "32b": [
+      "Qwen/Qwen2.5-32B",
+      "1818d35814b8319459f4bd55ed1ac8709630f003"
+    ]
+  },
+  "gain": 2.624716970336347,
+  "groups": 512,
+  "map_digest": "4b5c46001809387bdf9195bf77d70de2ac9e98ffcaf6281fc4b4a9a5802acc3f",
+  "prompts_digest": "5ae081cd2cc499ee45a641d528527844805571686ea3557c178660cb73d2cc95",
+  "eligible": 512,
+  "correct": {
+    "native": 512,
+    "both": 358,
+    "random": 0,
+    "whole": 454
+  },
+  "direction_counts": {
+    "one_to_two": {
+      "prompts": 747,
+      "correct": {
+        "both": 689,
+        "random": 0,
+        "whole": 711
+      }
+    },
+    "two_to_one": {
+      "prompts": 747,
+      "correct": {
+        "both": 669,
+        "random": 0,
+        "whole": 737
+      }
+    }
+  },
+  "both_minus_random": {
+    "mean": 0.69921875,
+    "interval": [
+      0.66015625,
+      0.73828125
+    ]
+  }
+}
