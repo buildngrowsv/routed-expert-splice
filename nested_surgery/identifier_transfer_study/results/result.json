@@ -1,0 +1,43 @@
+{
+  "models": {
+    "donor": [
+      "Qwen/Qwen2.5-Coder-7B",
+      "0396a76181e127dfc13e5c5ec48a8cee09938b02"
+    ],
+    "host": [
+      "Qwen/Qwen2.5-14B",
+      "97e1e76335b7017d8f67c08a19d103c0504298c9"
+    ]
+  },
+  "groups": 512,
+  "calibration_pairs": 512,
+  "rank": 25,
+  "decision": "transfer",
+  "eligible": 512,
+  "switches": {
+    "transfer": 512,
+    "norm_matched": 0,
+    "whole_site": 512
+  },
+  "item_switches": {
+    "transfer": [
+      512,
+      512
+    ],
+    "norm_matched": [
+      0,
+      0
+    ],
+    "whole_site": [
+      512,
+      512
+    ]
+  },
+  "transfer_minus_random": {
+    "mean": 1.0,
+    "interval": [
+      1.0,
+      1.0
+    ]
+  }
+}

@@ -41,4 +41,5 @@ On the registered identical-suffix follow-up the same coding graft solved zero o
 
 - [Seven-block fixed reference](identifier_tunnel_study/README.md) preserves and reverses paired completions in both checkpoints.
 - [Prompt-format control](opener_format_study/README.md) checks whether the donor's lead survives when the general model stops choosing colons.
-- [Two-definition protocol](IDENTIFIER_BINDING.md) tests whether the same activation edit follows the class selected by the query.
+- [Two-definition result](identifier_binding_study/README.md) shows how strongly the edit follows the selected class.
+- [Cross-model feature transfer](identifier_transfer_study/README.md) reports the fitted interface from the 7B coder to the 14B model. [Cross-context follow-up](IDENTIFIER_TRANSFER_BINDING.md)

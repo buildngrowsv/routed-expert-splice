@@ -1,0 +1,52 @@
+{
+  "models": {
+    "donor": [
+      "Qwen/Qwen2.5-Coder-7B",
+      "0396a76181e127dfc13e5c5ec48a8cee09938b02"
+    ],
+    "host": [
+      "Qwen/Qwen2.5-14B",
+      "97e1e76335b7017d8f67c08a19d103c0504298c9"
+    ]
+  },
+  "groups": 512,
+  "calibration_pairs": 512,
+  "rank": 25,
+  "decision": "transfer",
+  "eligible": 512,
+  "switches": {
+    "transfer": 512,
+    "norm_matched": 0,
+    "whole_site": 512
+  },
+  "item_switches": {
+    "transfer": [
+      512,
+      512
+    ],
+    "norm_matched": [
+      0,
+      0
+    ],
+    "whole_site": [
+      512,
+      512
+    ]
+  },
+  "transfer_minus_random": {
+    "mean": 1.0,
+    "interval": [
+      1.0,
+      1.0
+    ]
+  },
+  "mean_margin": {
+    "native": 12.103271484375,
+    "transfer": -11.88623046875,
+    "norm_matched": 12.01727294921875,
+    "whole_site": -12.03265380859375
+  },
+  "max_norm_difference": 7.62939453125e-06,
+  "median_transfer_to_full_norm": 0.9534479975700378,
+  "map_sha256": "74c75a25e5e9cc5c93b8f0c347ea8c0802d631538e6a910630273056848f9389"
+}

@@ -1,0 +1,9 @@
+{
+  "job": "qwen-binding-selective-reference",
+  "revision": "27a2e3bbccfd7eeda6a8acdc6bf46a5ae69ed934",
+  "attempt": 1,
+  "started": "2026-11-20T07:18:29+00:00",
+  "status": "done",
+  "finished": "2026-11-20T07:20:55+00:00",
+  "exit": 0
+}

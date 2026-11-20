@@ -1,0 +1,38 @@
+{
+  "model": [
+    "Qwen/Qwen2.5-14B",
+    "97e1e76335b7017d8f67c08a19d103c0504298c9"
+  ],
+  "cut": 10,
+  "groups": 256,
+  "calibration_pairs": 512,
+  "rank": 25,
+  "decision": "binding_sensitive",
+  "eligible_groups": 256,
+  "reversals_by_site": {
+    "selected": [
+      242,
+      256
+    ],
+    "unselected": [
+      1,
+      0
+    ],
+    "whole_site": [
+      250,
+      256
+    ]
+  },
+  "reversal_rates": {
+    "selected": 0.97265625,
+    "unselected": 0.001953125,
+    "whole_site": 0.98828125
+  },
+  "selected_minus_unselected": {
+    "mean": 0.970703125,
+    "interval": [
+      0.953125,
+      0.984375
+    ]
+  }
+}
