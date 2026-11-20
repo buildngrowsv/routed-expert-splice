@@ -86,10 +86,11 @@ def check_subset(host, rows, tokens, projected, calls, expected, weights):
             continue
         data = rows[start:start+size]
         ids, pos, options, _ = encode(data, tokens["host"])
-        pos = pos[subset]
+        indices = mx.array(subset, dtype=mx.int32)
+        pos = pos[indices]
         r, u = inputs(host, mx.array(ids[subset]), HOST_BLOCK)
         state = r + host.model.layers[HOST_BLOCK].mlp(u)
-        delta = projected[batch][subset] @ weights["port"] + weights["bias"]
+        delta = projected[batch][indices] @ weights["port"] + weights["bias"]
         changed = state.at[mx.arange(len(subset)), pos].add(delta.astype(state.dtype))
         sparse = np.asarray(finish(host, changed, pos, options))
         errors += int((sparse.argmax(1) != expected[start+subset].argmax(1)).sum())
