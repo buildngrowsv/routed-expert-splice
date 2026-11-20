@@ -1,0 +1,9 @@
+# Does moving the key assignment make a whole-state exchange more reliable?
+
+The first dictionary benchmark switched both mirrored answers in 96 of 183 native-qualified groups under a full-state exchange. The seven-dimensional donor switched 92. Both forms edited the key declaration before the model read the dictionary. [Original dictionary results and exact prompts](numeric_lookup_72b_study/README.md)
+
+Reuse all 256 original groups and move only the key assignment after the dictionary, directly before the lookup. Dictionary entries, selector values, signed offset, answer, and prompt length apart from any tokenizer boundary changes are held fixed. The same key value can still give opposite counterfactual answers for the two mirrored tables. The constant-table case still requires answer preservation. Execute every resulting program before scoring.
+
+Score native inference and the full 8,192-coordinate exchange at the relocated key token after 17 recipient blocks. The counterpart prompt differs only at the key token. Compare to the archived early-order scores on the intersection of groups where the unchanged host gets all six answers right in both orders. Use rank one over the full vocabulary with ties excluded. This diagnostic estimates the effect of declaration order on the whole-state intervention. Moving that line also changes what precedes the key and how far the key is from its use.
+
+Require at least 100 shared native-qualified groups, 80% mirrored switching and 95% constant-table preservation in the late order, and a late-minus-early paired switching gain of at least 15 percentage points with a positive lower 95% bound. Bootstrap by complete group with 5,000 draws. The frozen donor interface remains outside this comparison until the whole-state control establishes sufficient response at the new site.
