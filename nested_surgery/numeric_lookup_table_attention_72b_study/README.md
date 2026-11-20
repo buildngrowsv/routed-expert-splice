@@ -20,4 +20,4 @@ The intervention outcomes condition on the groups solved natively in all three a
 
 Run `uv run --with numpy python nested_surgery/numeric_lookup_table_attention_72b_study/verify.py` to execute archived program assertions, verify the source hashes and span records, and recompute the counts and paired intervals. The Studio run took 496 seconds, reaching 146.71 GB peak MLX allocation on Apple M5 Ultra with 80 GPU cores and 256 GiB unified memory. The environment was macOS build 26B118, Python 3.12.16, MLX 0.32.4, MLX-LM 0.32.2, NumPy 2.5.5 and tokenizers 0.23.3. The owner proposed research on walls and conditional routing. OpenAI Codex implemented, ran, audited and documented the comparison. [Execution receipt](results/receipt.json) · [Independent verifier](verify.py)
 
-[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/536)
+[Published Pubroot paper](https://pubroot.com/ai/nlp/a-dictionary-only-attention-mask-improved-early-key-steering-and-missed-the-registered-target/) · [Public review](https://github.com/buildngrowsv/pubroot-website/issues/536)

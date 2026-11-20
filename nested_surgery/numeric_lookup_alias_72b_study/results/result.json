@@ -1,0 +1,28 @@
+{
+  "decision": "unresolved",
+  "eligible": 183,
+  "switches": {
+    "early": 111,
+    "alias": 0
+  },
+  "preserved": {
+    "early": 181,
+    "alias": 183
+  },
+  "alias_minus_early": {
+    "mean": -0.6065573770491803,
+    "interval": [
+      -0.6775956284153005,
+      -0.5355191256830601
+    ]
+  },
+  "recipient": [
+    "Qwen/Qwen2.5-72B",
+    "efba10c8e54e91e0d9570ab5f7b51a958474d4cb"
+  ],
+  "cut": 17,
+  "groups": 256,
+  "source_programs_digest": "c7e2e3ff66fcd6fce22d7c30e99bc9e0118c0cee709c90be556309df26a4e70a",
+  "runtime_s": 354.13208904099884,
+  "peak_mlx_bytes": 146539183064
+}
