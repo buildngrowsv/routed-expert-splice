@@ -26,4 +26,4 @@ The donor cleared all prespecified criteria for shared-group coverage, late swit
 
 Run `uv run --with numpy python nested_surgery/numeric_lookup_fresh_72b_study/verify.py` from the repository root to execute the program assertions, audit the dataset split and frozen matrix hashes, and recompute all paired scores from the archived ranks. The Studio run took 802 seconds and peaked at 146.69 GB MLX allocation on Apple M5 Ultra with 80 GPU cores and 256 GiB unified memory. The runtime was macOS build 26B118, Python 3.12.16, MLX 0.32.4, MLX-LM 0.32.2, NumPy 2.5.5 and tokenizers 0.23.3. The owner proposed research on conditional routing and model transplantation, and OpenAI Codex implemented, ran, audited and documented the comparison. [Execution receipt](results/receipt.json) · [Independent verifier](verify.py)
 
-[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/523)
+[Published Pubroot article](https://pubroot.com/ai/nlp/the-relocated-dictionary-key-restored-seven-coordinate-steering-on-a-fresh-panel/) · [Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/523)
