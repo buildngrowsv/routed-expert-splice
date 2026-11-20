@@ -1,0 +1,9 @@
+{
+  "job": "large-qwen-opener-prompt-format",
+  "revision": "ab1dd787cabdb8d1bd1c341df6010d175ac2da7d",
+  "attempt": 1,
+  "started": "2026-11-20T07:08:53+00:00",
+  "status": "done",
+  "finished": "2026-11-20T07:10:05+00:00",
+  "exit": 0
+}

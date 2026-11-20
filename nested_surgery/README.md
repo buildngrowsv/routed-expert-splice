@@ -36,3 +36,9 @@ The account owner proposed moving an expert one block earlier, adapting the foll
 [Published Pubroot article](https://pubroot.com/ai/fine-tuning/which-new-python-repairs-disappear-when-a-transplanted-coding-expert-is-switched-off/) · [Submission and review](https://github.com/buildngrowsv/pubroot-website/issues/362)
 
 On the registered identical-suffix follow-up the same coding graft solved zero of 256 complete counterfactual triplets. Its 243 correct individual completions were all closing parentheses. Disabling it lost 47 parentheses and gained 69 braces. This closes the planned syntax-transfer branch. [Follow-up and independent executable audit](opener_study/README.md)
+
+## Fixed references and specialist qualification at 7B and 14B
+
+- [Seven-block fixed reference](identifier_tunnel_study/README.md) preserves and reverses paired completions in both checkpoints.
+- [Prompt-format control](opener_format_study/README.md) checks whether the donor's lead survives when the general model stops choosing colons.
+- [Two-definition protocol](IDENTIFIER_BINDING.md) tests whether the same activation edit follows the class selected by the query.

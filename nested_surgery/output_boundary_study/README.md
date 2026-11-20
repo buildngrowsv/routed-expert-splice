@@ -25,4 +25,4 @@ The exact-output condition minus half the native donor effect was −1.0644 (−
 
 The owner proposed the expert transplant and matched controls. OpenAI Codex implemented and ran the experiment on the owner’s Apple M5 Ultra, audited the evidence and assisted with writing. The model inference used Python 3.12, MLX 0.32.4, MLX-LM 0.32.2, NumPy 2.5.5 and Tokenizers 0.23.3. The verification script runs with Python and NumPy using only the public scores and prompt archive.
 
-[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/426)
+[Published Pubroot article](https://pubroot.com/ai/fine-tuning/the-14b-receiver-lost-the-bracket-signal-even-with-the-native-7b-expert-s-exact-output/) · [Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/426)

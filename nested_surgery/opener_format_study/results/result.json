@@ -1,0 +1,89 @@
+{
+  "decision": "portable_advantage",
+  "models": {
+    "donor": [
+      "Qwen/Qwen2.5-Coder-7B",
+      "0396a76181e127dfc13e5c5ec48a8cee09938b02"
+    ],
+    "host": [
+      "Qwen/Qwen2.5-14B",
+      "97e1e76335b7017d8f67c08a19d103c0504298c9"
+    ]
+  },
+  "complete": {
+    "host_fim": 0,
+    "host_empty": 12,
+    "host_prefix": 82,
+    "donor_fim": 55,
+    "donor_empty": 49,
+    "donor_prefix": 171
+  },
+  "candidate_counts": {
+    "host_fim": [
+      5,
+      0,
+      0,
+      763
+    ],
+    "host_empty": [
+      192,
+      139,
+      13,
+      424
+    ],
+    "host_prefix": [
+      92,
+      250,
+      426,
+      0
+    ],
+    "donor_fim": [
+      268,
+      251,
+      55,
+      194
+    ],
+    "donor_empty": [
+      258,
+      255,
+      50,
+      205
+    ],
+    "donor_prefix": [
+      171,
+      282,
+      315,
+      0
+    ]
+  },
+  "gaps": {
+    "fim": {
+      "mean": 0.21484375,
+      "interval": [
+        0.1640625,
+        0.265625
+      ]
+    },
+    "empty": {
+      "mean": 0.14453125,
+      "interval": [
+        0.0859375,
+        0.203125
+      ]
+    },
+    "prefix": {
+      "mean": 0.34765625,
+      "interval": [
+        0.28515625,
+        0.41015625
+      ]
+    }
+  },
+  "prefix_minus_fim_gap": {
+    "mean": 0.1328125,
+    "interval": [
+      0.046875,
+      0.21484375
+    ]
+  }
+}

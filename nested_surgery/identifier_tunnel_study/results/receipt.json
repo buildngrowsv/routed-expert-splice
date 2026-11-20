@@ -1,0 +1,9 @@
+{
+  "job": "qwen-fixed-identifier-subspace",
+  "revision": "2a25de6f6e74cc491e881d2e6f8cfa640d5e9f9a",
+  "attempt": 1,
+  "started": "2026-11-20T07:12:09+00:00",
+  "status": "done",
+  "finished": "2026-11-20T07:16:13+00:00",
+  "exit": 0
+}

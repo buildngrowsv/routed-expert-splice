@@ -1,0 +1,50 @@
+{
+  "donor": {
+    "native": 512,
+    "learned_retained": 512,
+    "random_retained": 512,
+    "matched_eligible": 512,
+    "learned_reversed": 512,
+    "learned_reversed_on_matched": 512,
+    "random_reversed_on_matched": 0,
+    "contrast": {
+      "mean": 1.0,
+      "interval": [
+        1.0,
+        1.0
+      ]
+    },
+    "qualifies": true,
+    "mean_margin": {
+      "native": 12.712646484375,
+      "learned_clean": 12.8333740234375,
+      "learned_swap": -12.7275390625,
+      "random_clean": 12.6939697265625,
+      "random_swap": 12.30767822265625
+    }
+  },
+  "host": {
+    "native": 512,
+    "learned_retained": 512,
+    "random_retained": 512,
+    "matched_eligible": 512,
+    "learned_reversed": 512,
+    "learned_reversed_on_matched": 512,
+    "random_reversed_on_matched": 0,
+    "contrast": {
+      "mean": 1.0,
+      "interval": [
+        1.0,
+        1.0
+      ]
+    },
+    "qualifies": true,
+    "mean_margin": {
+      "native": 11.86614990234375,
+      "learned_clean": 11.998291015625,
+      "learned_swap": -11.8497314453125,
+      "random_clean": 11.85540771484375,
+      "random_swap": 11.7503662109375
+    }
+  }
+}
