@@ -43,3 +43,7 @@ The host chose four spaces for every repair. The smaller donor favored twelve an
 ## Specializing the exact coding block proposed for transfer
 
 Training the smaller model’s final feed-forward block gained 28–99 new repairs across three runs and lost 20–93 former solves. It trailed the adapted host on every qualification and test panel. [Specialist study, checkpoint release and per-repair reversion ledger](specialist/README.md)
+
+## Recombining attention and expert weights inside the donor
+
+Training the coding donor’s whole final block gained 0.13 percentage points over training its feed-forward module alone. A lookup using the four requested output counts solved 419/512 fresh repairs. [Whole-block comparison, shortcut and restoration ledger](donor_block/README.md)

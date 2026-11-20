@@ -1,0 +1,7 @@
+{
+  "filename": "whole-donor-block-24.zip",
+  "bytes": 89490114,
+  "sha256": "2685fd83149b8a95e3b9e6bd2ce8bec097fa41a3ab153b97017d0dfd0a1fe38d",
+  "model": "Qwen/Qwen2.5-Coder-0.5B",
+  "revision": "8123ea2e9354afb7ffcc6c8641d1b2f5ecf18301"
+}

@@ -1,0 +1,118 @@
+{
+  "qualification": {
+    "verified_families": 16,
+    "verified_repairs": 512,
+    "verified_quartets": 128,
+    "shortcut_reproduced": true,
+    "ledger_reproduced": true,
+    "archived_logits_exact": true,
+    "composed_replay": {
+      "full_101": {
+        "top_one_mismatches": 0,
+        "max_absolute_logit_error": 0.0
+      },
+      "expert_101": {
+        "top_one_mismatches": 0,
+        "max_absolute_logit_error": 0.0
+      },
+      "attention_101": {
+        "top_one_mismatches": 0,
+        "max_absolute_logit_error": 0.0
+      },
+      "donor_base_101": {
+        "top_one_mismatches": 0,
+        "max_absolute_logit_error": 0.0
+      },
+      "full_211": {
+        "top_one_mismatches": 0,
+        "max_absolute_logit_error": 0.0
+      },
+      "expert_211": {
+        "top_one_mismatches": 0,
+        "max_absolute_logit_error": 0.0
+      },
+      "attention_211": {
+        "top_one_mismatches": 0,
+        "max_absolute_logit_error": 0.0
+      },
+      "donor_base_211": {
+        "top_one_mismatches": 0,
+        "max_absolute_logit_error": 0.0
+      },
+      "full_307": {
+        "top_one_mismatches": 0,
+        "max_absolute_logit_error": 0.0
+      },
+      "expert_307": {
+        "top_one_mismatches": 0,
+        "max_absolute_logit_error": 0.0
+      },
+      "attention_307": {
+        "top_one_mismatches": 0,
+        "max_absolute_logit_error": 0.0
+      },
+      "donor_base_307": {
+        "top_one_mismatches": 0,
+        "max_absolute_logit_error": 0.0
+      }
+    }
+  },
+  "confirmation": {
+    "verified_families": 16,
+    "verified_repairs": 512,
+    "verified_quartets": 128,
+    "shortcut_reproduced": true,
+    "ledger_reproduced": true,
+    "archived_logits_exact": true,
+    "composed_replay": {
+      "full_101": {
+        "top_one_mismatches": 0,
+        "max_absolute_logit_error": 0.0
+      },
+      "expert_101": {
+        "top_one_mismatches": 0,
+        "max_absolute_logit_error": 0.0
+      },
+      "attention_101": {
+        "top_one_mismatches": 0,
+        "max_absolute_logit_error": 0.0
+      },
+      "donor_base_101": {
+        "top_one_mismatches": 0,
+        "max_absolute_logit_error": 0.0
+      },
+      "full_211": {
+        "top_one_mismatches": 0,
+        "max_absolute_logit_error": 0.0
+      },
+      "expert_211": {
+        "top_one_mismatches": 0,
+        "max_absolute_logit_error": 0.0
+      },
+      "attention_211": {
+        "top_one_mismatches": 0,
+        "max_absolute_logit_error": 0.0
+      },
+      "donor_base_211": {
+        "top_one_mismatches": 0,
+        "max_absolute_logit_error": 0.0
+      },
+      "full_307": {
+        "top_one_mismatches": 0,
+        "max_absolute_logit_error": 0.0
+      },
+      "expert_307": {
+        "top_one_mismatches": 0,
+        "max_absolute_logit_error": 0.0
+      },
+      "attention_307": {
+        "top_one_mismatches": 0,
+        "max_absolute_logit_error": 0.0625
+      },
+      "donor_base_307": {
+        "top_one_mismatches": 0,
+        "max_absolute_logit_error": 0.0
+      }
+    }
+  }
+}

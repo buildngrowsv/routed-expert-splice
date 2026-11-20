@@ -1,0 +1,50 @@
+{
+  "qualification": {
+    "correct_by_depth": [
+      128,
+      105,
+      61,
+      108
+    ],
+    "count_by_depth": [
+      128,
+      128,
+      128,
+      128
+    ],
+    "ones_gold_counts": [
+      128,
+      0,
+      0,
+      0
+    ],
+    "keys_previously_seen": 466,
+    "correct_on_seen": 366,
+    "keys_unseen": 46,
+    "correct_on_unseen": 36
+  },
+  "confirmation": {
+    "correct_by_depth": [
+      128,
+      112,
+      70,
+      109
+    ],
+    "count_by_depth": [
+      128,
+      128,
+      128,
+      128
+    ],
+    "ones_gold_counts": [
+      128,
+      0,
+      0,
+      0
+    ],
+    "keys_previously_seen": 467,
+    "correct_on_seen": 385,
+    "keys_unseen": 45,
+    "correct_on_unseen": 34
+  }
+}
