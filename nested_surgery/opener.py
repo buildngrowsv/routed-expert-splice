@@ -1,5 +1,6 @@
 """Counterfactual opening-delimiter transfers with an identical FIM suffix."""
 import ast
+from opener_report import summarize
 import sys
 import json
 import random
@@ -63,12 +64,5 @@ def main():
     block.load_weights(str(fit/"trained-around-donor.safetensors"))
     for k,arm in (("coder","coder"),("off","knockout"),("swapped","shuffled")):z[k]=graft_scores(host,arms[arm],data)
     np.savez_compressed(OUT/"logits.npz",gold=gold,**z)
-    ok={k:a.argmax(1)==gold for k,a in z.items()};whole={k:v.reshape(-1,3).all(1) for k,v in ok.items()}
-    delta=float(whole["coder"].mean()-whole["native"].mean());ci=interval(whole["coder"],whole["native"])
-    strict=whole["coder"]&~whole["native"]&~whole["pre-native"]&~whole["off"]
-    new=ok["coder"]&~ok["native"]&~ok["pre-native"]&~ok["off"]
-    write("result.json",dict(decision="complete",scores={k:int(v.sum()) for k,v in ok.items()},
-        triplets={k:int(v.sum()) for k,v in whole.items()},n_items=len(rows),n_triplets=len(strict),
-        strict_disabled_item_ids=[r["id"] for r,v in zip(rows,new) if v],strict_disabled_triplets=np.flatnonzero(strict).tolist(),
-        triplet_advantage=delta,interval=ci,supported=bool(delta>=.05 and ci[0]>0 and strict.sum()>=10)))
+    write(OUT/"result.json",summarize(rows,z,gold))
 if __name__=="__main__":main()
