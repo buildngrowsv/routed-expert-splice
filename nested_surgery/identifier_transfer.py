@@ -38,9 +38,12 @@ def transform(donor, src_axis, dst_axis, control_axis, mapping):
     coordinates = (donor_delta@src_axis)@mapping
     learned = coordinates@dst_axis.T
     control = coordinates@control_axis.T
-    left = mx.linalg.norm(learned,axis=1)
-    right = mx.linalg.norm(control,axis=1)
-    np.testing.assert_allclose(np.array(left),np.array(right),atol=1e-6,rtol=1e-5)
+    left = mx.linalg.norm(learned,axis=1,keepdims=True)
+    right = mx.linalg.norm(control,axis=1,keepdims=True)
+    assert bool(mx.all((right>0)|(left==0)).item())
+    control = control*(left/mx.maximum(right,1e-12))
+    np.testing.assert_allclose(np.array(left),np.array(mx.linalg.norm(control,axis=1,keepdims=True)),
+                               atol=1e-6,rtol=1e-5)
     return learned,control
 
 
