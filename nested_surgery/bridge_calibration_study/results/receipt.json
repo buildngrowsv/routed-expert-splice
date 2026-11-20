@@ -1,0 +1,9 @@
+{
+  "job": "large-qwen-paired-input-calibration",
+  "revision": "e178e4b01c8890a1738d89da5d4e1b79bff56097",
+  "attempt": 1,
+  "started": "2026-11-20T05:28:48+00:00",
+  "status": "done",
+  "finished": "2026-11-20T05:29:44+00:00",
+  "exit": 0
+}
