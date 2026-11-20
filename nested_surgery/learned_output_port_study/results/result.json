@@ -1,0 +1,101 @@
+{
+  "decision": "unresolved",
+  "groups": 256,
+  "complete": {
+    "native": 0,
+    "intact_donor": 40,
+    "host_feature": 253,
+    "shuffled_donor": 229,
+    "donor": 256,
+    "off": 30,
+    "swap": 77
+  },
+  "donor_only_opportunities": [
+    "opener-81009",
+    "opener-81017",
+    "opener-81028",
+    "opener-81037",
+    "opener-81063",
+    "opener-81069",
+    "opener-81072",
+    "opener-81079",
+    "opener-81081",
+    "opener-81084",
+    "opener-81087",
+    "opener-81100",
+    "opener-81110",
+    "opener-81116",
+    "opener-81124",
+    "opener-81125",
+    "opener-81142",
+    "opener-81146",
+    "opener-81148",
+    "opener-81152",
+    "opener-81157",
+    "opener-81160",
+    "opener-81164",
+    "opener-81169",
+    "opener-81170",
+    "opener-81175",
+    "opener-81181",
+    "opener-81184",
+    "opener-81194",
+    "opener-81207",
+    "opener-81211",
+    "opener-81220",
+    "opener-81226",
+    "opener-81227",
+    "opener-81229",
+    "opener-81236",
+    "opener-81240",
+    "opener-81242",
+    "opener-81250",
+    "opener-81251"
+  ],
+  "attributed_new_repairs": [],
+  "attributed_on_intact_donor_opportunities": [],
+  "new_repairs_following_cyclic_donor": [],
+  "donor_minus": {
+    "host_feature": {
+      "mean": 0.01171875,
+      "interval": [
+        0.0,
+        0.02734375
+      ]
+    },
+    "shuffled_donor": {
+      "mean": 0.10546875,
+      "interval": [
+        0.0703125,
+        0.14453125
+      ]
+    },
+    "off": {
+      "mean": 0.8828125,
+      "interval": [
+        0.8436523437500001,
+        0.921875
+      ]
+    }
+  },
+  "models": {
+    "donor": [
+      "Qwen/Qwen2.5-Coder-7B",
+      "0396a76181e127dfc13e5c5ec48a8cee09938b02"
+    ],
+    "host": [
+      "Qwen/Qwen2.5-14B",
+      "97e1e76335b7017d8f67c08a19d103c0504298c9"
+    ]
+  },
+  "phase": "full",
+  "rank": 32,
+  "epochs": 4,
+  "groups_training": 64,
+  "insert_block_one_based": 27,
+  "trainable_parameters": 168960,
+  "step_lr": 0.002,
+  "seconds": 112.75324762499076,
+  "peak_mlx_bytes": 46152289096,
+  "port_sha256": "f0ecb60d3b335e34d23ce248091aa2e431e1bb1511aca817fadf4e5dbf347ca9"
+}

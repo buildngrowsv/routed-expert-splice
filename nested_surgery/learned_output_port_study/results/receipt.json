@@ -1,0 +1,9 @@
+{
+  "job": "large-qwen-learned-output-port",
+  "revision": "a733c8662949bf34ce8c86f7d4fb17f5a945c014",
+  "attempt": 1,
+  "started": "2026-11-20T14:39:26+00:00",
+  "status": "done",
+  "finished": "2026-11-20T14:41:19+00:00",
+  "exit": 0
+}

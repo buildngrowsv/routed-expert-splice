@@ -1,0 +1,18 @@
+{
+  "complete": {
+    "native": 0,
+    "intact_donor": 40,
+    "host_feature": 253,
+    "shuffled_donor": 229,
+    "donor": 256,
+    "off": 30,
+    "swap": 77
+  },
+  "donor_only": 40,
+  "strict": 0,
+  "strict_on_intact_donor": 0,
+  "complete_lost_when_off": 226,
+  "complete_rescued_when_off": 0,
+  "complete_cyclic_follows": 89,
+  "strict_follows": 0
+}
