@@ -1,0 +1,86 @@
+{
+  "changed_minus_same_source_target_log_odds": 2.099609375,
+  "margin_interval": [
+    2.0432088216145834,
+    2.1564982096354166
+  ],
+  "ties_at_maximum": {
+    "intact": 4,
+    "off": 5,
+    "same": 3,
+    "changed": 19
+  },
+  "same_preferred_donor_target": 9,
+  "changed_preferred_donor_target": 71,
+  "group_scores": {
+    "intact": 54,
+    "off": 21,
+    "same": 55,
+    "changed": 14
+  },
+  "item_scores": {
+    "intact": 559,
+    "off": 454,
+    "same": 561,
+    "changed": 497
+  },
+  "targeted_groups": [
+    "opener-30000",
+    "opener-30006",
+    "opener-30019",
+    "opener-30023",
+    "opener-30025",
+    "opener-30036",
+    "opener-30039",
+    "opener-30052",
+    "opener-30053",
+    "opener-30059",
+    "opener-30073",
+    "opener-30076",
+    "opener-30088",
+    "opener-30094",
+    "opener-30097",
+    "opener-30098",
+    "opener-30105",
+    "opener-30134",
+    "opener-30136",
+    "opener-30138",
+    "opener-30156",
+    "opener-30157",
+    "opener-30163",
+    "opener-30173",
+    "opener-30175",
+    "opener-30187",
+    "opener-30194",
+    "opener-30201",
+    "opener-30203",
+    "opener-30204",
+    "opener-30206",
+    "opener-30211",
+    "opener-30212",
+    "opener-30217",
+    "opener-30218",
+    "opener-30225",
+    "opener-30229",
+    "opener-30232",
+    "opener-30236",
+    "opener-30247"
+  ],
+  "unique_same_sources": 759,
+  "exact_length_matches": 758,
+  "broken_originally_correct": 62,
+  "switched_to_new_opener": 36,
+  "per_opener_switched": [
+    0,
+    0,
+    36
+  ],
+  "intact_lost_to_zero": 33,
+  "newly_correct_with_zero": 0,
+  "delta": 0.16015625,
+  "interval": [
+    0.1171875,
+    0.20703125
+  ],
+  "passed": true
+}

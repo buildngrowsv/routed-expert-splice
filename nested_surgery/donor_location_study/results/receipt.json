@@ -1,0 +1,9 @@
+{
+  "job": "large-qwen-donor-location-archive-fix",
+  "revision": "3dd5365e92529eee6b532b9da97cafad105038df",
+  "attempt": 1,
+  "started": "2026-11-20T03:45:12+00:00",
+  "status": "done",
+  "finished": "2026-11-20T03:45:22+00:00",
+  "exit": 0
+}

@@ -1,0 +1,77 @@
+{
+  "decision": "advance",
+  "group_scores": {
+    "intact": 54,
+    "off": 21,
+    "same": 55,
+    "changed": 14
+  },
+  "item_scores": {
+    "intact": 559,
+    "off": 454,
+    "same": 561,
+    "changed": 497
+  },
+  "intact_losses": {
+    "intact": 0,
+    "off": 33,
+    "same": 0,
+    "changed": 40
+  },
+  "intact_rescues": {
+    "intact": 0,
+    "off": 0,
+    "same": 1,
+    "changed": 0
+  },
+  "exact_length_shams": 758,
+  "switched_to_new_opener": 36,
+  "originally_correct": 559,
+  "same_minus_changed": 0.16015625,
+  "interval": [
+    0.1171875,
+    0.20703125
+  ],
+  "targeted_ids": [
+    0,
+    6,
+    19,
+    23,
+    25,
+    36,
+    39,
+    52,
+    53,
+    59,
+    73,
+    76,
+    88,
+    94,
+    97,
+    98,
+    105,
+    134,
+    136,
+    138,
+    156,
+    157,
+    163,
+    173,
+    175,
+    187,
+    194,
+    201,
+    203,
+    204,
+    206,
+    211,
+    212,
+    217,
+    218,
+    225,
+    229,
+    232,
+    236,
+    247
+  ]
+}
