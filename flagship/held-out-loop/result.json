@@ -1,0 +1,72 @@
+{
+  "decision": "exact_transfer_composes",
+  "models": {
+    "donor": [
+      "Qwen/Qwen2.5-Coder-7B",
+      "0396a76181e127dfc13e5c5ec48a8cee09938b02"
+    ],
+    "recipient": [
+      "Qwen/Qwen2.5-72B",
+      "efba10c8e54e91e0d9570ab5f7b51a958474d4cb"
+    ]
+  },
+  "cuts": [
+    6,
+    17
+  ],
+  "screen_qualified": {
+    "conditional": 0,
+    "loop": 43
+  },
+  "qualification_revision": "be55503fb1560375e66547d28d74e250485111da",
+  "comparisons": {
+    "loop": {
+      "groups": 768,
+      "qualified": 501,
+      "total_success": {
+        "native": 501,
+        "bridge": 430,
+        "wrong": 0,
+        "orthogonal": 0,
+        "dense": 427,
+        "whole": 429
+      },
+      "qualified_success": {
+        "native": 501,
+        "bridge": 359,
+        "wrong": 0,
+        "orthogonal": 0,
+        "dense": 353,
+        "whole": 367
+      },
+      "bridge_minus": {
+        "wrong": {
+          "mean": 0.716566866267465,
+          "interval": [
+            0.6785928143712574,
+            0.7544910179640718
+          ]
+        },
+        "orthogonal": {
+          "mean": 0.716566866267465,
+          "interval": [
+            0.6785928143712574,
+            0.7544910179640718
+          ]
+        },
+        "dense": {
+          "mean": 0.011976047904191617,
+          "interval": [
+            -0.015968063872255488,
+            0.03992015968063872
+          ]
+        }
+      }
+    }
+  },
+  "beats_dense": false,
+  "map_sha256": "4b5c46001809387bdf9195bf77d70de2ac9e98ffcaf6281fc4b4a9a5802acc3f",
+  "alignment_sha256": "318a75288da95e284052d86c3e9235aca6c661736cb3305b545ad1a0f80695da",
+  "runtime_s": 1113.6339718340023,
+  "peak_mlx_bytes": 146806867328
+}

@@ -1,5 +1,23 @@
 # Can a recipient model compute with a donor’s value?
 
+## Held-out loop result
+
+**The seven-coordinate edit changed both loop outputs and preserved the audit value in 359 of 501 native-qualified pairs (71.7%).** Qwen2.5-72B received the alternate operand from the 7B donor at one assignment site. The calibration examples used direct returns. The loop experiment required both swap directions to produce the exact tuple, including the unedited second field.
+
+| Intervention | Native-qualified pairs, out of 501 | All pairs, out of 768 |
+|---|---:|---:|
+| Seven-coordinate donor edit | 359 | 430 |
+| Dense linear stitch | 353 | 427 |
+| Full recipient activation swap | 367 | 429 |
+| Wrong donor value | 0 | 0 |
+| Equal-norm orthogonal edit | 0 | 0 |
+
+The donor edit cleared the registered transfer gate. It led the dense stitch by 1.20 percentage points, with a paired 95% interval from −1.60 to +3.99 points. The comparison provides evidence for selective operand transfer on this loop template within the Qwen family. It leaves the practical case for seven coordinates and generalization to other model families open. The conditional benchmark stopped at native qualification.
+
+The Studio run took 18 minutes 34 seconds and peaked at 146.8 GB of MLX allocation. The independent verifier takes the pinned recipient tokenizer. It recalculates the answers, retokenizes the prompts and expected completions, checks the saved greedy traces and edit norms, and reproduces the paired statistics on CPU. [Scoring evidence and receipt](flagship/held-out-loop) · [Verifier](flagship/verify_loop.py) · [Pinned recipient tokenizer](https://huggingface.co/Qwen/Qwen2.5-72B/blob/efba10c8e54e91e0d9570ab5f7b51a958474d4cb/tokenizer.json)
+
+## Earlier arithmetic results
+
 The strongest starting result is **502 of 504 paired arithmetic reversals in frozen Qwen2.5-72B**. Seven coordinates derived from Qwen2.5-Coder-7B carried a changed operand. On a separate addition panel, two operand edits changed all four complete answers in 507 of 509 groups. Both panels used related Qwen checkpoints and known assignment sites. [One operand](nested_surgery/numeric_width_study/README.md) · [Two operands](nested_surgery/numeric_carry_72b_study/README.md)
 
 ## Studio qualification
