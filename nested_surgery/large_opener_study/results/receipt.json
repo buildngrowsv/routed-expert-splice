@@ -1,0 +1,9 @@
+{
+  "job": "large-qwen-opener-qualification",
+  "revision": "07daabb4ff4b6bf11928cc40fd84b426ecaca952",
+  "attempt": 1,
+  "started": "2026-11-20T02:54:40+00:00",
+  "status": "done",
+  "finished": "2026-11-20T02:55:10+00:00",
+  "exit": 0
+}

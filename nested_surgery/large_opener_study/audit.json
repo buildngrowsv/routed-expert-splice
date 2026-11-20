@@ -1,0 +1,27 @@
+{
+  "panel": 768,
+  "triplets": 256,
+  "donor_complete": 49,
+  "host_complete": 0,
+  "donor_only": 49,
+  "host_only": 0,
+  "choices": {
+    "donor": [
+      273,
+      250,
+      49,
+      196
+    ],
+    "host": [
+      5,
+      0,
+      1,
+      762
+    ]
+  },
+  "paired_interval": [
+    0.14453125,
+    0.23828125
+  ],
+  "qualified": true
+}
