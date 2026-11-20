@@ -28,3 +28,5 @@ As an exploratory diagnostic, the seven singular values of the two fitted host b
 Run `uv run --with numpy python nested_surgery/numeric_scale_study/verify.py` to check every prompt, rank, norm and comparison. The run took six minutes and 59 seconds on the owner's Apple M5 Ultra. The owner proposed expert transplantation and larger-scale tests. OpenAI Codex designed and operated the comparison, verified its outputs and assisted with writing. [Version-pinned receipt](results/receipt.json)
 
 [Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/470)
+
+[Published Pubroot article](https://pubroot.com/ai/fine-tuning/a-14b-operand-interface-also-worked-in-a-frozen-32b-receiver-at-a-matched-edit-norm/)

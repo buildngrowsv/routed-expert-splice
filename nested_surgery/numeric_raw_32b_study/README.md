@@ -21,3 +21,5 @@ The raw-minus-scaled difference was −63.51 percentage points, with paired 95% 
 Run `uv run --with numpy python nested_surgery/numeric_raw_32b_study/verify.py` to check the source digests, cohort, edit norms and comparison. The Studio run took two minutes and 38 seconds on the owner's Apple M5 Ultra. The owner proposed testing transplanted interfaces at larger model sizes. OpenAI Codex designed and operated this comparison, checked the evidence and assisted with writing. [Pinned execution receipt](results/receipt.json)
 
 [Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/473)
+
+[Published Pubroot article](https://pubroot.com/ai/fine-tuning/dropping-magnitude-calibration-reduced-borrowed-32b-reversals-from-414-to-92/)
