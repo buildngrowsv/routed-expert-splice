@@ -1,26 +1,50 @@
-# An assignment sign did not relay a declaration edit through a seven-block wall
+# A declaration edit lost its effect through three tested single-token routes in Qwen2.5-14B
 
-On 256 new two-definition Python files, an unrestricted declaration edit reversed 242 reads of its class and zero reads of the other class. The same edit reversed zero reads through either of two single-token routes. The assignment sign immediately after the edited declaration changed by a median Euclidean norm of 11.91 at release. Its effect on the final score was small.
+A 25-dimensional edit to an earlier declaration reversed the read of its class in 242 of 256 paired Python files on one panel and 246 of 256 on a second panel. When the rest of the hidden states were restored to the untouched run through block 17, neither of two assignment signs nor the final query token carried enough of the change to reverse a pair. The final query token also failed when it was allowed to receive the edit through the intact model before capture at block 17.
 
-## The imposed wall
+![Mean original-letter margins for the unrestricted edit and both single-token relay panels](relay.png)
 
-The frozen Qwen2.5-14B base checkpoint at revision `97e1e76335b7017d8f67c08a19d103c0504298c9` receives the same rank-25 edit to the earlier declaration as in the previous two-class study. The other class and both test queries remain in the file. At the exit of each of seven blocks after block 10, the wall restores every state to the untouched run except the source and one relay. At the end of the seventh block it restores the source too. Only the relay differs in the input to block 18. We test the assignment sign after the first declaration and the assignment sign after the second. Both occur after the edited token, and both remain visible under ordinary causal attention. [Registered protocol](../IDENTIFIER_DOORWAY.md) · [Implementation](../identifier_doorway.py)
+## Generated task and metric
 
-| How the edit can travel | Reversed reads of edited class | Reversed reads of other class | Original-letter margin on edited class |
-|---|---:|---:|---:|
-| Native baseline | — | — | +12.64 |
-| Unrestricted | 242 / 256 | 0 / 256 | −4.64 |
-| Through assignment sign in the same class | 0 / 256 | 0 / 256 | +12.63 |
-| Through assignment sign in the other class | 0 / 256 | 0 / 256 | +12.64 |
+Each group has two earlier class definitions and two possible destinations for a final attribute read. Starting from a program like the following, write a second version by replacing the final letter of both attributes with a different letter. Run both files with the query selecting the first class, then run them again with the same query selecting the second class.
 
-The unrestricted edit also reduced the other class's mean margin from +12.60 to +5.91 despite changing no paired winners. The two relay arms left that margin near +12.60. The second relay's median displacement was 1.13. These measurements distinguish carrying an altered state from carrying enough task-relevant information to flip the answer. They test these relay tokens and this window. A result with a different source, receiver or layer range can differ. [Raw execution and margins](results) · [Independent audit](verify.py) · [Recomputed effects](audit.json) · [Query-token follow-up](../IDENTIFIER_QUERY_RELAY.md)
+```python
+class Cedar:
+    item_732000m = 19
 
-Run `uv run --with numpy python nested_surgery/identifier_doorway_study/verify.py` from the repository root. The pinned run took two minutes and 29 seconds on the owner's Apple M5 Ultra. The owner proposed testing walls that prevent communication between selected parts of a network. OpenAI Codex implemented this intervention, operated the run, checked the results and assisted with writing.
+class Harbor:
+    item_732000m = 83
 
-## Follow-up at the final query token
+def fetch():
+    scratch_0 = 216
+    return Cedar.item_732000
+```
 
-On a fresh panel of 256 files at indices 44500–44755, the unrestricted edit reversed 246 reads of its class and zero of the other class. We ran two new arms. One allowed seven blocks of normal propagation, then retained only the change at the final query token. The other continuously restricted changes to the source and the final query token, then restored the source at block 17. Both arms reversed zero reads of either class. The first-class original-letter margin was +12.81 in the native model, +12.80 for normal propagation followed by capture, and +12.77 for the continuous restriction. In the unrestricted edit it was −4.67. The release norms for the two query-token conditions were 7.90 and 6.39 at the median example. A useful effect was still available in the unrestricted run. Neither intervention captured enough of it at that query position and layer to flip a pair. [Registered follow-up](../IDENTIFIER_QUERY_RELAY.md) · [Raw follow-up data](query-results) · [Recomputed numbers](query-audit.json)
+The final line is a prompt prefix. Appending `m` makes the program return 19, and appending the alternate letter makes the read raise `AttributeError`. In the paired version, those relations reverse. Parsing and executing the programs verifies both the target value and the invalid alternative. The actual generator varies class names, assigned values, suffix letters and intervening scratch lines. The two permitted final-letter completions are single Qwen tokens. There are two declaration token changes between versions. They occur before the class name in the query. The two query versions therefore share the same source activation for either declaration. [Generator and paired source audit](../identifier_binding.py) · [All prompts in both panels](results/programs.json) · [Second panel prompts](query-results/programs.json)
 
-Run the same verifier with `--query` to check this follow-up.
+For a query, the margin is the logit of the original correct final letter minus the logit of the partner letter. A paired reversal requires a strictly negative margin in both letter versions. A group qualifies only when both queries and both letters are correct in unmodified inference. All 256 groups satisfied that rule on each panel. We use the first declaration as the sole edit site. Querying the second class measures the same edit on a different read. The bootstrap samples whole four-prompt groups with 5,000 draws per panel. [Probe definition and archived tests](verify.py)
 
-[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/439)
+## Edit estimation and the imposed wall
+
+We froze Qwen2.5-14B base revision `97e1e76335b7017d8f67c08a19d103c0504298c9`. To learn the edit directions, use 512 independent programs with a single declaration and two possible letter endings. Record their paired hidden-state differences at the declaration token after block 10. Regress these differences on their corresponding 26-dimensional letter-indicator differences. The ridge penalty is 0.02 times the mean diagonal of the indicator Gram matrix. The first 25 left singular vectors of the fitted hidden-by-letter matrix form columns of an orthonormal basis U. For each test variant, replace its source state x with x + UUᵀ(x_partner − x). All other states start unchanged. The unrestricted control simply continues running the transformer after this edit. [Calibration details and code](../identifier_subspace.py) · [Underlying interchange method](https://arxiv.org/abs/2303.02536)
+
+The imposed wall runs a clean and an edited copy through blocks 11–17. After each block, it takes all token states from the clean copy except the edited source and the candidate relay. At block 17's exit it restores the source state too. From block 18 until the ordinary readout, the relay at the boundary is the only surviving state difference. The first test uses the assignment sign in each class as its candidate relay, in separate arms. Both assignment signs appear after the source under the usual causal mask. The second test uses the final query token. Its restricted arm uses the same step-by-step restoration rule. Its capture arm allows normal propagation through block 17 and then retains only the query-token difference. [Assignment protocol](../IDENTIFIER_DOORWAY.md) · [Query protocol](../IDENTIFIER_QUERY_RELAY.md) · [Assignment implementation](../identifier_doorway.py) · [Query implementation](../identifier_query_relay.py)
+
+## Results at the block-17 boundary
+
+| Panel and route | First-class reversals | Second-class reversals | Mean original-letter margin, first class | Median relay displacement |
+|---|---:|---:|---:|---:|
+| Assignment panel, native | — | — | +12.64 | — |
+| Assignment panel, unrestricted | 242 / 256 | 0 / 256 | −4.64 | — |
+| Assignment sign of edited class | 0 / 256 | 0 / 256 | +12.63 | 11.91 |
+| Assignment sign of other class | 0 / 256 | 0 / 256 | +12.64 | 1.13 |
+| Query panel, native | — | — | +12.81 | — |
+| Query panel, unrestricted | 246 / 256 | 0 / 256 | −4.67 | — |
+| Final query token, capture | 0 / 256 | 0 / 256 | +12.80 | 7.90 |
+| Final query token, restricted | 0 / 256 | 0 / 256 | +12.77 | 6.39 |
+
+The unrestricted first-versus-second query differences were +94.53 points (95% interval +91.80 to +97.27) and +96.09 points (+93.36 to +98.44). Neither assignment relay nor either query relay reached the 35% qualification threshold. The unrestricted edit also reduced the other class's mean margin from +12.60 to +5.91 on the assignment panel and from +12.79 to +5.88 on the query panel. It changed zero paired winners there. The relay displacements show that hidden states changed along the isolated paths. Releasing those altered states left the mean output margins near their unmodified values.
+
+These tests establish a limit at the tested tokens and block boundary in one checkpoint, on generated two-class Python completions. A useful effect remained available through the unrestricted path. Later layers, other token positions and combinations of relay states remain separate possibilities. [Assignment audit](audit.json) · [Query audit](query-audit.json)
+
+Run `uv run --with numpy python nested_surgery/identifier_doorway_study/verify.py` from the repository root. Add `--query` for the second panel. The programs, scores, release norms and source revisions are public. Studio inference took 149 seconds for the assignment panel and 140 seconds for the query panel under Python 3.12, MLX 0.32.4, MLX-LM 0.32.2 and NumPy 2.5.5 on the owner's Apple M5 Ultra. The owner proposed testing walls that prevent communication between selected parts of a network. OpenAI Codex implemented the interventions, operated the runs over SSH, verified the results and assisted with writing. [Assignment receipt](results/receipt.json) · [Query receipt](query-results/receipt.json) · [Review of the shorter assignment-only report](https://github.com/buildngrowsv/pubroot-website/issues/439)

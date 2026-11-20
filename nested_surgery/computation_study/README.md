@@ -18,4 +18,4 @@ The untouched model solved both completions in 511 of 512 pairs. One addition pa
 
 Run `uv run --with numpy python nested_surgery/computation_study/verify.py` to execute the saved cases and recompute the statistics. The owner proposed testing whether a protected or transplanted state can carry something useful. OpenAI Codex designed and implemented the comparison, ran it on the owner's Apple M5 Ultra, verified the outputs and assisted with writing. The run took 92 seconds under Python 3.12, MLX 0.32.4, MLX-LM 0.32.2, NumPy 2.5.5 and Tokenizers 0.23.3.
 
-[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/442)
+[Published Pubroot article](https://pubroot.com/ai/fine-tuning/changing-seven-activation-coordinates-changed-511-computed-answers-in-qwen2-5-14b/) · [Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/442)
