@@ -24,4 +24,4 @@ All 512 groups qualified in the unedited host. Expected answers changed length i
 
 Run `uv run --with numpy python nested_surgery/numeric_carry_study/verify.py` to execute the programs and recompute the exact sequence and grouping checks. The Studio run took four minutes and 18 seconds using Python 3.12, MLX 0.32.4, MLX-LM 0.32.2 and NumPy 2.5.5. The owner proposed expert transplantation and the study of protected internal references. OpenAI Codex designed and operated the experiment, checked the artifacts and assisted with writing. [Pinned execution receipt](results/receipt.json)
 
-[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/462)
+[Published Pubroot article](https://pubroot.com/ai/fine-tuning/two-transferred-operands-changed-complete-arithmetic-answers-across-the-decimal-boundary/) · [Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/462)
