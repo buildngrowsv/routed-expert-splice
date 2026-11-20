@@ -77,8 +77,30 @@ def verify_data(recipient):
                 edit_norm_quantiles=np.quantile(norms[:, 0], [.1, .5, .9]).tolist())
 
 
+def compare_recipients():
+    back = {}
+    for receiver in RECIPIENTS:
+        with np.load(HERE / receiver / f"{receiver}.npz") as raw:
+            back[receiver] = {
+                mode: (raw[mode][:, :, int(mode != "native")] == 1).all(axis=1)
+                for mode in ("native", "stitch", "random", "whole")
+            }
+    shared = back["32b"]["native"] & back["72b"]["native"]
+    n = int(shared.sum())
+    assert n
+    counts = {receiver: {mode: int(hit[shared].sum()) for mode, hit in outcome.items() if mode != "native"}
+              for receiver, outcome in back.items()}
+    delta = back["72b"]["stitch"][shared].astype(int) - back["32b"]["stitch"][shared]
+    sample = np.random.default_rng(822011).integers(n, size=(5000, n))
+    return dict(shared_native=n, counts=counts, comparison="72B aligned minus 32B aligned",
+                difference=dict(mean=float(delta.mean()), interval=np.percentile(delta[sample].mean(1),
+                                                                                   [2.5, 97.5]).tolist()),
+                overlap=dict(only_32b=int((delta < 0).sum()), only_72b=int((delta > 0).sum())))
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("recipient", choices=RECIPIENTS)
+    parser.add_argument("recipient", choices=(*RECIPIENTS, "paired"))
     args = parser.parse_args()
-    print(json.dumps(verify_data(args.recipient), indent=2))
+    result = compare_recipients() if args.recipient == "paired" else verify_data(args.recipient)
+    print(json.dumps(result, indent=2))

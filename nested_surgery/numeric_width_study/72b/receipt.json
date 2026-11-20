@@ -1,0 +1,9 @@
+{
+  "job": "qwen-cross-width-72b",
+  "revision": "d2609dcba899b8755b47a8862512aca8e8401326",
+  "attempt": 2,
+  "started": "2026-11-20T09:39:22+00:00",
+  "status": "done",
+  "finished": "2026-11-20T09:48:12+00:00",
+  "exit": 0
+}

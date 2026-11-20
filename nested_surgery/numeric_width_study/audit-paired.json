@@ -1,0 +1,27 @@
+{
+  "shared_native": 499,
+  "counts": {
+    "32b": {
+      "stitch": 425,
+      "random": 0,
+      "whole": 425
+    },
+    "72b": {
+      "stitch": 498,
+      "random": 0,
+      "whole": 497
+    }
+  },
+  "comparison": "72B aligned minus 32B aligned",
+  "difference": {
+    "mean": 0.1462925851703407,
+    "interval": [
+      0.11623246492985972,
+      0.17835671342685372
+    ]
+  },
+  "overlap": {
+    "only_32b": 0,
+    "only_72b": 73
+  }
+}
