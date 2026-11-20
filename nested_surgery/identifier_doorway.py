@@ -45,7 +45,7 @@ def relay_outputs(model, h, modified, sites, end, choices, cut):
     return outputs,np.column_stack(shifts)
 
 
-def evaluate(model, rows, axis, cut):
+def evaluate(model, rows, axis, cut, *, run_relays=relay_outputs):
     axis = mx.array(axis)
     scores = {m:[] for m in MODES}
     displacements = []
@@ -63,7 +63,7 @@ def evaluate(model, rows, axis, cut):
         np.testing.assert_array_equal(np.asarray(value),np.asarray(value[canonical]))
         change = ((value[canonical][partner]-value) @ axis) @ axis.T
         modified = patch(h,source,value+change)
-        outcomes,shifts = relay_outputs(model,h,modified,sites,end,choices,cut)
+        outcomes,shifts = run_relays(model,h,modified,sites,end,choices,cut)
         assert np.isfinite(shifts).all()
         displacements.extend(shifts.reshape(-1,2,2,2))
         for name,margins in zip(MODES,outcomes,strict=True):
