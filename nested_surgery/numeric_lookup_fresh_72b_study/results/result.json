@@ -1,0 +1,55 @@
+{
+  "decision": "late_key_donor_transfer",
+  "eligible": 137,
+  "mirrored_switches": {
+    "early_donor": 86,
+    "late_donor": 135,
+    "late_orthogonal": 0,
+    "late_whole": 135
+  },
+  "constant_preserved": {
+    "early_donor": 136,
+    "late_donor": 137,
+    "late_orthogonal": 137,
+    "late_whole": 137
+  },
+  "late_donor_minus": {
+    "early_donor": {
+      "mean": 0.35766423357664234,
+      "interval": [
+        0.2773722627737226,
+        0.43795620437956206
+      ]
+    },
+    "late_orthogonal": {
+      "mean": 0.9854014598540146,
+      "interval": [
+        0.9635036496350365,
+        1.0
+      ]
+    },
+    "late_whole": {
+      "mean": 0.0,
+      "interval": [
+        -0.021897810218978103,
+        0.021897810218978103
+      ]
+    }
+  },
+  "models": {
+    "donor": [
+      "Qwen/Qwen2.5-Coder-7B",
+      "0396a76181e127dfc13e5c5ec48a8cee09938b02"
+    ],
+    "recipient": [
+      "Qwen/Qwen2.5-72B",
+      "efba10c8e54e91e0d9570ab5f7b51a958474d4cb"
+    ]
+  },
+  "cut": 17,
+  "map_digest": "4b5c46001809387bdf9195bf77d70de2ac9e98ffcaf6281fc4b4a9a5802acc3f",
+  "alignment_digest": "318a75288da95e284052d86c3e9235aca6c661736cb3305b545ad1a0f80695da",
+  "programs_digest": "c7e2e3ff66fcd6fce22d7c30e99bc9e0118c0cee709c90be556309df26a4e70a",
+  "runtime_s": 801.8335516669904,
+  "peak_mlx_bytes": 146694231392
+}

@@ -1,5 +1,9 @@
 # Which new Python repairs disappear when a transplanted coding expert is switched off?
 
+## Fresh dictionary replication at 72B
+
+The same donor switched 135 of 137 native-shared groups at the late key versus 86 at the early key. It preserved every constant-table answer. [Independent replication](numeric_lookup_fresh_72b_study/README.md)
+
 ## Donor at the relocated dictionary key
 
 The same donor switched 134 of 139 groups at the key declared after the table, compared with 71 at the early key, and preserved all constant-table answers. [Verified paired comparison](numeric_lookup_transfer_72b_study/README.md)
