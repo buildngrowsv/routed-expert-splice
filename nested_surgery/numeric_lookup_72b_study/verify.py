@@ -94,7 +94,7 @@ def main():
                             joint=int(joint[mode].sum()))
     assert groups == result["counts"]
     contrast = paired(joint["donor"], joint["orthogonal"], 597621)
-    np.testing.assert_allclose(list(contrast.values())[0], result["donor_minus_orthogonal"]["mean"])
+    np.testing.assert_allclose(contrast["mean"], result["donor_minus_orthogonal"]["mean"])
     np.testing.assert_allclose(contrast["interval"], result["donor_minus_orthogonal"]["interval"])
     passed = (n >= 100 and min(groups[k]["both_switch"] for k in ("donor", "whole")) >= .8*n
               and groups["donor"]["inert"] >= .95*n and contrast["mean"] >= .2 and contrast["interval"][0] > 0)
