@@ -42,15 +42,15 @@ def move_key(tokenizer, rows):
     return result
 
 
-def evaluate(model, rows):
+def evaluate(model, rows, *, cut=CUT):
     native, whole = [], []
     for i, (ids, site, last, candidates, _) in enumerate(encoded_batches(rows), start=1):
-        state = prefix(model, ids, CUT)
+        state = prefix(model, ids, cut)
         j = mx.arange(len(ids))
-        native.extend(whole_vocabulary(model, state, last, CUT, candidates))
+        native.extend(whole_vocabulary(model, state, last, cut, candidates))
         partner = j ^ 1
         exchanged = patch(state, site, state[partner, site])
-        whole.extend(whole_vocabulary(model, exchanged, last, CUT, candidates))
+        whole.extend(whole_vocabulary(model, exchanged, last, cut, candidates))
         if i % 12 == 0:
             print(f"Scored {i * 8}/{len(rows)} contexts", flush=True)
     return dict(native=np.asarray(native), whole=np.asarray(whole))
