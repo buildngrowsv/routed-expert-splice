@@ -1,0 +1,38 @@
+{
+  "model": [
+    "Qwen/Qwen2.5-72B",
+    "efba10c8e54e91e0d9570ab5f7b51a958474d4cb"
+  ],
+  "cut": 17,
+  "original_programs_digest": "748736cd9bd0a64ba9a77c8eb4e22bc22f41327f272d5bb570533f7c7224b2ce",
+  "original_ranks_digest": "61a3eb32e31c3de23d0bc6a14b25d1513176c80c54b115d391f85a04a216c3cf",
+  "runtime_s": 249.4263587089954,
+  "peak_mlx_bytes": 146696359712,
+  "decision": "key_order_restores_whole_state_routing",
+  "shared_native_groups": 139,
+  "native_early": 183,
+  "native_late": 155,
+  "whole": {
+    "early": {
+      "switch_both": 74,
+      "inert": 137,
+      "switch_and_preserve": 73
+    },
+    "late": {
+      "switch_both": 138,
+      "inert": 138,
+      "switch_and_preserve": 137
+    }
+  },
+  "late_minus_early": {
+    "mean": 0.460431654676259,
+    "interval": [
+      0.381294964028777,
+      0.539568345323741
+    ]
+  },
+  "early_only_native": 44,
+  "late_only_native": 16,
+  "early_only_switch": 0,
+  "late_only_switch": 64
+}

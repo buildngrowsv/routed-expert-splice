@@ -1,5 +1,9 @@
 # Which new Python repairs disappear when a transplanted coding expert is switched off?
 
+## Dictionary key order at 72B
+
+A full-state swap switched 138 of 139 groups after moving the key assignment after the dictionary, compared with 74 before it. The shared cohort solved both layouts natively. [Whole-state result](numeric_lookup_order_72b_study/README.md)
+
 ## Dictionary addresses at 72B
 
 Editing the key switched both mirrored lookups in 92 of 183 natively solved groups. A whole-state exchange switched 96. Both missed the 80% gate. Editing the key preserved 182 groups where both keys led to the same answer. [Audit and evidence](numeric_lookup_72b_study/README.md)
