@@ -14,15 +14,16 @@ from identifier_baseline import SITES, encoded_batches, finish, make_pairs, pref
 from large_opener import MODELS, model_files
 
 
-def bases(states, labels):
+def bases(states, labels, classes=26):
     delta = states[::2]-states[1::2]
-    onehot = np.eye(26)[labels]
+    onehot = np.eye(classes)[labels]
     y = onehot[::2]-onehot[1::2]
     gram = y.T@y
     fit = np.linalg.solve(gram+.02*np.trace(gram)/len(gram)*np.eye(len(gram)),y.T@delta)
     u,s,_ = np.linalg.svd(fit.T,full_matrices=False)
-    assert s[24]>0
-    left = u[:,:25]
+    rank = classes-1
+    assert s[rank-1]>0
+    left = u[:,:rank]
     random = np.random.default_rng(83407).normal(size=left.shape)
     random -= left@(left.T@random)
     control = np.linalg.qr(random,mode="reduced")[0]
@@ -41,13 +42,13 @@ def norm_matched(diff, learned_basis, control_basis):
     return learned,scaled
 
 
-def evaluate(model, calibration, test, depth):
+def evaluate(model, calibration, test, depth, *, classes=26):
     x,y = [],[]
     for ids,site,_,_,labels in encoded_batches(calibration):
         state = prefix(model,ids,depth)
         x.append(np.array(state[mx.arange(len(site)),site].astype(mx.float32)))
         y.extend(labels)
-    learned,control = bases(np.concatenate(x).astype(np.float64),np.asarray(y))
+    learned,control = bases(np.concatenate(x).astype(np.float64),np.asarray(y),classes)
     axes = [mx.array(a) for a in (learned,control)]
     modes = ("native","learned","matched","whole_site")
     scores = {k:[] for k in modes}
@@ -81,7 +82,7 @@ def evaluate(model, calibration, test, depth):
     pass_gate = (active>=100 and out["whole_site"]>=.2*active and out["learned"]>=.2*active
                  and contrast["mean"]>=.10 and contrast["interval"][0]>0)
     return margins,np.asarray(dose),dict(eligible=active,switches=out,learned_minus_matched=contrast,
-                                         qualifies=bool(pass_gate),depth=depth,rank=25)
+                                         qualifies=bool(pass_gate),depth=depth,rank=classes-1)
 
 
 def main():

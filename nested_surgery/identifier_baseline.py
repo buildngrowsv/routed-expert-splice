@@ -56,7 +56,8 @@ def encoded_batches(rows):
             ids[j,:len(s)] = s
         sites = np.repeat([r["site"] for r in group],2)
         candidates = np.array([c for r in group for c in r["choices"]])
-        labels = np.array([ord(c)-97 for r in group for c in r["letters"]])
+        labels = np.array([label for r in group for label in (
+            r["labels"] if "labels" in r else [ord(c)-97 for c in r["letters"]])])
         yield mx.array(ids),mx.array(sites),mx.array(ends),candidates,labels
 
 

@@ -1,0 +1,7 @@
+# Can a declaration edit change a computed value the model has to derive?
+
+The strongest transplant so far changes a letter appearing directly in an earlier declaration. To test a different behavior, intervene on an integer assignment and ask Qwen2.5-14B to finish an assertion about a Python function's return value. The function adds or subtracts a known constant. Both possible correct completions differ from both original declaration digits. A copy of the edited digit therefore cannot solve these evaluation prompts.
+
+Use 512 identity-return pairs with source digits 1 through 8 to fit seven directions at the assignment token after block 10. Freeze the directions and the pretrained model. On 512 fresh generated pairs with indices 60000–60511, use a nonzero offset and check the answers by running CPython. The four conditions are native, exchange the learned projection, exchange an equal-norm random projection, and exchange the whole source-token state. Use only the two computed answers as single-token candidates.
+
+Require at least 100 initially solved pairs, whole-site and learned exchanges to reverse at least 60% of those pairs, and a learned-minus-random difference of at least 20 percentage points with a positive lower paired interval. If the whole-source control fails, report that limitation. If the learned edit passes, this supports a study of whether the same computed operand change crosses between models.
