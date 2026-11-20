@@ -22,6 +22,10 @@ PATCHES = (")", "]", "}", ":")
 
 def model_files(name):
     repo, revision = MODELS[name]
+    return checkpoint_files(repo, revision)
+
+
+def checkpoint_files(repo, revision):
     dest = CACHE / revision
     CACHE.mkdir(parents=True, exist_ok=True)
     with (CACHE / (revision + ".lock")).open("a") as lock:
