@@ -1,0 +1,23 @@
+{
+  "decision": "native_screen_below_floor",
+  "screen_qualified": {
+    "conditional": 0,
+    "loop": 43
+  },
+  "models": {
+    "donor": [
+      "Qwen/Qwen2.5-Coder-7B",
+      "0396a76181e127dfc13e5c5ec48a8cee09938b02"
+    ],
+    "recipient": [
+      "Qwen/Qwen2.5-72B",
+      "efba10c8e54e91e0d9570ab5f7b51a958474d4cb"
+    ]
+  },
+  "cuts": [
+    6,
+    17
+  ],
+  "runtime_s": 43.539641874987865,
+  "peak_mlx_bytes": 146919802068
+}

@@ -1,0 +1,9 @@
+{
+  "job": "flagship-exact-transfer-72b",
+  "revision": "be55503fb1560375e66547d28d74e250485111da",
+  "attempt": 1,
+  "started": "2026-11-20T16:11:55+00:00",
+  "status": "done",
+  "finished": "2026-11-20T16:12:40+00:00",
+  "exit": 0
+}

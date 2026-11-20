@@ -2,6 +2,10 @@
 
 The strongest starting result is **502 of 504 paired arithmetic reversals in frozen Qwen2.5-72B**. Seven coordinates derived from Qwen2.5-Coder-7B carried a changed operand. On a separate addition panel, two operand edits changed all four complete answers in 507 of 509 groups. Both panels used related Qwen checkpoints and known assignment sites. [One operand](nested_surgery/numeric_width_study/README.md) · [Two operands](nested_surgery/numeric_carry_72b_study/README.md)
 
+## Studio qualification
+
+The unedited recipient completed both variants in **43 of 64 loop groups** and **0 of 64 conditional groups**. In the conditional screen, 86 of 128 completions diverged before the end of the tuple fields. The registered gate required 32 groups in each family, so the intervention panel and its dense comparison remain untested. The outcome limits this benchmark’s coverage and leaves the activation-transfer question open. [Screen traces and receipt](flagship/qualification)
+
 ## What would change the conclusion
 
 Freeze the existing seven-coordinate interface. Give the donor a fresh input digit in a direct-return program. Its hidden state supplies that digit to the intervention. Give the recipient a different starting digit and a Python function. The recipient must use the donor’s digit in either a three-way conditional or an accumulator loop, then complete an exact assertion containing the new result and an untouched audit value. The donor only sees its own program. Each pair tests the two directions of a swap, using the corresponding donor value each time.
