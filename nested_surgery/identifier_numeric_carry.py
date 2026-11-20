@@ -71,10 +71,12 @@ def host_panel(tokenizer,count,start):
     return rows
 
 
-def decoded_steps(model,h,positions,cut):
+def decoded_steps(model,h,positions,cut,restore=None):
     mask=create_attention_mask(h,None)
-    for layer in model.model.layers[cut:]:
+    for index,layer in enumerate(model.model.layers[cut:]):
         h=layer(h,mask)
+        if restore is not None and index < restore[0]:
+            h=restore[1](h)
     state=model.model.norm(h[mx.arange(h.shape[0])[:,None],positions])
     head=model.model.embed_tokens.as_linear if model.args.tie_word_embeddings else model.lm_head
     scores=head(state).astype(mx.float32)
@@ -83,13 +85,13 @@ def decoded_steps(model,h,positions,cut):
     return np.array(mx.stack((top,unique.astype(mx.int32)),axis=-1)).reshape(-1,4,3,2)
 
 
-def predict(model,rows,changes=None,*,cut=SITES["host"],operand_edit=None):
+def predict(model,rows,changes=None,*,cut=SITES["host"],operand_edit=None,hold_factory=None,modes=MODES):
     intervening=changes is not None or operand_edit is not None
     outputs={}
     for start in range(0,len(rows),4):
         block=rows[start:start+4]
         sites=mx.array(np.repeat([r["sites"] for r in block],4,axis=0))
-        for mode in MODES if intervening else ("native",):
+        for mode in modes if intervening else ("native",):
             target_index=np.arange(4) if mode=="native" else np.arange(4)[::-1]
             original=[ids for row in block for ids in row["ids"]]
             target=[row["answer_tokens"][v] for row in block for v in target_index]
@@ -113,7 +115,8 @@ def predict(model,rows,changes=None,*,cut=SITES["host"],operand_edit=None):
                         edit=changes[name][which][rows_slice][:,pattern].reshape(len(seq),-1)
                         values.append(state[:,i]+mx.array(edit))
                 h=replace(h,sites,values)
-            outputs.setdefault(mode,[]).extend(decoded_steps(model,h,mx.array(positions),cut))
+            restore=None if hold_factory is None else hold_factory(h,sites,mode)
+            outputs.setdefault(mode,[]).extend(decoded_steps(model,h,mx.array(positions),cut,restore))
         if intervening and (start+len(block))%64==0:
             print(f"Scored {start+len(block)}/{len(rows)} groups",flush=True)
     return {m:np.array(v) for m,v in outputs.items()}

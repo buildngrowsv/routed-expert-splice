@@ -42,6 +42,20 @@ def edit_both(state, targets, host_axis, random_axis, gain):
     return transplanted, orthogonal
 
 
+def gather_targets(donor_path, source, panel, donor_axis, affine, bias):
+    donor, _ = load_model(donor_path, strict=True)
+    targets = []
+    for name, pattern in (("left", (1, 1, 0, 0)), ("right", (1, 0, 1, 0))):
+        activation = mx.array(gather(donor, source["donor"][name], SITES["donor"]).astype(np.float32))
+        target = (activation @ donor_axis @ affine + bias).reshape(len(panel), 2, -1)
+        targets.append(mx.take(target, mx.array(pattern), axis=1))
+    desired = mx.stack(targets, axis=2)
+    mx.eval(desired)
+    del donor
+    gc.collect()
+    return desired
+
+
 def main():
     mx.set_cache_limit(2 * 1024**3)
     out = Path(os.environ["STUDIO_JOB_DIR"])
@@ -75,16 +89,7 @@ def main():
         mapping, digest = archived_maps(root / MAP_JOB)
         donor_axis, host_axis, random_axis, _, affine, bias = mapping
         assert digest == scaling["map_digest"]
-        donor, _ = load_model(donor_path, strict=True)
-        targets = []
-        for name, pattern in (("left", (1, 1, 0, 0)), ("right", (1, 0, 1, 0))):
-            activation = mx.array(gather(donor, source["donor"][name], SITES["donor"]).astype(np.float32))
-            target = (activation @ donor_axis @ affine + bias).reshape(len(panel), 2, -1)
-            targets.append(mx.take(target, mx.array(pattern), axis=1))
-        desired = mx.stack(targets, axis=2)
-        mx.eval(desired)
-        del donor
-        gc.collect()
+        desired = gather_targets(donor_path, source, panel, donor_axis, affine, bias)
 
         norms = {"both": [], "random": []}
         def edit(state, start, count, mode):
