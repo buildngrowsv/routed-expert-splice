@@ -26,4 +26,4 @@ The donor–whole difference in exact intrusions was +2.74 points. The registere
 
 Run `uv run --with numpy python nested_surgery/numeric_overwrite_72b_study/verify.py` from the repository root to execute the prompt cases, check the frozen map and alignment hashes, and reproduce all paired endpoints. The Studio run took 1,135 seconds and reached 147.24 GB peak MLX allocation. Hardware was Apple M5 Ultra with 80 GPU cores and 256 GiB unified memory. It ran macOS 27.2 (26B118), Python 3.12.16, MLX 0.32.4, MLX-LM 0.32.2, NumPy 2.5.5, and tokenizers 0.23.3. The owner proposed the fixed-reference research questions. OpenAI Codex implemented, ran, audited and wrote up the paired comparison. [Execution receipt](results/receipt.json) · [Independent verifier](verify.py)
 
-[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/514)
+[Published Pubroot article](https://pubroot.com/ai/nlp/a-narrow-7b-edit-sometimes-displaced-a-saved-value-in-a-72b-overwrite-control/) · [Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/514)
