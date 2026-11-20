@@ -1,0 +1,5 @@
+# The threshold-routing task missed native qualification at 72B
+
+The unchanged Qwen2.5-72B checkpoint got all six answers right in **26 of 64** groups. The registered floor was 48. Each group had an original threshold program, a mirrored program that swapped the payloads, and a third program where either selector took the same branch. The native model solved both selector variants in 39 original, 47 mirrored and 58 inert contexts. Its top answer matched the opposite branch in 40 of 42 wrong responses in the two routing contexts. The benchmark stopped before applying a donor edit. [Registered test](../../NUMERIC_ROUTE_72B.md) · [Independent audit](audit.json)
+
+Run `uv run --with numpy python nested_surgery/numeric_select_72b_study/branch_screen/verify.py` to execute the archived programs and verify the full-vocabulary qualification counts. The next registered benchmark uses the same controlled outputs with a dictionary lookup. [Exact qualification programs](screen.json) · [Raw ranks](screen.npz) · [Studio receipt](receipt.json) · [Indexed selection protocol](../../NUMERIC_LOOKUP_72B.md)

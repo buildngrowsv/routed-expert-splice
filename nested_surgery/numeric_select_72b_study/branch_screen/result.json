@@ -1,0 +1,18 @@
+{
+  "decision": "benchmark_below_floor",
+  "screen_eligible": 26,
+  "screen_groups": 64,
+  "models": {
+    "donor": [
+      "Qwen/Qwen2.5-Coder-7B",
+      "0396a76181e127dfc13e5c5ec48a8cee09938b02"
+    ],
+    "recipient": [
+      "Qwen/Qwen2.5-72B",
+      "efba10c8e54e91e0d9570ab5f7b51a958474d4cb"
+    ]
+  },
+  "cut": 17,
+  "runtime_s": 64.32201820799673,
+  "peak_mlx_bytes": 146933311192
+}
