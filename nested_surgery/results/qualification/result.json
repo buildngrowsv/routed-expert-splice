@@ -1,0 +1,12 @@
+{
+  "decision": "graft",
+  "donor": 256,
+  "host": 119,
+  "donor_only": 137,
+  "host_only": 0,
+  "n": 256,
+  "interval": [
+    0.4765625,
+    0.59765625
+  ]
+}

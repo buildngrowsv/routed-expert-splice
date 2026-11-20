@@ -1,0 +1,7 @@
+{
+  "exact_native_logits": true,
+  "items": 8,
+  "cached_max_absolute_error": 0.0,
+  "cached_changed_choices": 0,
+  "scoring": "end-to-end full model and vocabulary, all reported arms"
+}

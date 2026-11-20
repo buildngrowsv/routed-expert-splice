@@ -1,0 +1,93 @@
+{
+  "qualification": {
+    "solves": {
+      "donor": 256,
+      "host": 119
+    },
+    "verified_programs": 256
+  },
+  "fit": {
+    "solves": {
+      "pre-native": 237,
+      "pre-knockout": 222,
+      "pre-direct": 238,
+      "pre-shuffled": 242,
+      "pre-general": 229,
+      "pre-coder": 220,
+      "native": 331,
+      "knockout": 247,
+      "direct": 307,
+      "shuffled": 306,
+      "general": 360,
+      "coder": 335,
+      "off": 295,
+      "swapped": 301
+    },
+    "verified_programs": 512,
+    "new_count": 140,
+    "strict_new": 23,
+    "donor_dependent_new_ids": [
+      "nested-71977-20",
+      "nested-71977-34",
+      "nested-71977-40",
+      "nested-71977-77",
+      "nested-71977-94",
+      "nested-71977-114",
+      "nested-71977-117",
+      "nested-71977-121",
+      "nested-71977-125",
+      "nested-71977-126",
+      "nested-71977-143",
+      "nested-71977-152",
+      "nested-71977-157",
+      "nested-71977-165",
+      "nested-71977-170",
+      "nested-71977-190",
+      "nested-71977-192",
+      "nested-71977-205",
+      "nested-71977-209",
+      "nested-71977-213",
+      "nested-71977-217",
+      "nested-71977-231",
+      "nested-71977-234",
+      "nested-71977-255",
+      "nested-71977-264",
+      "nested-71977-271",
+      "nested-71977-287",
+      "nested-71977-311",
+      "nested-71977-324",
+      "nested-71977-340",
+      "nested-71977-349",
+      "nested-71977-357",
+      "nested-71977-376",
+      "nested-71977-383",
+      "nested-71977-395",
+      "nested-71977-405",
+      "nested-71977-431",
+      "nested-71977-433",
+      "nested-71977-438",
+      "nested-71977-453",
+      "nested-71977-478",
+      "nested-71977-479",
+      "nested-71977-481",
+      "nested-71977-509"
+    ],
+    "strict_dependent_ids": [
+      "nested-71977-34",
+      "nested-71977-40",
+      "nested-71977-125",
+      "nested-71977-376",
+      "nested-71977-395",
+      "nested-71977-453",
+      "nested-71977-478"
+    ],
+    "disabled_losses": 44,
+    "disabled_rescues": 4,
+    "general_vs_native_gains": 41,
+    "general_vs_native_losses": 12
+  },
+  "suffix_lookup": {
+    "entries": 4,
+    "fit_panel_correct": 512
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "decision": "complete",
+  "seed": 71977,
+  "n": 512,
+  "solves": {
+    "pre-native": 237,
+    "pre-knockout": 222,
+    "pre-direct": 238,
+    "pre-shuffled": 242,
+    "pre-general": 229,
+    "pre-coder": 220,
+    "native": 331,
+    "knockout": 247,
+    "direct": 307,
+    "shuffled": 306,
+    "general": 360,
+    "coder": 335,
+    "off": 295,
+    "swapped": 301
+  },
+  "comparisons": {
+    "native": {
+      "delta": 0.0078125,
+      "ci": [
+        -0.0234375,
+        0.037109375
+      ]
+    },
+    "shuffled": {
+      "delta": 0.056640625,
+      "ci": [
+        0.037109375,
+        0.078125
+      ]
+    }
+  },
+  "bridge_sha256": "e604197879a26d7508491cfd2554b56bd9907460c8cb64e9d35e723909eb06d1",
+  "new_solves": 140,
+  "new_lost_off": 44,
+  "strict_new": 23,
+  "strict_lost_ids": [
+    "nested-71977-34",
+    "nested-71977-40",
+    "nested-71977-125",
+    "nested-71977-376",
+    "nested-71977-395",
+    "nested-71977-453",
+    "nested-71977-478"
+  ],
+  "baseline_lost": 42,
+  "off_to_on_net_pre": -2,
+  "off_to_on_net_post": 40
+}
