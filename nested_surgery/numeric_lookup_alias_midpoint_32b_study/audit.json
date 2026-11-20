@@ -1,0 +1,63 @@
+{
+  "decision": "alias_gap_replicates_at_32b",
+  "local": {
+    "shared": 145,
+    "switched": {
+      "source": 10,
+      "alias": 0,
+      "relocated": 137
+    },
+    "constant_preserved": {
+      "source": 144,
+      "alias": 145,
+      "relocated": 145
+    },
+    "alias_minus_relocated": {
+      "mean": -0.9448275862068966,
+      "interval": [
+        -0.9793103448275862,
+        -0.903448275862069
+      ]
+    }
+  },
+  "cross_host_shared": {
+    "at_32b": {
+      "shared": 115,
+      "switched": {
+        "source": 8,
+        "alias": 0,
+        "relocated": 110
+      },
+      "constant_preserved": {
+        "source": 114,
+        "alias": 115,
+        "relocated": 115
+      },
+      "alias_minus_relocated": {
+        "mean": -0.9565217391304348,
+        "interval": [
+          -0.991304347826087,
+          -0.9130434782608695
+        ]
+      }
+    },
+    "at_72b": {
+      "shared": 115,
+      "switched": {
+        "alias": 0,
+        "relocated": 99
+      },
+      "constant_preserved": {
+        "alias": 115,
+        "relocated": 113
+      },
+      "alias_minus_relocated": {
+        "mean": -0.8608695652173913,
+        "interval": [
+          -0.9217391304347826,
+          -0.7913043478260869
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "job": "qwen-dictionary-alias-midpoint-32b",
+  "revision": "8d6d1a1fd0a0886dfbab2a381b73e4bed6683758",
+  "attempt": 1,
+  "started": "2026-11-20T15:03:32+00:00",
+  "status": "done",
+  "finished": "2026-11-20T15:06:47+00:00",
+  "exit": 0
+}
