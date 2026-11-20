@@ -17,12 +17,14 @@ from large_opener import MODELS, model_files
 SITES = {"donor": 6, "host": 10}
 
 
-def make_pairs(tokenizers, count, start):
+def make_pairs(tokenizers, count, start, *, letter_pairs=None):
     rows = []
     for i in range(start,start+count):
         rng = random.Random(f"identifier-foundation-v1-{i}")
         stem = f"item_{100000+i}"
         letters = rng.sample(string.ascii_lowercase,2)
+        if letter_pairs is not None:
+            letters = letter_pairs[i-start]
         fill = "".join(f"    scratch_{k} = {rng.randrange(10,100)}\n" for k in range(rng.randint(6,14)))
         prompts = [f"def fetch():\n    {stem}{c} = 7\n{fill}    return {stem}" for c in letters]
         for p,c in zip(prompts,letters,strict=True):

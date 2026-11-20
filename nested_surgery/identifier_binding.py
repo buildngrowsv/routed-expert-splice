@@ -67,14 +67,16 @@ def patch(h, positions, values):
     return mx.where(mask, values[:, None, :].astype(h.dtype), h)
 
 
-def evaluate(model, rows, axis, cut):
-    axis = mx.array(axis)
+def evaluate(model, rows, axis, cut, *, donor_changes=None):
+    if donor_changes is None:
+        axis = mx.array(axis)
     margins = {mode: [] for mode in MODES}
     doses = []
     offset = 0
     for ids, _, end, candidates, _ in encoded_batches(rows):
         batch = len(candidates)
         example = rows[offset:offset+batch//2]
+        groups = slice(offset//2, (offset+len(example))//2)
         offset += len(example)
         sites = mx.array(np.repeat([row["sites"] for row in example], 2, axis=0))
         query = mx.array(np.repeat([row["query"] for row in example], 2))
@@ -85,8 +87,12 @@ def evaluate(model, rows, axis, cut):
         state = h[index[:, None], sites].astype(mx.float32)
         np.testing.assert_allclose(np.array(state), np.array(state[canonical]), atol=0, rtol=0)
         original = state[canonical]
-        delta = original[partner] - original
-        projected = (delta @ axis) @ axis.T
+        if donor_changes is None:
+            delta = original[partner] - original
+            projected = (delta @ axis) @ axis.T
+        else:
+            shared = np.repeat(donor_changes[groups, None], 2, axis=1).reshape(batch,1,-1)
+            projected = mx.broadcast_to(mx.array(shared),state.shape)
         norm = np.array(mx.linalg.norm(projected, axis=-1)).reshape(-1, 2, 2, 2)
         np.testing.assert_allclose(norm[:, 0], norm[:, 1], atol=0, rtol=0)
         doses.extend(norm)
