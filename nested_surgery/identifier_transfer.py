@@ -47,7 +47,7 @@ def transform(donor, src_axis, dst_axis, control_axis, mapping):
     return learned,control
 
 
-def evaluate(host, rows, donor_states, axes):
+def collect_edits(host, rows, donor_states, axes, readout):
     result = {k:[] for k in ("native","transfer","norm_matched","whole_site")}
     doses = []
     for i,(ids,site,end,choices,_) in enumerate(encoded_batches(rows)):
@@ -61,12 +61,17 @@ def evaluate(host, rows, donor_states, axes):
         full = source[mx.array(np.arange(len(site))^1)]
         replacements = {"transfer":source+learned,"norm_matched":source+random,"whole_site":full}
         doses.extend(np.column_stack([np.array(mx.linalg.norm(a,axis=1)) for a in (learned,random,full-source)]))
-        result["native"].extend(finish(host,h,end,cut,choices))
+        result["native"].extend(readout(host,h,end,cut,choices))
         for k,value in replacements.items():
             state = mx.where(place,value[:,None,:].astype(h.dtype),h)
-            result[k].extend(finish(host,state,end,cut,choices))
+            result[k].extend(readout(host,state,end,cut,choices))
     scores = {k:np.asarray(v) for k,v in result.items()}
     assert all(np.isfinite(v).all() for v in scores.values())
+    return scores,np.asarray(doses)
+
+
+def evaluate(host, rows, donor_states, axes):
+    scores,doses = collect_edits(host,rows,donor_states,axes,finish)
     active = (scores["native"]>0).all(1)
     n = int(active.sum())
     switched = {k:((v<0).all(1)&active)[active] for k,v in scores.items() if k!="native"}
@@ -78,7 +83,7 @@ def evaluate(host, rows, donor_states, axes):
     report = dict(decision="transfer" if qualifies else "stop",eligible=n,switches=counts,
                   item_switches={k:((v[active]<0).sum(0)).tolist() for k,v in scores.items() if k!="native"},
                   transfer_minus_random=comparison)
-    return scores,np.asarray(doses),report
+    return scores,doses,report
 
 
 def main():

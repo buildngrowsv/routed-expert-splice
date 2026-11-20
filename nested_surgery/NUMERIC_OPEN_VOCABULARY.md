@@ -1,0 +1,7 @@
+# Does the transferred operand change the top token across the full vocabulary?
+
+The two-answer test fixed the possible output tokens even though the host has a full vocabulary. Reuse the exact 512 held-out host pairs, independent donor functions, model revisions, and saved seven-by-seven map. The host makes the same next-token prediction from the same prompt, with every vocabulary entry available. Measure both the original forced-choice outcome and the full-vocabulary outcome in the same forward pass. Both candidate token ranks and the top token ID are archived.
+
+A native pair is eligible if the correct digit is the unique highest-logit token in both versions. An edited pair reverses if the two counterfactual answer digits are individually the unique highest-logit tokens after transfer. The controls are the untouched model, the matched-norm orthogonal edit, and the full host source exchange. Require at least 100 native top-token pairs, at least 80% pair reversals under both the translated edit and the full-site exchange, an advantage over random of at least 20 points, and a positive lower paired 95% bound. Report forced-choice eligibility and reversals separately on the same files, including when the full-vocabulary gate fails.
+
+This checks one unrestricted next-token decision. The archive includes scores and token IDs so the effect of output-format preferences can be inspected. The larger two-operand run is independent of this check.
