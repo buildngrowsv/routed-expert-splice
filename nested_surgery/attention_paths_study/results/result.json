@@ -1,0 +1,57 @@
+{
+  "model": [
+    "Qwen/Qwen2.5-14B",
+    "97e1e76335b7017d8f67c08a19d103c0504298c9"
+  ],
+  "groups": 512,
+  "cut": 10,
+  "decision": "routing_resolved",
+  "eligible": 512,
+  "clean_groups": {
+    "unrestricted": 512,
+    "direct_only": 512,
+    "relay_only": 512
+  },
+  "reversals_by_query": {
+    "unrestricted": [
+      496,
+      0
+    ],
+    "direct_only": [
+      508,
+      0
+    ],
+    "relay_only": [
+      0,
+      0
+    ]
+  },
+  "contrast_from_unrestricted": {
+    "direct_only": {
+      "mean": 0.0234375,
+      "interval": [
+        0.0078125,
+        0.041015625
+      ]
+    },
+    "relay_only": {
+      "mean": -0.96875,
+      "interval": [
+        -0.982421875,
+        -0.953125
+      ]
+    }
+  },
+  "direct_minus_relay": {
+    "mean": 0.9921875,
+    "interval": [
+      0.984375,
+      0.998046875
+    ]
+  },
+  "sufficient_paths": [
+    "direct_only"
+  ],
+  "more_effective": "direct_only",
+  "unrestricted_control_qualified": true
+}

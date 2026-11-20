@@ -1,0 +1,73 @@
+{
+  "decision": "composes",
+  "models": {
+    "donor": [
+      "Qwen/Qwen2.5-Coder-7B",
+      "0396a76181e127dfc13e5c5ec48a8cee09938b02"
+    ],
+    "host": [
+      "Qwen/Qwen2.5-14B",
+      "97e1e76335b7017d8f67c08a19d103c0504298c9"
+    ]
+  },
+  "screen_groups": 128,
+  "screen_eligible": 128,
+  "eligible": 512,
+  "cells": {
+    "native": 512,
+    "left": 512,
+    "right": 512,
+    "both": 512,
+    "random": 0,
+    "whole": 512
+  },
+  "both_minus_random": {
+    "mean": 1.0,
+    "interval": [
+      1.0,
+      1.0
+    ]
+  },
+  "by_operator": {
+    "addition": {
+      "eligible": 256,
+      "cells": {
+        "native": 256,
+        "left": 256,
+        "right": 256,
+        "both": 256,
+        "random": 0,
+        "whole": 256
+      }
+    },
+    "subtraction": {
+      "eligible": 256,
+      "cells": {
+        "native": 256,
+        "left": 256,
+        "right": 256,
+        "both": 256,
+        "random": 0,
+        "whole": 256
+      }
+    }
+  },
+  "groups": 512,
+  "map_digest": "314f780d33cdb572add76953d9fbebfeeeee1e3eccdb5cadca188dddadf30b68",
+  "mean_margin": {
+    "native": 4.11212158203125,
+    "left": 4.06427001953125,
+    "right": 4.07257080078125,
+    "both": 4.066162109375,
+    "random": -4.73712158203125,
+    "whole": 4.08721923828125
+  },
+  "native_item_accuracy": 1.0,
+  "native_groups_by_correct_items": [
+    0,
+    0,
+    0,
+    0,
+    512
+  ]
+}

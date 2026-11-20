@@ -1,0 +1,83 @@
+{
+  "model": [
+    "Qwen/Qwen2.5-14B",
+    "97e1e76335b7017d8f67c08a19d103c0504298c9"
+  ],
+  "groups": 512,
+  "cut": 10,
+  "decision": "routing_resolved",
+  "eligible": 512,
+  "clean_groups": {
+    "unrestricted": 512,
+    "direct_only": 512,
+    "relay_only": 512
+  },
+  "reversals_by_query": {
+    "unrestricted": [
+      496,
+      0
+    ],
+    "direct_only": [
+      508,
+      0
+    ],
+    "relay_only": [
+      0,
+      0
+    ]
+  },
+  "contrast_from_unrestricted": {
+    "direct_only": {
+      "mean": 0.0234375,
+      "interval": [
+        0.0078125,
+        0.041015625
+      ]
+    },
+    "relay_only": {
+      "mean": -0.96875,
+      "interval": [
+        -0.982421875,
+        -0.953125
+      ]
+    }
+  },
+  "direct_minus_relay": {
+    "mean": 0.9921875,
+    "interval": [
+      0.984375,
+      0.998046875
+    ]
+  },
+  "sufficient_paths": [
+    "direct_only"
+  ],
+  "more_effective": "direct_only",
+  "unrestricted_control_qualified": true,
+  "mean_margin": {
+    "unrestricted_clean": [
+      12.69818115234375,
+      12.684326171875
+    ],
+    "unrestricted_edited": [
+      -4.70751953125,
+      5.9100341796875
+    ],
+    "relay_only_edited": [
+      6.32763671875,
+      10.06719970703125
+    ],
+    "relay_only_clean": [
+      12.9989013671875,
+      13.06329345703125
+    ],
+    "direct_only_clean": [
+      10.951385498046875,
+      11.91680908203125
+    ],
+    "direct_only_edited": [
+      -3.250732421875,
+      7.50311279296875
+    ]
+  }
+}

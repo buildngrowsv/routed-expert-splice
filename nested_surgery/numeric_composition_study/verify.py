@@ -54,27 +54,27 @@ def target_matrix(rows, sources):
     return {m:np.array(v) for m,v in expected.items()}
 
 
-def main():
-    receipt=json.loads((ROOT/"receipt.json").read_text())
+def audit(root, revision, count, start, donor_starts):
+    receipt=json.loads((root/"receipt.json").read_text())
     assert receipt["status"]=="done" and receipt["exit"]==0
-    assert receipt["revision"]=="b640590b733111878fc3d15497940e4913ab667e"
-    result=json.loads((ROOT/"result.json").read_text())
+    assert receipt["revision"]==revision
+    result=json.loads((root/"result.json").read_text())
     source_map=HERE.parent/"numeric_transfer_study/results/map.npz"
     assert sha256(source_map.read_bytes()).hexdigest()==result["map_digest"]
-    programs=json.loads((ROOT/"programs.json").read_text())
+    programs=json.loads((root/"programs.json").read_text())
     rows=programs["host"]
-    assert [x["id"] for x in rows]==list(range(80000,81024))
-    for name,start in (("left",84000),("right",86000)):
-        assert [x["id"] for x in programs["donor"][name]]==list(range(start,start+1024))
+    assert [x["id"] for x in rows]==list(range(start,start+count))
+    for name,donor_start in zip(("left","right"),donor_starts,strict=True):
+        assert [x["id"] for x in programs["donor"][name]]==list(range(donor_start,donor_start+count))
     targets=target_matrix(rows,programs["donor"])
-    with np.load(ROOT/"composition.npz") as z:
+    with np.load(root/"composition.npz") as z:
         assert set(z.files)=={"left_norms","right_norms",*ARMS}
         for name in ("left_norms","right_norms"):
             norms=z[name]
-            assert norms.shape==(1024,2,2) and np.isfinite(norms).all()
+            assert norms.shape==(count,2,2) and np.isfinite(norms).all()
             np.testing.assert_allclose(norms[:,:,0],norms[:,:,1],rtol=1e-5,atol=1e-6)
         scores={m:z[m] for m in ARMS}
-    assert all(a.shape==(1024,4,4) and np.isfinite(a).all() for a in scores.values())
+    assert all(a.shape==(count,4,4) and np.isfinite(a).all() for a in scores.values())
     margins={}
     for m,z in scores.items():
         gold=targets[m][:,:,None]
@@ -101,11 +101,11 @@ def main():
             and contrast["interval"][0]>.2)
     assert result["decision"]==("composes" if passes else "unresolved")
     native_items=margins["native"]>0
-    audit=dict(**result,mean_margin={m:float(x[eligible].mean()) if n else None for m,x in margins.items()},
-               native_item_accuracy=float(native_items.mean()),
-               native_groups_by_correct_items=np.bincount(native_items.sum(1),minlength=5).tolist())
-    print(json.dumps(audit,indent=2))
+    return dict(**result,mean_margin={m:float(x[eligible].mean()) if n else None for m,x in margins.items()},
+                native_item_accuracy=float(native_items.mean()),
+                native_groups_by_correct_items=np.bincount(native_items.sum(1),minlength=5).tolist())
 
 
 if __name__=="__main__":
-    main()
+    result=audit(ROOT,"b640590b733111878fc3d15497940e4913ab667e",1024,80000,(84000,86000))
+    print(json.dumps(result,indent=2))

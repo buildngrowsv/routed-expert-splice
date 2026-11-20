@@ -1,0 +1,9 @@
+{
+  "job": "qwen-two-operand-native-qualification",
+  "revision": "39538af4cfef39c536bb695d56c8a3ec216927b6",
+  "attempt": 1,
+  "started": "2026-11-20T08:01:09+00:00",
+  "status": "done",
+  "finished": "2026-11-20T08:06:16+00:00",
+  "exit": 0
+}

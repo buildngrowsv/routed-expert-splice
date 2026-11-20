@@ -1,0 +1,9 @@
+{
+  "job": "qwen-identifier-attention-paths",
+  "revision": "51ab60744b7a82b90e7d1a9641ec2b8382eb387a",
+  "attempt": 1,
+  "started": "2026-11-20T07:54:16+00:00",
+  "status": "done",
+  "finished": "2026-11-20T08:01:08+00:00",
+  "exit": 0
+}
