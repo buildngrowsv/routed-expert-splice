@@ -1,0 +1,9 @@
+{
+  "job": "qwen-cross-width-method-control-32b",
+  "revision": "9cef06213271ed3e72e8c089ae89af82f917238d",
+  "attempt": 1,
+  "started": "2026-11-20T09:34:30+00:00",
+  "status": "done",
+  "finished": "2026-11-20T09:38:07+00:00",
+  "exit": 0
+}

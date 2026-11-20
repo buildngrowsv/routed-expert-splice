@@ -1,0 +1,48 @@
+{
+  "models": {
+    "donor": [
+      "Qwen/Qwen2.5-Coder-7B",
+      "0396a76181e127dfc13e5c5ec48a8cee09938b02"
+    ],
+    "host": [
+      "Qwen/Qwen2.5-14B",
+      "97e1e76335b7017d8f67c08a19d103c0504298c9"
+    ],
+    "receiver": [
+      "Qwen/Qwen2.5-32B",
+      "1818d35814b8319459f4bd55ed1ac8709630f003"
+    ],
+    "32b_reference": [
+      "Qwen/Qwen2.5-32B",
+      "1818d35814b8319459f4bd55ed1ac8709630f003"
+    ]
+  },
+  "cut": 13,
+  "calibration_pairs": 256,
+  "groups": 512,
+  "map_digest": "4b5c46001809387bdf9195bf77d70de2ac9e98ffcaf6281fc4b4a9a5802acc3f",
+  "prompts_digest": "13497255d397fe710e8784f6a50ab90644dd70d933a7422be3a9df983f506a9e",
+  "runtime_s": 215.5042991250084,
+  "peak_mlx_bytes": 66895450324,
+  "decision": "alignment_control_transfers",
+  "eligible": 507,
+  "reversals": {
+    "stitch": 426,
+    "random": 0,
+    "whole": 426
+  },
+  "stitch_minus_random": {
+    "mean": 0.8402366863905325,
+    "interval": [
+      0.8086785009861933,
+      0.8698224852071006
+    ]
+  },
+  "shared_eligible": 507,
+  "shared_reversals": {
+    "stitch": 426,
+    "random": 0,
+    "whole": 426,
+    "scalar_32b": 434
+  }
+}
