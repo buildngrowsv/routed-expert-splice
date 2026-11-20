@@ -32,3 +32,5 @@ An exploratory control mapped each post-gap suffix in the qualification panel to
 The release includes all prompts, hidden cases, candidate logits, training IDs, bridge digest, receipts and intervention identities. From the repository root run `python nested_surgery/verify.py nested_surgery/results/qualification nested_surgery/results/fit` with NumPy to recompile the candidate programs and reconstruct the item-level changes. The environment used Python 3.12.16, MLX 0.32.4, MLX-LM 0.32.2 and NumPy 2.5.5 on the Apple M5 Ultra. The prior study supplies the pinned public model revisions and training-only interfaces. [Verification code](verify.py) · [Surgery code](run.py) · [Bridge construction](../penultimate/features.py)
 
 The account owner proposed moving an expert one block earlier, adapting the following block, and measuring which newly correct answers disappear when the donor is removed. OpenAI Codex implemented the study, ran it over SSH on the owner's Studio, audited the outcomes and assisted with writing.
+
+[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/362)
