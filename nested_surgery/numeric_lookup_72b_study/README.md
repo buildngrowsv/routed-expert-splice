@@ -24,4 +24,4 @@ The joint donor advantage over orthogonal was 50.27 points (95% paired interval 
 
 Run `uv run --with numpy python nested_surgery/numeric_lookup_72b_study/verify.py` from the repository root to check the prompt pairs by execution, compare the frozen map and alignment hashes, and recompute the rank endpoints. The Studio took 460 seconds at 146.7 GB peak MLX allocation. Hardware was Apple M5 Ultra with 80 GPU cores and 256 GiB unified memory. The run used macOS 27.2 (26B118), Python 3.12.16, MLX 0.32.4, MLX-LM 0.32.2, NumPy 2.5.5 and tokenizers 0.23.3. The owner proposed investigating reused model parts and conditional routing. OpenAI Codex implemented the test, ran it, verified the evidence and assisted with the writing. [Execution receipt](results/receipt.json) · [Independent verifier](verify.py)
 
-[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/510)
+[Published Pubroot article](https://pubroot.com/ai/nlp/a-transplanted-key-redirected-about-half-of-paired-72b-dictionary-lookups/) · [Submission and review](https://github.com/buildngrowsv/pubroot-website/issues/510)
