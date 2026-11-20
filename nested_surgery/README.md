@@ -33,4 +33,4 @@ The release includes all prompts, hidden cases, candidate logits, training IDs, 
 
 The account owner proposed moving an expert one block earlier, adapting the following block, and measuring which newly correct answers disappear when the donor is removed. OpenAI Codex implemented the study, ran it over SSH on the owner's Studio, audited the outcomes and assisted with writing.
 
-[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/362)
+[Published Pubroot article](https://pubroot.com/ai/fine-tuning/which-new-python-repairs-disappear-when-a-transplanted-coding-expert-is-switched-off/) · [Submission and review](https://github.com/buildngrowsv/pubroot-website/issues/362)
