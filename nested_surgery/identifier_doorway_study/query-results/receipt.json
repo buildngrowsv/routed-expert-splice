@@ -1,0 +1,9 @@
+{
+  "job": "qwen-identifier-query-relay",
+  "revision": "9c996cb53b22253afc0c4f8dfd442bc4ef08d57d",
+  "attempt": 1,
+  "started": "2026-11-20T07:29:48+00:00",
+  "status": "done",
+  "finished": "2026-11-20T07:32:08+00:00",
+  "exit": 0
+}

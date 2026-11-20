@@ -1,0 +1,76 @@
+{
+  "model": [
+    "Qwen/Qwen2.5-14B",
+    "97e1e76335b7017d8f67c08a19d103c0504298c9"
+  ],
+  "cut": 10,
+  "relay_blocks": 7,
+  "groups": 256,
+  "decision": "unresolved",
+  "eligible_groups": 256,
+  "reversals": {
+    "unrestricted": {
+      "first": 246,
+      "second": 0,
+      "differential": {
+        "mean": 0.9609375,
+        "interval": [
+          0.93359375,
+          0.984375
+        ]
+      }
+    },
+    "query_capture": {
+      "first": 0,
+      "second": 0,
+      "differential": {
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "query_direct": {
+      "first": 0,
+      "second": 0,
+      "differential": {
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "median_release_norm": [
+    7.9028143882751465,
+    6.392891883850098
+  ],
+  "qualifying_relays": [],
+  "capture_minus_direct": {
+    "mean": 0.0,
+    "interval": [
+      0.0,
+      0.0
+    ]
+  },
+  "mean_original_letter_margin": {
+    "native": [
+      12.8076171875,
+      12.792236328125
+    ],
+    "unrestricted": [
+      -4.666748046875,
+      5.884765625
+    ],
+    "query_capture": [
+      12.7982177734375,
+      12.7882080078125
+    ],
+    "query_direct": [
+      12.7691650390625,
+      12.7535400390625
+    ]
+  }
+}

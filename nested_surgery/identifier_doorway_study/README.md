@@ -16,3 +16,11 @@ The frozen Qwen2.5-14B base checkpoint at revision `97e1e76335b7017d8f67c08a19d1
 The unrestricted edit also reduced the other class's mean margin from +12.60 to +5.91 despite changing no paired winners. The two relay arms left that margin near +12.60. The second relay's median displacement was 1.13. These measurements distinguish carrying an altered state from carrying enough task-relevant information to flip the answer. They test these relay tokens and this window. A result with a different source, receiver or layer range can differ. [Raw execution and margins](results) · [Independent audit](verify.py) · [Recomputed effects](audit.json) · [Query-token follow-up](../IDENTIFIER_QUERY_RELAY.md)
 
 Run `uv run --with numpy python nested_surgery/identifier_doorway_study/verify.py` from the repository root. The pinned run took two minutes and 29 seconds on the owner's Apple M5 Ultra. The owner proposed testing walls that prevent communication between selected parts of a network. OpenAI Codex implemented this intervention, operated the run, checked the results and assisted with writing.
+
+## Follow-up at the final query token
+
+On a fresh panel of 256 files at indices 44500–44755, the unrestricted edit reversed 246 reads of its class and zero of the other class. We ran two new arms. One allowed seven blocks of normal propagation, then retained only the change at the final query token. The other continuously restricted changes to the source and the final query token, then restored the source at block 17. Both arms reversed zero reads of either class. The first-class original-letter margin was +12.81 in the native model, +12.80 for normal propagation followed by capture, and +12.77 for the continuous restriction. In the unrestricted edit it was −4.67. The release norms for the two query-token conditions were 7.90 and 6.39 at the median example. A useful effect was still available in the unrestricted run. Neither intervention captured enough of it at that query position and layer to flip a pair. [Registered follow-up](../IDENTIFIER_QUERY_RELAY.md) · [Raw follow-up data](query-results) · [Recomputed numbers](query-audit.json)
+
+Run the same verifier with `--query` to check this follow-up.
+
+[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/439)

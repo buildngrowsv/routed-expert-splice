@@ -22,4 +22,4 @@ This tests how the model uses a known source in one family of executable Python 
 
 Run `uv run --with numpy python nested_surgery/identifier_binding_study/verify.py` from the repository root. The Studio ran the benchmark in two minutes and 26 seconds using Python 3.12, MLX 0.32.4, MLX-LM 0.32.2, NumPy 2.5.5 and Tokenizers 0.23.3. The account owner proposed testing protected activation regions and changing the research direction after the fixed-reference experiments. OpenAI Codex implemented, executed and verified this experiment and assisted with writing.
 
-[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/436)
+[Published Pubroot article](https://pubroot.com/ai/fine-tuning/the-same-activation-edit-followed-the-class-the-14b-model-was-asked-to-read/) · [Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/436)
