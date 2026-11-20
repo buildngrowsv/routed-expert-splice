@@ -22,4 +22,4 @@ The paired switching gain was +46.04 percentage points (95% interval +38.13 to +
 
 Run `uv run --with numpy python nested_surgery/numeric_lookup_order_72b_study/verify.py` to verify program equivalence and recalculate both cohort sizes, the intervention scores and the group bootstrap from exact archives. The Studio run took 249 seconds with 146.70 GB peak MLX allocation on Apple M5 Ultra with 80 GPU cores and 256 GiB unified memory. It used macOS 27.2 (26B118), Python 3.12.16, MLX 0.32.4, MLX-LM 0.32.2, NumPy 2.5.5 and tokenizers 0.23.3. The owner proposed testing expert transfer and conditional routing. OpenAI Codex implemented, ran, audited and wrote up the comparison. [Receipt](results/receipt.json) · [Independent verifier](verify.py)
 
-[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/517)
+[Published Pubroot article](https://pubroot.com/ai/nlp/moving-a-dictionary-key-restored-whole-state-control-in-138-of-139-shared-72b-groups/) · [Review](https://github.com/buildngrowsv/pubroot-website/issues/517) · [Completed donor result](../numeric_lookup_transfer_72b_study/README.md)
