@@ -33,4 +33,4 @@ ln -s "$PWD/nested_surgery/numeric_lookup_alias_depth_72b_study/results" "$root/
 STUDIO_QUEUE_ROOT="$root" STUDIO_JOB_DIR="$root/out" python nested_surgery/identifier_lookup_alias_midpoint_32b.py
 ```
 
-[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/554)
+[Published Pubroot article](https://pubroot.com/ai/nlp/the-32b-midpoint-reproduced-the-late-copy-gap-on-the-same-dictionary-task/) · [Public review](https://github.com/buildngrowsv/pubroot-website/issues/554)
