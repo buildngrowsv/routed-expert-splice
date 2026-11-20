@@ -1,0 +1,53 @@
+{
+  "decision": "carry_composes",
+  "screen_eligible": 128,
+  "screen_groups": 128,
+  "models": {
+    "donor": [
+      "Qwen/Qwen2.5-Coder-7B",
+      "0396a76181e127dfc13e5c5ec48a8cee09938b02"
+    ],
+    "host": [
+      "Qwen/Qwen2.5-14B",
+      "97e1e76335b7017d8f67c08a19d103c0504298c9"
+    ]
+  },
+  "groups": 512,
+  "map_digest": "314f780d33cdb572add76953d9fbebfeeeee1e3eccdb5cadca188dddadf30b68",
+  "eligible": 512,
+  "correct": {
+    "native": 512,
+    "both": 512,
+    "random": 0,
+    "whole": 512
+  },
+  "direction_counts": {
+    "one_to_two": {
+      "prompts": 747,
+      "correct": {
+        "both": 747,
+        "random": 0,
+        "whole": 747
+      }
+    },
+    "two_to_one": {
+      "prompts": 747,
+      "correct": {
+        "both": 747,
+        "random": 0,
+        "whole": 747
+      }
+    }
+  },
+  "both_minus_random": {
+    "mean": 1.0,
+    "interval": [
+      1.0,
+      1.0
+    ]
+  },
+  "observed_terminator_ids": [
+    271,
+    151643
+  ]
+}

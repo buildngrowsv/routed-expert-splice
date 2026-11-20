@@ -1,0 +1,9 @@
+{
+  "job": "qwen-identifier-selected-edge",
+  "revision": "3e428e7a2e955398056e38a56193e42f4877b579",
+  "attempt": 1,
+  "started": "2026-11-20T08:16:31+00:00",
+  "status": "done",
+  "finished": "2026-11-20T08:23:57+00:00",
+  "exit": 0
+}

@@ -51,3 +51,6 @@ On the registered identical-suffix follow-up the same coding graft solved zero o
 - [Qualified two-operand composition](numeric_simple_study/README.md) tests independent edits on simple sums and differences.
 - [Direct-edge timing](attention_timing_study/README.md) isolates access before and after block 17.
 - [Two operands without a shortlist](numeric_simple_open_study/README.md) verifies the complete-vocabulary result.
+- [Single-block direct read](attention_single_study/README.md) tests the largest calibration score on a separate panel.
+- [Complete-number composition](numeric_carry_study/README.md) verifies both directions of decimal carry with two donor edits.
+- [One donor pass per operand](numeric_absolute_study/README.md) compares an absolute-state interface to the paired method.
