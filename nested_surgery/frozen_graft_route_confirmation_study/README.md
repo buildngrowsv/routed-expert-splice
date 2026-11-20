@@ -32,3 +32,5 @@ The frozen BF16 models are Qwen2.5-Coder-7B revision `0396a76181e127dfc13e5c5ec4
 ```sh
 uv run --with numpy python nested_surgery/frozen_graft_route_study/verify.py --confirmation
 ```
+
+[Published Pubroot article](https://pubroot.com/ai/fine-tuning/a-fixed-confidence-route-added-106-repairs-while-calling-the-14b-graft-on-23-of-prompts/) · [Public review](https://github.com/buildngrowsv/pubroot-website/issues/559)
