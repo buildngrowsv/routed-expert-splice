@@ -1,0 +1,11 @@
+{
+  "programs": 768,
+  "changes_per_triplet": 1,
+  "distinct_suffixes": 1,
+  "parser_solved": 768,
+  "disabled_triplet_losses": 0,
+  "disabled_triplet_rescues": 0,
+  "strict_triplets": 0,
+  "strict_items": 47,
+  "all_solve_counts_reproduced": true
+}
