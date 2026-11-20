@@ -31,4 +31,4 @@ The intact 7B model uses this module to solve some groups in its own network. Th
 
 Run the verification script with Python and NumPy to reproduce the source choices, original standalone predictions, individual transitions and uncertainty estimates. The owner proposed locating and transplanting a working coding expert. OpenAI Codex implemented and ran the diagnostic on the owner’s Apple M5 Ultra, checked its archived scores and assisted with writing.
 
-[Fresh input-map comparison](../BRIDGE_INPUT.md) · [Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/408)
+[Fresh input-map comparison](../BRIDGE_INPUT.md) · [Accepted Pubroot paper](https://pubroot.com/ai/fine-tuning/changing-the-opening-bracket-signal-in-a-7b-coder-s-final-module-breaks-40-of-54-complete-repairs/) · [Public review](https://github.com/buildngrowsv/pubroot-website/issues/408)
