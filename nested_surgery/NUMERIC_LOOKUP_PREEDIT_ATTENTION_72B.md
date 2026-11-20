@@ -1,0 +1,7 @@
+# Can the early key work if later tokens cannot read it before the edit?
+
+The late-key advantage persisted at exactly matched token distance, and whole-state steering improved in both frozen hosts. Test whether the early key's original numeral leaves information in later token states during the blocks that precede the intervention.
+
+Reuse the fresh 256-group early-key panel. From blocks 1–17, mask all attention from positions after the key value to the key numeral itself. This cuts routes to later positions before the whole key state is exchanged. Keep earlier positions and the key state unchanged by the mask. After exchanging the key state at the usual boundary, restore ordinary causal attention for the remaining blocks. Score native and paired full-state exchanges in the masked model. A matched syntax control removes the same query edges into the immediately preceding nonnumeric assignment token. The early unmasked native and whole-state scores are archived.
+
+Compare in groups solved natively in all three arms. Require at least 100 shared groups, 80% switching in both mirrored contexts, 95% preservation of constant-table answers, and at least 15 points of switching improvement over each control with positive paired lower bounds. This tests the consequence of removing access before the cut. It couples changes to the subsequent native computation with removal of original-key information. [Matched-gap experiment](NUMERIC_LOOKUP_MATCHED_GAP_72B.md)
