@@ -1,0 +1,9 @@
+{
+  "job": "qwen-numeric-computed-intervention",
+  "revision": "f6373b266767c5d226ea86c036471f719e7e0819",
+  "attempt": 1,
+  "started": "2026-11-20T07:34:19+00:00",
+  "status": "done",
+  "finished": "2026-11-20T07:35:51+00:00",
+  "exit": 0
+}

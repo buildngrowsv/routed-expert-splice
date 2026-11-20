@@ -1,0 +1,26 @@
+{
+  "decision": "computed_transfer",
+  "model": [
+    "Qwen/Qwen2.5-14B",
+    "97e1e76335b7017d8f67c08a19d103c0504298c9"
+  ],
+  "groups": 512,
+  "arm": {
+    "eligible": 511,
+    "switches": {
+      "learned": 511,
+      "matched": 0,
+      "whole_site": 511
+    },
+    "learned_minus_matched": {
+      "mean": 1.0,
+      "interval": [
+        1.0,
+        1.0
+      ]
+    },
+    "qualifies": true,
+    "depth": 10,
+    "rank": 7
+  }
+}

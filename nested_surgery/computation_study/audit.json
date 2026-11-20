@@ -1,0 +1,51 @@
+{
+  "decision": "computed_transfer",
+  "model": [
+    "Qwen/Qwen2.5-14B",
+    "97e1e76335b7017d8f67c08a19d103c0504298c9"
+  ],
+  "groups": 512,
+  "arm": {
+    "eligible": 511,
+    "switches": {
+      "learned": 511,
+      "matched": 0,
+      "whole_site": 511
+    },
+    "learned_minus_matched": {
+      "mean": 1.0,
+      "interval": [
+        1.0,
+        1.0
+      ]
+    },
+    "qualifies": true,
+    "depth": 10,
+    "rank": 7
+  },
+  "by_operator": {
+    "addition": {
+      "eligible": 255,
+      "reversals": {
+        "learned": 255,
+        "matched": 0,
+        "whole_site": 255
+      }
+    },
+    "subtraction": {
+      "eligible": 256,
+      "reversals": {
+        "learned": 256,
+        "matched": 0,
+        "whole_site": 256
+      }
+    }
+  },
+  "mean_margin": {
+    "native": 3.5272748470306396,
+    "learned": -3.4442269802093506,
+    "matched": 3.5135762691497803,
+    "whole_site": -3.442270040512085
+  },
+  "max_norm_difference": 3.814697265625e-06
+}
