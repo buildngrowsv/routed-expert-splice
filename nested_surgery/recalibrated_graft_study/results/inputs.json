@@ -1,0 +1,9 @@
+{
+  "hashes": {
+    "archived": "d55d6bf02dd1d236dce974d6163a8086adf6bdb8f88646ed9119c0b0aa186bd8",
+    "refit": "6f8497c79a4394b584452f66f1418fdf74d02671904ee27df418f0d0000898ee"
+  },
+  "calibration": "ordinary",
+  "host_block": 27,
+  "trained_block": 28
+}

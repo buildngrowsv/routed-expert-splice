@@ -1,0 +1,85 @@
+{
+  "decision": "stop",
+  "groups": 256,
+  "individual": {
+    "standalone-donor": 554,
+    "native": 318,
+    "knockout": 269,
+    "direct": 241,
+    "shuffled": 486,
+    "general": 172,
+    "coder": 261,
+    "refit": 261,
+    "refit-shuffled": 0,
+    "refit-to-knockout": 152,
+    "refit-to-native": 145,
+    "refit-to-old-input": 192,
+    "refit-to-shuffled": 190,
+    "before-native": 4,
+    "before-knockout": 8,
+    "before-direct": 4,
+    "before-shuffled": 0,
+    "before-general": 6,
+    "before-coder": 5,
+    "before-refit": 11,
+    "before-refit-shuffled": 3
+  },
+  "complete": {
+    "standalone-donor": 48,
+    "native": 4,
+    "knockout": 0,
+    "direct": 1,
+    "shuffled": 22,
+    "general": 0,
+    "coder": 1,
+    "refit": 0,
+    "refit-shuffled": 0,
+    "refit-to-knockout": 0,
+    "refit-to-native": 0,
+    "refit-to-old-input": 3,
+    "refit-to-shuffled": 0,
+    "before-native": 0,
+    "before-knockout": 0,
+    "before-direct": 0,
+    "before-shuffled": 0,
+    "before-general": 0,
+    "before-coder": 0,
+    "before-refit": 0,
+    "before-refit-shuffled": 0
+  },
+  "advantages": {
+    "native": {
+      "mean": -0.015625,
+      "interval": [
+        -0.03125,
+        -0.00390625
+      ]
+    },
+    "refit-shuffled": {
+      "mean": 0.0,
+      "interval": [
+        0.0,
+        0.0
+      ]
+    },
+    "coder": {
+      "mean": -0.00390625,
+      "interval": [
+        -0.01171875,
+        0.0
+      ]
+    }
+  },
+  "strict_ids": [],
+  "new_ids": [],
+  "strict_overlap_with_standalone_donor": [],
+  "strict_removed_by_old_input": [],
+  "off_rescues": [],
+  "off_losses": [],
+  "native_regressions": [
+    "opener-60015",
+    "opener-60032",
+    "opener-60216",
+    "opener-60232"
+  ]
+}
