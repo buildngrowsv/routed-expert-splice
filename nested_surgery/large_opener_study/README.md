@@ -23,4 +23,4 @@ The next experiment replaces the feed-forward module in one-based block 27 of th
 
 The scoring ran on the owner's Apple M5 Ultra in original model precision. Reproduction uses the exact two model revisions in the result, plus the released prompt set and four logits per example. Run the independent Python and NumPy audit to rederive the labels, whole-group scores, intervention locations in the prompts, qualification decision and paired intervals. The owner proposed finding a smaller donor that beats its host on real executable repairs. OpenAI Codex implemented and operated the experiments, audited the outputs and assisted with writing. [Raw logits, gate decision and receipt](results) · [Audit](verify.py) · [Recomputed counts](audit.json)
 
-[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/398)
+[Published Pubroot paper](https://pubroot.com/ai/fine-tuning/a-7b-coding-donor-solves-49-complete-delimiter-triplets-missed-by-a-14b-general-host/) · [Public review](https://github.com/buildngrowsv/pubroot-website/issues/398)
