@@ -1,0 +1,51 @@
+{
+  "decision": "unresolved",
+  "eligible": 157,
+  "native": {
+    "key_block": 159,
+    "syntax_block": 176,
+    "unrestricted": 173
+  },
+  "switched": {
+    "key_block": 123,
+    "syntax_block": 102,
+    "unrestricted": 101
+  },
+  "constant_preserved": {
+    "key_block": 154,
+    "syntax_block": 155,
+    "unrestricted": 156
+  },
+  "key_block_minus": {
+    "unrestricted": {
+      "mean": 0.14012738853503184,
+      "interval": [
+        0.05732484076433121,
+        0.2229299363057325
+      ]
+    },
+    "syntax_block": {
+      "mean": 0.1337579617834395,
+      "interval": [
+        0.050955414012738856,
+        0.21656050955414013
+      ]
+    }
+  },
+  "recipient": [
+    "Qwen/Qwen2.5-72B",
+    "efba10c8e54e91e0d9570ab5f7b51a958474d4cb"
+  ],
+  "cut": 17,
+  "table_only": true,
+  "source_programs_digest": "c7e2e3ff66fcd6fce22d7c30e99bc9e0118c0cee709c90be556309df26a4e70a",
+  "source_ranks_digest": "b118a2064ce103cd8a2adb7deb69a2e095b3bab87c8268b8706f21980198202e",
+  "runtime_s": 495.8766483340005,
+  "peak_mlx_bytes": 146710400096,
+  "table_token_span": [
+    16,
+    31
+  ],
+  "minimum_switches": 126,
+  "only_key_block": 33
+}

@@ -1,0 +1,9 @@
+{
+  "job": "qwen-dictionary-table-only-key-block-72b",
+  "revision": "d29e00dde9be0f7ea6d08a5e427c67bfd9e834ce",
+  "attempt": 1,
+  "started": "2026-11-20T14:04:59+00:00",
+  "status": "done",
+  "finished": "2026-11-20T14:13:16+00:00",
+  "exit": 0
+}
