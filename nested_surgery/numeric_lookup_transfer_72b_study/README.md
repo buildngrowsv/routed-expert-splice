@@ -21,4 +21,4 @@ The paired late-minus-early donor gain was **45.32 points**, with a 95% interval
 
 Run `uv run --with numpy python nested_surgery/numeric_lookup_transfer_72b_study/verify.py` from the repository root to re-execute the program assertions, check artifact hashes, and reproduce the rank outcomes and paired intervals. The run took 406 seconds and reached 146.69 GB peak MLX allocation on an Apple M5 Ultra with 80 GPU cores and 256 GiB unified memory. Software was macOS 27.2 (26B118), Python 3.12.16, MLX 0.32.4, MLX-LM 0.32.2, NumPy 2.5.5 and tokenizers 0.23.3. The owner proposed work on conditional routing and expert transfer. OpenAI Codex implemented, ran, audited and documented the comparison. [Execution receipt](results/receipt.json) · [Verifier](verify.py)
 
-[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/519)
+[Published Pubroot article](https://pubroot.com/ai/nlp/moving-a-dictionary-key-raised-seven-coordinate-donor-switching-from-71-to-134-groups/) · [Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/519)
