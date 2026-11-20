@@ -1,0 +1,121 @@
+{
+  "decision": "scales_to_32b",
+  "models": {
+    "donor": [
+      "Qwen/Qwen2.5-Coder-7B",
+      "0396a76181e127dfc13e5c5ec48a8cee09938b02"
+    ],
+    "14b": [
+      "Qwen/Qwen2.5-14B",
+      "97e1e76335b7017d8f67c08a19d103c0504298c9"
+    ],
+    "32b": [
+      "Qwen/Qwen2.5-32B",
+      "1818d35814b8319459f4bd55ed1ac8709630f003"
+    ]
+  },
+  "groups": 512,
+  "old_map_sha256": "4b5c46001809387bdf9195bf77d70de2ac9e98ffcaf6281fc4b4a9a5802acc3f",
+  "arms": {
+    "14b": {
+      "full_vocabulary": {
+        "eligible": 506,
+        "reversals": {
+          "transfer": 505,
+          "norm_matched": 0,
+          "paired": 505,
+          "whole_site": 505
+        },
+        "transfer_minus_random": {
+          "mean": 0.9980237154150198,
+          "interval": [
+            0.9940711462450593,
+            1.0
+          ]
+        },
+        "qualifies": true
+      },
+      "forced": {
+        "eligible": 512,
+        "reversals": {
+          "transfer": 512,
+          "norm_matched": 0,
+          "paired": 512,
+          "whole_site": 512
+        },
+        "transfer_minus_random": {
+          "mean": 1.0,
+          "interval": [
+            1.0,
+            1.0
+          ]
+        },
+        "qualifies": true
+      }
+    },
+    "32b": {
+      "full_vocabulary": {
+        "eligible": 507,
+        "reversals": {
+          "transfer": 420,
+          "norm_matched": 0,
+          "paired": 421,
+          "whole_site": 426,
+          "borrowed": 414
+        },
+        "transfer_minus_random": {
+          "mean": 0.8284023668639053,
+          "interval": [
+            0.7948717948717948,
+            0.8599605522682445
+          ]
+        },
+        "qualifies": true
+      },
+      "forced": {
+        "eligible": 511,
+        "reversals": {
+          "transfer": 428,
+          "norm_matched": 0,
+          "paired": 429,
+          "whole_site": 436,
+          "borrowed": 422
+        },
+        "transfer_minus_random": {
+          "mean": 0.837573385518591,
+          "interval": [
+            0.8043052837573386,
+            0.8688845401174168
+          ]
+        },
+        "qualifies": true
+      }
+    }
+  },
+  "shared": {
+    "eligible": 502,
+    "arms": {
+      "14b": {
+        "transfer": 501,
+        "norm_matched": 0,
+        "paired": 501,
+        "whole_site": 501
+      },
+      "32b": {
+        "transfer": 415,
+        "norm_matched": 0,
+        "paired": 416,
+        "whole_site": 421,
+        "borrowed": 409
+      }
+    }
+  },
+  "fitted_minus_borrowed": {
+    "mean": 0.011834319526627219,
+    "interval": [
+      -0.0039447731755424065,
+      0.027613412228796843
+    ]
+  },
+  "fit_advantage": false
+}
