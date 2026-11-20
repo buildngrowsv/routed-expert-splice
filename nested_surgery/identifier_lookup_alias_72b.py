@@ -47,16 +47,16 @@ def alias_rows(tokenizer,rows):
     return output
 
 
-def evaluate(model,rows):
+def evaluate(model, rows, *, cut=CUT):
     scores={k:[] for k in ("native","early","alias")}
     for i,(ids,early,ends,digits,_) in enumerate(encoded_batches(rows)):
         targets=mx.array(np.repeat([r["alias_site"] for r in rows[i*8:i*8+len(ids)//2]],2))
-        h=prefix(model,ids,CUT)
+        h=prefix(model,ids,cut)
         index=mx.arange(len(ids))
-        scores["native"].extend(whole_vocabulary(model,h,ends,CUT,digits))
+        scores["native"].extend(whole_vocabulary(model,h,ends,cut,digits))
         for label,site in (("early",early),("alias",targets)):
             patched=patch(h,site,h[index^1,site])
-            scores[label].extend(whole_vocabulary(model,patched,ends,CUT,digits))
+            scores[label].extend(whole_vocabulary(model,patched,ends,cut,digits))
         if (i+1)%12==0:
             print(f"Scored {(i+1)*8}/{len(rows)} contexts",flush=True)
     return {k:np.array(v) for k,v in scores.items()}
