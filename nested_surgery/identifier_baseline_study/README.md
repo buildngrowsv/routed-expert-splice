@@ -26,4 +26,6 @@ Earlier work uses interchange interventions to connect neural representations to
 
 The public repository stores the test prompts, logits margins, and Studio receipt. Run python nested_surgery/identifier_baseline_study/verify.py with NumPy to check token alignment, source code syntax, intact and exchanged margins, and all counts. The registered generator and the exact public model revisions reproduce the inference step with Python 3.12, NumPy 2.5.5, MLX 0.32.4, MLX-LM 0.32.2 and Tokenizers 0.23.3. The two runs together took 4 minutes and 6 seconds on an Apple M5 Ultra. The owner proposed evaluating the tunnel at larger scales. OpenAI Codex implemented and ran the experiments, audited the records and assisted with writing. [Studio receipt](results/receipt.json)
 
-[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/423)
+[Published Pubroot paper](https://pubroot.com/ai/fine-tuning/a-slice-can-reveal-an-identifier-without-controlling-the-answer-in-two-pretrained-qwen-models/) · [Public review](https://github.com/buildngrowsv/pubroot-website/issues/423)
+
+[Task-aligned subspace follow-up](../IDENTIFIER_SUBSPACE.md)
