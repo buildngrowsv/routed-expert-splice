@@ -1,0 +1,10 @@
+2026-11-20T14:36:38Z
+ProductName:		macOS
+ProductVersion:		27.2
+BuildVersion:		26B118
+arm64
+Apple M5 Ultra
+274877906944
+3.12.16
+{'mlx': '0.32.4', 'mlx-lm': '0.32.2', 'numpy': '2.5.5', 'tokenizers': '0.23.3'}
+{'torch_dtype': 'bfloat16', 'quantization_config': None, 'num_hidden_layers': 80, 'hidden_size': 8192}

@@ -6,4 +6,8 @@ The intervention uses the same 256 matched dictionary groups as the fresh lookup
 
 The untouched model was correct on all six prompts in 183 groups. At this cut, supplying a counterpart's full state at the alias was insufficient to steer the answer. This test fixes the cut, alias token and surface form. It leaves other readouts, stages and alias syntax open. It shows that the earlier effect from relocating the declaration cannot be reproduced by simple placement of a late read in this setting. [Exact token ranks](results/alias.npz) · [Executable prompts](results/programs.json) · [Numeric report](results/result.json) · [Independent verification](verify.py) · [Execution receipt](results/receipt.json)
 
-[Pubroot submission and review](https://github.com/buildngrowsv/pubroot-website/issues/538)
+[Pubroot review, declined](https://github.com/buildngrowsv/pubroot-website/issues/538)
+
+## Reproduce the registered cut
+
+The Studio ran the released BF16 Qwen2.5-72B checkpoint at revision `efba10c8e54e91e0d9570ab5f7b51a958474d4cb`, with no quantization. The process took 354.13 seconds and peaked at 146.54 GB of MLX allocation. The arm64 Apple M5 Ultra has 256 GiB unified memory. Software was macOS build 26B118, Python 3.12.16, MLX 0.32.4, MLX-LM 0.32.2, NumPy 2.5.5 and tokenizers 0.23.3. Run `uv run --with numpy python nested_surgery/numeric_lookup_alias_72b_study/verify.py` from the repo root to reproduce the scoped comparison. The original cut held the intervention depth fixed relative to the earlier positive declaration-relocation test. The paired depth follow-up tests whether the alias can become steerable later with the relocated definition as a concurrent control. [Recorded Studio environment and checkpoint metadata](results/studio-environment.txt) · [Deeper comparison](../NUMERIC_LOOKUP_ALIAS_DEPTH_72B.md)
