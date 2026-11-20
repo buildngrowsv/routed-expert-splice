@@ -1,5 +1,9 @@
 # Which new Python repairs disappear when a transplanted coding expert is switched off?
 
+## Saved values at 72B
+
+The same 7B interface switched 193 of 206 native-qualified groups after adding a saved binding and a later overwrite. Editing the irrelevant assignment preserved 195 groups, one short of the 95% floor. All 14 missed individual answers followed the edited later value. [Audited result](numeric_snapshot_72b_study/README.md)
+
 ## Selective operand use at 72B
 
 Seven donor coordinates switched 245 of 250 native-qualified groups when applied at the assignment the program read. Editing the unused assignment preserved 246 groups. An equal-norm orthogonal edit switched zero, and a full-state swap switched 246. The next registered test exchanges a branch selector across mirrored payloads. [Outcome and audit](numeric_select_72b_study/README.md) · [Branch selector protocol](NUMERIC_ROUTE_72B.md)

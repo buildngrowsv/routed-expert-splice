@@ -1,0 +1,65 @@
+{
+  "decision": "unresolved",
+  "screen_eligible": 51,
+  "screen_groups": 64,
+  "models": {
+    "donor": [
+      "Qwen/Qwen2.5-Coder-7B",
+      "0396a76181e127dfc13e5c5ec48a8cee09938b02"
+    ],
+    "recipient": [
+      "Qwen/Qwen2.5-72B",
+      "efba10c8e54e91e0d9570ab5f7b51a958474d4cb"
+    ]
+  },
+  "cut": 17,
+  "snapshot": true,
+  "groups": 256,
+  "map_digest": "4b5c46001809387bdf9195bf77d70de2ac9e98ffcaf6281fc4b4a9a5802acc3f",
+  "alignment_digest": "318a75288da95e284052d86c3e9235aca6c661736cb3305b545ad1a0f80695da",
+  "eligible": 206,
+  "counts": {
+    "selected": 193,
+    "unused": 195,
+    "orthogonal": 0,
+    "whole": 192
+  },
+  "selected_minus_orthogonal": {
+    "mean": 0.9368932038834952,
+    "interval": [
+      0.9029126213592233,
+      0.9660194174757282
+    ]
+  },
+  "runtime_s": 732.266013667002,
+  "peak_mlx_bytes": 147242172580,
+  "paired_saved_and_current": {
+    "selected": [
+      193,
+      206
+    ],
+    "unused": [
+      195,
+      206
+    ],
+    "orthogonal": [
+      0,
+      0
+    ],
+    "whole": [
+      192,
+      206
+    ]
+  },
+  "strict_pass": false,
+  "preservation_minimum": 196,
+  "tied_top_candidates": {
+    "native": 9,
+    "selected": 0,
+    "unused": 2,
+    "orthogonal": 6,
+    "whole": 3
+  },
+  "unused_miss_responses": 14,
+  "unused_miss_top_equals_edited_assignment_plus_offset": 14
+}
