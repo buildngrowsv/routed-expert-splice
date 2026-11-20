@@ -150,7 +150,11 @@ def main():
                   port_sha256=result["port_sha256"], runtime_s=time.perf_counter()-started,
                   peak_mlx_bytes=mx.get_peak_memory())
     if out is None:
+        assert all(x["actual_subset_audit"]["candidate_differences"] == 0 for x in results.values())
+        report["decision"] = "smoke_complete"
         print(json.dumps(report))
+        if "STUDIO_JOB_DIR" in os.environ:
+            (Path(os.environ["STUDIO_JOB_DIR"]) / "result.json").write_text(json.dumps(report, indent=2) + "\n")
     else:
         (out / "programs.json").write_text(json.dumps(matched, separators=(",", ":")) + "\n")
         (out / "result.json").write_text(json.dumps(report, indent=2) + "\n")
