@@ -1,5 +1,22 @@
 # Can a recipient model compute with a donor’s value?
 
+## Stored facts transferred to a frozen 7B model
+
+The best rank-256 map let frozen Qwen2.5-7B answer **11,604 of 20,000 direct questions (58.02%)** about people the map never saw during fitting. The 0.5B donor had learned randomly assigned facts about those people. Feeding a different person’s state through the same map reduced direct accuracy to the reported 3.75%, near the 3.73% chance level. Both models stayed frozen while the map trained.
+
+| Condition | Direct facts, out of 20,000 | Country questions, out of 6,000 |
+|---|---:|---:|
+| Rank-256 map, best direct result | 11,604 | 1,247 |
+| Donor alone | 19,715 | 597 |
+| Frozen recipient alone | 775 | 269 |
+| Donor answer relayed to the recipient as text | 19,472 | 1,386 |
+| Recipient LoRA trained on the same map-fitting people | 702 | 691 |
+| Rank-64 map using the untrained donor | 774 | 501 |
+
+The best run recovered 58.86% of the donor’s direct accuracy, below the registered 60% threshold. Direct accuracy averaged 55.30% over three rank-256 seeds. The text relay led on direct and country questions. Evaluation scored the first answer token from a fixed set. The study selected the layer and rank on this evaluation panel, so the strongest number is a configuration-selection result.
+
+The CPU audit recomputes the table and seed statistics from the retained per-question scores. The wrong-person result was saved as a summary and checked against the corresponding configuration record. The same study encompasses the operand interventions below and the approved stored-fact evaluation. [Registered E1 protocol](../research-program/protocols/E1.md) · [Audit](flagship/knowledge-7b-audit.json) · [Verifier](flagship/verify_knowledge.py)
+
 ## Held-out loop result
 
 **The seven-coordinate edit changed both loop outputs and preserved the audit value in 359 of 501 native-qualified pairs (71.7%).** Qwen2.5-72B received the alternate operand from the 7B donor at one assignment site. The calibration examples used direct returns. The loop experiment required both swap directions to produce the exact tuple, including the unedited second field.
@@ -22,7 +39,7 @@ The strongest starting result is **502 of 504 paired arithmetic reversals in fro
 
 ## Studio qualification
 
-The unedited recipient completed both variants in **43 of 64 loop groups** and **0 of 64 conditional groups**. In the conditional screen, 86 of 128 completions diverged before the end of the tuple fields. The registered gate required 32 groups in each family, so the intervention panel and its dense comparison remain untested. The outcome limits this benchmark’s coverage and leaves the activation-transfer question open. [Screen traces and receipt](flagship/qualification)
+The unedited recipient completed both variants in **43 of 64 loop groups** and **0 of 64 conditional groups**. In the conditional screen, 86 of 128 completions diverged before the end of the tuple fields. The original gate required 32 groups in each family, so the two-family run ended at qualification. The qualifying loop went forward under the separate registration below. The conditional remains untested under intervention. [Screen traces and receipt](flagship/qualification)
 
 ## What would change the conclusion
 

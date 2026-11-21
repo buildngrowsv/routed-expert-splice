@@ -1,0 +1,67 @@
+{
+  "revision": "4982b3395c2cace1c4295be8e0a47d93b099218a",
+  "people": 2000,
+  "direct_questions": 20000,
+  "country_questions": 6000,
+  "decision": "transplant_partial",
+  "counts": {
+    "map_seed_0": {
+      "direct": 11604,
+      "country": 1247,
+      "direct_top_token": 11579
+    },
+    "map_seed_1": {
+      "direct": 10163,
+      "country": 1057,
+      "direct_top_token": 10130
+    },
+    "map_seed_2": {
+      "direct": 11412,
+      "country": 1262,
+      "direct_top_token": 11366
+    },
+    "text_relay": {
+      "direct": 19472,
+      "country": 1386,
+      "direct_top_token": 18189
+    },
+    "host_alone": {
+      "direct": 775,
+      "country": 269,
+      "direct_top_token": 414
+    },
+    "donor_alone": {
+      "direct": 19715,
+      "country": 597,
+      "direct_top_token": 19712
+    },
+    "lora": {
+      "direct": 702,
+      "country": 691,
+      "direct_top_token": 702
+    },
+    "untrained_donor_rank64": {
+      "direct": 774,
+      "country": 501,
+      "direct_top_token": 774
+    }
+  },
+  "direct_seed_mean": 0.5529833333333334,
+  "donor_floor": 0.59145,
+  "wrong_person_direct_reported": 0.0375,
+  "sha256": {
+    "prog-e1-sweep-7b/receipt.json": "47918d49ca07afe1fb14924cc5356322f5c8138f9b1d211426c3d01d60359297",
+    "prog-e1-ranks-7b/receipt.json": "d83774e1644987a2694012ac7f73770484d50c730a4b0e74f0fa339e1709efcc",
+    "prog-e1-ranks-7b/result.json": "abc23f31f3d0f7d2bed0168c327d6d3d05c2ba20a2e2eb765074b8298980f8c1",
+    "prog-e1-sweep-7b/result.json": "d8d2cb51c88c30160343bb87b5522101beb89be6507fa0eb343d3b77bb794f26",
+    "prog-e1-ranks-7b/configs/L20-r256-s0.npz": "0e082546bfca5721d51f396e582321a853386ce1f6479e6d63d3116b50fddcb2",
+    "prog-e1-ranks-7b/configs/L20-r256-s1.npz": "b44c487eb55ef641941fb9ab73fcc43c02c1d5094202025f5c4808f3eedbe47a",
+    "prog-e1-ranks-7b/configs/L20-r256-s2.npz": "1c6e1eab785584938d90cddd6ea9ae7438b0c095278a1368d7ad2f5f50773f16",
+    "prog-e1-sweep-7b/configs/control-relay.npz": "4dd92b99298c4e50086bfda48484cd3cfaabf7576d9c103269c68d47b166a077",
+    "prog-e1-sweep-7b/configs/host_alone.npz": "e463aacb77fd36385762c76a901d95788bd970af6053868b791d9f2c22ab0849",
+    "prog-e1-sweep-7b/configs/donor_alone.npz": "11151fad85a6fa21e08c0b268ac24f5ecaa3ad47c439ec17185991a0a754a1d5",
+    "prog-e1-sweep-7b/configs/control-lora.npz": "fc33b7435dfda46274e125d27e173213a903b819bf5f2f8365c1e07ea085d242",
+    "prog-e1-sweep-7b/configs/control-base-donor-L20-r64.npz": "c5188ac655d9eb87aeb286cd6cc3033b1c8bebf7dc8d7fed82462c091bd3e22e",
+    "prog-e1-ranks-7b/configs/L20-r256-s0.json": "6d4da1ac22e06d8873a0fb9b522299f155ef7d55a42b1a02ea961524a1b98f58"
+  }
+}
