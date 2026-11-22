@@ -1,0 +1,493 @@
+{
+  "dense": {
+    "receipt": {
+      "job": "prog-e3-dense",
+      "revision": "4982b3395c2cace1c4295be8e0a47d93b099218a",
+      "attempt": 1,
+      "started": "2026-11-22T05:16:38+00:00",
+      "status": "done",
+      "finished": "2026-11-22T06:27:58+00:00",
+      "exit": 0
+    },
+    "result": {
+      "decision": "trained",
+      "job": "prog-e3-dense-s1",
+      "hours": 1.189,
+      "arm": "dense",
+      "scale": "main",
+      "seed": 1,
+      "lam": 0.0,
+      "steps": 6510,
+      "tokens": 399974400,
+      "params": {
+        "total": 97536768,
+        "embedding": 12582912,
+        "blocks": 84953856
+      },
+      "flops_per_token": 603979776.0,
+      "train_hours": 1.1880935572253333,
+      "tokens_per_second": 93514.52107818144,
+      "data_epochs": {
+        "english": 1.0,
+        "code": 1.0,
+        "welsh": 1.0
+      },
+      "val": {
+        "english": 3.1175894141197205,
+        "code": 1.847665548324585,
+        "welsh": 2.6658313870429993,
+        "icelandic": 4.430341005325317
+      },
+      "train_mean_val": 2.5436954498291016,
+      "removal": {
+        "base": {
+          "english": 3.1175894141197205,
+          "code": 1.847665548324585,
+          "welsh": 2.6658313870429993
+        },
+        "rooms": [
+          {
+            "room": 0,
+            "loss": {
+              "english": 3.583525538444519,
+              "code": 2.3497350215911865,
+              "welsh": 3.13846093416214
+            },
+            "increase": {
+              "english": 0.4659361243247986,
+              "code": 0.5020694732666016,
+              "welsh": 0.4726295471191406
+            },
+            "domain": "code",
+            "selectivity": 0.03375360025526816,
+            "meaningful": true,
+            "ratio": 1.0698654096184688
+          },
+          {
+            "room": 1,
+            "loss": {
+              "english": 3.564840793609619,
+              "code": 2.3422837257385254,
+              "welsh": 3.069290816783905
+            },
+            "increase": {
+              "english": 0.4472513794898987,
+              "code": 0.49461817741394043,
+              "welsh": 0.40345942974090576
+            },
+            "domain": "code",
+            "selectivity": 0.07528778450980461,
+            "meaningful": true,
+            "ratio": 1.16283505992163
+          },
+          {
+            "room": 2,
+            "loss": {
+              "english": 3.6030073165893555,
+              "code": 2.2830280661582947,
+              "welsh": 3.1567861437797546
+            },
+            "increase": {
+              "english": 0.485417902469635,
+              "code": 0.4353625178337097,
+              "welsh": 0.49095475673675537
+            },
+            "domain": "welsh",
+            "selectivity": 0.03212772196088947,
+            "meaningful": true,
+            "ratio": 1.06638835038437
+          },
+          {
+            "room": 3,
+            "loss": {
+              "english": 3.6876211166381836,
+              "code": 2.5083723068237305,
+              "welsh": 3.282202363014221
+            },
+            "increase": {
+              "english": 0.5700317025184631,
+              "code": 0.6607067584991455,
+              "welsh": 0.6163709759712219
+            },
+            "domain": "code",
+            "selectivity": 0.05383601826621718,
+            "meaningful": true,
+            "ratio": 1.1137984943530956
+          }
+        ],
+        "max_selectivity": 0.07528778450980461,
+        "domains_with_selective_room": []
+      },
+      "wiring_cost": null,
+      "peak_memory_gb": 13.65025012
+    },
+    "result_sha256": "099574ad9afc10e1e0813ab990b608e661bcce5d35c4c2f42d861db36cfa316a",
+    "packages": {
+      "mlx": "0.32.4",
+      "mlx_lm": "0.32.2",
+      "numpy": "2.5.5",
+      "transformers": "5.23.0",
+      "tokenizers": "0.23.3"
+    },
+    "config": {
+      "arm": "dense",
+      "seed": 1,
+      "tokens": 400000000,
+      "lam": 0.0,
+      "scale": "main",
+      "smoke": false
+    },
+    "curve": [
+      {
+        "step": 0,
+        "flops": 0.0,
+        "val_english": 9.16995644569397,
+        "val_code": 9.17698621749878,
+        "val_welsh": 9.180717945098877
+      },
+      {
+        "step": 325,
+        "flops": 1.2060268167168e+16,
+        "val_english": 4.582649827003479,
+        "val_code": 3.6961944103240967,
+        "val_welsh": 3.9774875044822693
+      },
+      {
+        "step": 650,
+        "flops": 2.4120536334336e+16,
+        "val_english": 3.9604991674423218,
+        "val_code": 2.5978330969810486,
+        "val_welsh": 3.477828621864319
+      },
+      {
+        "step": 975,
+        "flops": 3.6180804501504e+16,
+        "val_english": 3.7599924206733704,
+        "val_code": 2.385235905647278,
+        "val_welsh": 3.2843888998031616
+      },
+      {
+        "step": 1300,
+        "flops": 4.8241072668672e+16,
+        "val_english": 3.647231101989746,
+        "val_code": 2.2772721648216248,
+        "val_welsh": 3.181791126728058
+      },
+      {
+        "step": 1625,
+        "flops": 6.030134083584e+16,
+        "val_english": 3.566802442073822,
+        "val_code": 2.206377625465393,
+        "val_welsh": 3.096448540687561
+      },
+      {
+        "step": 1950,
+        "flops": 7.2361609003008e+16,
+        "val_english": 3.498004972934723,
+        "val_code": 2.1449341773986816,
+        "val_welsh": 3.0355010628700256
+      },
+      {
+        "step": 2275,
+        "flops": 8.4421877170176e+16,
+        "val_english": 3.4430293440818787,
+        "val_code": 2.099571406841278,
+        "val_welsh": 2.97517728805542
+      },
+      {
+        "step": 2600,
+        "flops": 9.6482145337344e+16,
+        "val_english": 3.4015106558799744,
+        "val_code": 2.0611888766288757,
+        "val_welsh": 2.9435625076293945
+      },
+      {
+        "step": 2925,
+        "flops": 1.08542413504512e+17,
+        "val_english": 3.3568251729011536,
+        "val_code": 2.0233089327812195,
+        "val_welsh": 2.8937907218933105
+      },
+      {
+        "step": 3250,
+        "flops": 1.2060268167168e+17,
+        "val_english": 3.326506197452545,
+        "val_code": 1.9961578249931335,
+        "val_welsh": 2.857508063316345
+      },
+      {
+        "step": 3575,
+        "flops": 1.32662949838848e+17,
+        "val_english": 3.2895758748054504,
+        "val_code": 1.9715561270713806,
+        "val_welsh": 2.828916847705841
+      },
+      {
+        "step": 3900,
+        "flops": 1.44723218006016e+17,
+        "val_english": 3.252577781677246,
+        "val_code": 1.9528732001781464,
+        "val_welsh": 2.7994994521141052
+      },
+      {
+        "step": 4225,
+        "flops": 1.56783486173184e+17,
+        "val_english": 3.2295409440994263,
+        "val_code": 1.9357617497444153,
+        "val_welsh": 2.7749842405319214
+      },
+      {
+        "step": 4550,
+        "flops": 1.68843754340352e+17,
+        "val_english": 3.205085039138794,
+        "val_code": 1.9146284759044647,
+        "val_welsh": 2.7510306239128113
+      },
+      {
+        "step": 4875,
+        "flops": 1.8090402250752e+17,
+        "val_english": 3.184102177619934,
+        "val_code": 1.8966783285140991,
+        "val_welsh": 2.7264827489852905
+      },
+      {
+        "step": 5200,
+        "flops": 1.92964290674688e+17,
+        "val_english": 3.1669177412986755,
+        "val_code": 1.88438281416893,
+        "val_welsh": 2.7108492255210876
+      },
+      {
+        "step": 5525,
+        "flops": 2.05024558841856e+17,
+        "val_english": 3.1525672674179077,
+        "val_code": 1.8742829859256744,
+        "val_welsh": 2.6946789622306824
+      },
+      {
+        "step": 5850,
+        "flops": 2.17084827009024e+17,
+        "val_english": 3.1374179124832153,
+        "val_code": 1.8619763553142548,
+        "val_welsh": 2.6817182898521423
+      },
+      {
+        "step": 6175,
+        "flops": 2.29145095176192e+17,
+        "val_english": 3.1254137754440308,
+        "val_code": 1.852601945400238,
+        "val_welsh": 2.671412229537964
+      },
+      {
+        "step": 6500,
+        "flops": 2.4120536334336e+17,
+        "val_english": 3.1172016263008118,
+        "val_code": 1.8495213687419891,
+        "val_welsh": 2.665546953678131
+      },
+      {
+        "step": 6510,
+        "flops": 2.415764485177344e+17,
+        "val_english": 3.1175894141197205,
+        "val_code": 1.847665548324585,
+        "val_welsh": 2.6658313870429993
+      }
+    ]
+  },
+  "frozen": {
+    "receipt": {
+      "job": "prog-e5-grow-frozen",
+      "revision": "4982b3395c2cace1c4295be8e0a47d93b099218a",
+      "attempt": 1,
+      "started": "2026-11-22T18:04:04+00:00",
+      "status": "done",
+      "finished": "2026-11-22T18:35:56+00:00",
+      "exit": 0
+    },
+    "result": {
+      "decision": "growth_costs",
+      "job": "prog-e5-grow-frozen",
+      "hours": 0.531,
+      "mode": "frozen",
+      "stages": [
+        {
+          "stage": 1,
+          "layers": 4,
+          "trainable_layers": 4,
+          "steps": 2170,
+          "flops": 3.01970560647168e+16,
+          "val": {
+            "english": 3.5864580869674683,
+            "code": 2.22433739900589,
+            "welsh": 3.108532130718231,
+            "icelandic": 4.768596291542053
+          },
+          "mean_val": 2.9731092055638633,
+          "params": {
+            "total": 40901376,
+            "embedding": 12582912,
+            "blocks": 28318464
+          }
+        },
+        {
+          "stage": 2,
+          "layers": 8,
+          "trainable_layers": 4,
+          "steps": 2170,
+          "flops": 6.87821832585216e+16,
+          "val": {
+            "english": 3.4656025171279907,
+            "code": 2.151612341403961,
+            "welsh": 2.9864121079444885,
+            "icelandic": 4.735448122024536
+          },
+          "mean_val": 2.867875655492147,
+          "params": {
+            "total": 69219072,
+            "embedding": 12582912,
+            "blocks": 56636160
+          }
+        },
+        {
+          "stage": 3,
+          "layers": 12,
+          "trainable_layers": 4,
+          "steps": 2170,
+          "flops": 1.157553815814144e+17,
+          "val": {
+            "english": 3.432291030883789,
+            "code": 2.125969648361206,
+            "welsh": 2.946783423423767,
+            "icelandic": 4.682321548461914
+          },
+          "mean_val": 2.8350147008895874,
+          "params": {
+            "total": 97536768,
+            "embedding": 12582912,
+            "blocks": 84953856
+          }
+        }
+      ],
+      "total_tokens": 399974400,
+      "total_flops": 1.157553815814144e+17,
+      "dense_final_mean_val": 2.5436954498291016,
+      "dense_flops": 2.415764485177344e+17,
+      "dense_mean_val_at_equal_flops": 2.739284492073915,
+      "gap_equal_tokens": 0.11452599448572287,
+      "gap_equal_flops": 0.034947158315489446,
+      "peak_memory_gb": 6.9
+    },
+    "result_sha256": "77920f2f1b8d8f91ec5f4fecf6fb82f2dc876b4fe9eabed7aafd8ff1badd01e0",
+    "packages": {
+      "mlx": "0.32.4",
+      "mlx_lm": "0.32.2",
+      "numpy": "2.5.5",
+      "transformers": "5.23.0",
+      "tokenizers": "0.23.3"
+    },
+    "config": {
+      "mode": "frozen",
+      "tokens": null,
+      "seed": 1,
+      "smoke": false
+    }
+  },
+  "unfrozen": {
+    "receipt": {
+      "job": "prog-e5-grow-unfrozen",
+      "revision": "4982b3395c2cace1c4295be8e0a47d93b099218a",
+      "attempt": 1,
+      "started": "2026-11-22T18:35:56+00:00",
+      "status": "done",
+      "finished": "2026-11-22T19:28:06+00:00",
+      "exit": 0
+    },
+    "result": {
+      "decision": "growth_matches",
+      "job": "prog-e5-grow-unfrozen",
+      "hours": 0.87,
+      "mode": "unfrozen",
+      "stages": [
+        {
+          "stage": 1,
+          "layers": 4,
+          "trainable_layers": 4,
+          "steps": 2170,
+          "flops": 3.01970560647168e+16,
+          "val": {
+            "english": 3.588581621646881,
+            "code": 2.2265440225601196,
+            "welsh": 3.1076605916023254,
+            "icelandic": 4.769428253173828
+          },
+          "mean_val": 2.974262078603109,
+          "params": {
+            "total": 40901376,
+            "embedding": 12582912,
+            "blocks": 28318464
+          }
+        },
+        {
+          "stage": 2,
+          "layers": 8,
+          "trainable_layers": 8,
+          "steps": 2170,
+          "flops": 8.55583255166976e+16,
+          "val": {
+            "english": 3.358597159385681,
+            "code": 2.047142744064331,
+            "welsh": 2.8845961689949036,
+            "icelandic": 4.645776748657227
+          },
+          "mean_val": 2.7634453574816384,
+          "params": {
+            "total": 69219072,
+            "embedding": 12582912,
+            "blocks": 56636160
+          }
+        },
+        {
+          "stage": 3,
+          "layers": 12,
+          "trainable_layers": 12,
+          "steps": 2170,
+          "flops": 1.660838083559424e+17,
+          "val": {
+            "english": 3.252301812171936,
+            "code": 1.9597387313842773,
+            "welsh": 2.7798487544059753,
+            "icelandic": 4.521558403968811
+          },
+          "mean_val": 2.6639630993207297,
+          "params": {
+            "total": 97536768,
+            "embedding": 12582912,
+            "blocks": 84953856
+          }
+        }
+      ],
+      "total_tokens": 399974400,
+      "total_flops": 1.660838083559424e+17,
+      "dense_final_mean_val": 2.5436954498291016,
+      "dense_flops": 2.415764485177344e+17,
+      "dense_mean_val_at_equal_flops": 2.6288862467385257,
+      "gap_equal_tokens": 0.04728067957180504,
+      "gap_equal_flops": 0.01334285674236435,
+      "peak_memory_gb": 13.6
+    },
+    "result_sha256": "e2594b37d07fa9456e0a7ec7fc4d873fb0b6543f6be33de2844b6089398cccbd",
+    "packages": {
+      "mlx": "0.32.4",
+      "mlx_lm": "0.32.2",
+      "numpy": "2.5.5",
+      "transformers": "5.23.0",
+      "tokenizers": "0.23.3"
+    },
+    "config": {
+      "mode": "unfrozen",
+      "tokens": null,
+      "seed": 1,
+      "smoke": false
+    }
+  }
+}
